@@ -1,0 +1,6 @@
+<Solution>
+  <Project Path="BE-Libreria/BE-Libreria.csproj" />
+  <Project Path="BLL-Libreria/BLL-Libreria.csproj" />
+  <Project Path="DAL-Libreria/DAL-Libreria.csproj" />
+  <Project Path="UI-Libreria/UI-Libreria.csproj" />
+</Solution>
