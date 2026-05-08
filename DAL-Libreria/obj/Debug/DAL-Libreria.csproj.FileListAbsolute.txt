@@ -1,0 +1,6 @@
+C:\Users\sanag\OneDrive\Desktop\Proyecto-Tecnicas-2026\DAL-Libreria\bin\Debug\DAL-Libreria.dll
+C:\Users\sanag\OneDrive\Desktop\Proyecto-Tecnicas-2026\DAL-Libreria\bin\Debug\DAL-Libreria.pdb
+C:\Users\sanag\OneDrive\Desktop\Proyecto-Tecnicas-2026\DAL-Libreria\obj\Debug\DAL-Libreria.csproj.AssemblyReference.cache
+C:\Users\sanag\OneDrive\Desktop\Proyecto-Tecnicas-2026\DAL-Libreria\obj\Debug\DAL-Libreria.csproj.CoreCompileInputs.cache
+C:\Users\sanag\OneDrive\Desktop\Proyecto-Tecnicas-2026\DAL-Libreria\obj\Debug\DAL-Libreria.dll
+C:\Users\sanag\OneDrive\Desktop\Proyecto-Tecnicas-2026\DAL-Libreria\obj\Debug\DAL-Libreria.pdb
