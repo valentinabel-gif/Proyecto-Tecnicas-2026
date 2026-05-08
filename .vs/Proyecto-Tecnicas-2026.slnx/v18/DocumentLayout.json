@@ -3,20 +3,28 @@
   "WorkspaceRootPath": "C:\\Users\\sanag\\OneDrive\\Desktop\\Proyecto-Tecnicas-2026\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{541CF52D-FA6E-425D-B952-33AE33AE9FE0}|BE-Libreria\\BE-Libreria.csproj|c:\\users\\sanag\\onedrive\\desktop\\proyecto-tecnicas-2026\\be-libreria\\class1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{541CF52D-FA6E-425D-B952-33AE33AE9FE0}|BE-Libreria\\BE-Libreria.csproj|solutionrelative:be-libreria\\class1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{2E16CF76-5676-4457-98A0-99EC6D89A2C6}|UI-Libreria\\UI-Libreria.csproj|C:\\Users\\sanag\\OneDrive\\Desktop\\Proyecto-Tecnicas-2026\\ui-libreria\\ucproveedores.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{2E16CF76-5676-4457-98A0-99EC6D89A2C6}|UI-Libreria\\UI-Libreria.csproj|solutionrelative:ui-libreria\\ucproveedores.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{547D1123-684A-4250-9A4E-C62B13138369}|DAL-Libreria\\DAL-Libreria.csproj|c:\\users\\sanag\\onedrive\\desktop\\proyecto-tecnicas-2026\\dal-libreria\\class1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{547D1123-684A-4250-9A4E-C62B13138369}|DAL-Libreria\\DAL-Libreria.csproj|solutionrelative:dal-libreria\\class1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{2E16CF76-5676-4457-98A0-99EC6D89A2C6}|UI-Libreria\\UI-Libreria.csproj|c:\\users\\sanag\\onedrive\\desktop\\proyecto-tecnicas-2026\\ui-libreria\\encargadodestock\\inicioencargadostock.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2E16CF76-5676-4457-98A0-99EC6D89A2C6}|UI-Libreria\\UI-Libreria.csproj|solutionrelative:ui-libreria\\encargadodestock\\inicioencargadostock.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{C170DF4A-752E-4A23-89CA-2A9A76FB55EE}|BLL-Libreria\\BLL-Libreria.csproj|c:\\users\\sanag\\onedrive\\desktop\\proyecto-tecnicas-2026\\bll-libreria\\class1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C170DF4A-752E-4A23-89CA-2A9A76FB55EE}|BLL-Libreria\\BLL-Libreria.csproj|solutionrelative:bll-libreria\\class1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{2E16CF76-5676-4457-98A0-99EC6D89A2C6}|UI-Libreria\\UI-Libreria.csproj|C:\\Users\\sanag\\OneDrive\\Desktop\\Proyecto-Tecnicas-2026\\ui-libreria\\inicio.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{2E16CF76-5676-4457-98A0-99EC6D89A2C6}|UI-Libreria\\UI-Libreria.csproj|solutionrelative:ui-libreria\\inicio.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{2E16CF76-5676-4457-98A0-99EC6D89A2C6}|UI-Libreria\\UI-Libreria.csproj|c:\\users\\sanag\\onedrive\\desktop\\proyecto-tecnicas-2026\\ui-libreria\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{2E16CF76-5676-4457-98A0-99EC6D89A2C6}|UI-Libreria\\UI-Libreria.csproj|solutionrelative:ui-libreria\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{2E16CF76-5676-4457-98A0-99EC6D89A2C6}|UI-Libreria\\UI-Libreria.csproj|C:\\Users\\sanag\\OneDrive\\Desktop\\Proyecto-Tecnicas-2026\\ui-libreria\\encargadodestock\\inicioencargadostock.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{2E16CF76-5676-4457-98A0-99EC6D89A2C6}|UI-Libreria\\UI-Libreria.csproj|solutionrelative:ui-libreria\\encargadodestock\\inicioencargadostock.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2E16CF76-5676-4457-98A0-99EC6D89A2C6}|UI-Libreria\\UI-Libreria.csproj|C:\\Users\\sanag\\OneDrive\\Desktop\\Proyecto-Tecnicas-2026\\ui-libreria\\ucstock.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{2E16CF76-5676-4457-98A0-99EC6D89A2C6}|UI-Libreria\\UI-Libreria.csproj|solutionrelative:ui-libreria\\ucstock.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2E16CF76-5676-4457-98A0-99EC6D89A2C6}|UI-Libreria\\UI-Libreria.csproj|C:\\Users\\sanag\\OneDrive\\Desktop\\Proyecto-Tecnicas-2026\\ui-libreria\\ucproductos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{2E16CF76-5676-4457-98A0-99EC6D89A2C6}|UI-Libreria\\UI-Libreria.csproj|solutionrelative:ui-libreria\\ucproductos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     }
   ],
   "DocumentGroupContainers": [
@@ -26,58 +34,76 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 3,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "Class1.cs",
-              "DocumentMoniker": "C:\\Users\\sanag\\OneDrive\\Desktop\\Proyecto-Tecnicas-2026\\BE-Libreria\\Class1.cs",
-              "RelativeDocumentMoniker": "BE-Libreria\\Class1.cs",
-              "ToolTip": "C:\\Users\\sanag\\OneDrive\\Desktop\\Proyecto-Tecnicas-2026\\BE-Libreria\\Class1.cs",
-              "RelativeToolTip": "BE-Libreria\\Class1.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAEAAAAhAAAAAAAAAA==",
+              "DocumentIndex": 2,
+              "Title": "Inicio.cs [Dise\u00F1o]",
+              "DocumentMoniker": "C:\\Users\\sanag\\OneDrive\\Desktop\\Proyecto-Tecnicas-2026\\UI-Libreria\\Inicio.cs",
+              "RelativeDocumentMoniker": "UI-Libreria\\Inicio.cs",
+              "ToolTip": "C:\\Users\\sanag\\OneDrive\\Desktop\\Proyecto-Tecnicas-2026\\UI-Libreria\\Inicio.cs [Dise\u00F1o]",
+              "RelativeToolTip": "UI-Libreria\\Inicio.cs [Dise\u00F1o]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-07T00:50:47.579Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-05-08T23:17:27.327Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "UcProductos.cs [Dise\u00F1o]",
+              "DocumentMoniker": "C:\\Users\\sanag\\OneDrive\\Desktop\\Proyecto-Tecnicas-2026\\UI-Libreria\\UcProductos.cs",
+              "RelativeDocumentMoniker": "UI-Libreria\\UcProductos.cs",
+              "ToolTip": "C:\\Users\\sanag\\OneDrive\\Desktop\\Proyecto-Tecnicas-2026\\UI-Libreria\\UcProductos.cs [Dise\u00F1o]",
+              "RelativeToolTip": "UI-Libreria\\UcProductos.cs [Dise\u00F1o]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-08T23:08:11.438Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "UcStock.cs [Dise\u00F1o]",
+              "DocumentMoniker": "C:\\Users\\sanag\\OneDrive\\Desktop\\Proyecto-Tecnicas-2026\\UI-Libreria\\UcStock.cs",
+              "RelativeDocumentMoniker": "UI-Libreria\\UcStock.cs",
+              "ToolTip": "C:\\Users\\sanag\\OneDrive\\Desktop\\Proyecto-Tecnicas-2026\\UI-Libreria\\UcStock.cs [Dise\u00F1o]",
+              "RelativeToolTip": "UI-Libreria\\UcStock.cs [Dise\u00F1o]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-08T23:07:53.751Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "UcProveedores.cs [Dise\u00F1o]",
+              "DocumentMoniker": "C:\\Users\\sanag\\OneDrive\\Desktop\\Proyecto-Tecnicas-2026\\UI-Libreria\\UcProveedores.cs",
+              "RelativeDocumentMoniker": "UI-Libreria\\UcProveedores.cs",
+              "ToolTip": "C:\\Users\\sanag\\OneDrive\\Desktop\\Proyecto-Tecnicas-2026\\UI-Libreria\\UcProveedores.cs [Dise\u00F1o]",
+              "RelativeToolTip": "UI-Libreria\\UcProveedores.cs [Dise\u00F1o]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-08T23:07:32.477Z",
+              "EditorCaption": " [Dise\u00F1o]"
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "Class1.cs",
-              "DocumentMoniker": "C:\\Users\\sanag\\OneDrive\\Desktop\\Proyecto-Tecnicas-2026\\DAL-Libreria\\Class1.cs",
-              "RelativeDocumentMoniker": "DAL-Libreria\\Class1.cs",
-              "ToolTip": "C:\\Users\\sanag\\OneDrive\\Desktop\\Proyecto-Tecnicas-2026\\DAL-Libreria\\Class1.cs",
-              "RelativeToolTip": "DAL-Libreria\\Class1.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Title": "InicioEncargadoStock.cs",
+              "DocumentMoniker": "C:\\Users\\sanag\\OneDrive\\Desktop\\Proyecto-Tecnicas-2026\\UI-Libreria\\EncargadoDeStock\\InicioEncargadoStock.cs",
+              "RelativeDocumentMoniker": "UI-Libreria\\EncargadoDeStock\\InicioEncargadoStock.cs",
+              "ToolTip": "C:\\Users\\sanag\\OneDrive\\Desktop\\Proyecto-Tecnicas-2026\\UI-Libreria\\EncargadoDeStock\\InicioEncargadoStock.cs",
+              "RelativeToolTip": "UI-Libreria\\EncargadoDeStock\\InicioEncargadoStock.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACIAAAAqAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-07T00:50:26.909Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "Class1.cs",
-              "DocumentMoniker": "C:\\Users\\sanag\\OneDrive\\Desktop\\Proyecto-Tecnicas-2026\\BLL-Libreria\\Class1.cs",
-              "RelativeDocumentMoniker": "BLL-Libreria\\Class1.cs",
-              "ToolTip": "C:\\Users\\sanag\\OneDrive\\Desktop\\Proyecto-Tecnicas-2026\\BLL-Libreria\\Class1.cs",
-              "RelativeToolTip": "BLL-Libreria\\Class1.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-07T00:50:08.132Z",
+              "WhenOpened": "2026-05-08T21:20:41.106Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 3,
-              "Title": "Form1.cs [Dise\u00F1o]",
-              "DocumentMoniker": "C:\\Users\\sanag\\OneDrive\\Desktop\\Proyecto-Tecnicas-2026\\UI-Libreria\\Form1.cs",
-              "RelativeDocumentMoniker": "UI-Libreria\\Form1.cs",
-              "ToolTip": "C:\\Users\\sanag\\OneDrive\\Desktop\\Proyecto-Tecnicas-2026\\UI-Libreria\\Form1.cs [Dise\u00F1o]",
-              "RelativeToolTip": "UI-Libreria\\Form1.cs [Dise\u00F1o]",
+              "Title": "InicioEncargadoStock.cs [Dise\u00F1o]",
+              "DocumentMoniker": "C:\\Users\\sanag\\OneDrive\\Desktop\\Proyecto-Tecnicas-2026\\UI-Libreria\\EncargadoDeStock\\InicioEncargadoStock.cs",
+              "RelativeDocumentMoniker": "UI-Libreria\\EncargadoDeStock\\InicioEncargadoStock.cs",
+              "ToolTip": "C:\\Users\\sanag\\OneDrive\\Desktop\\Proyecto-Tecnicas-2026\\UI-Libreria\\EncargadoDeStock\\InicioEncargadoStock.cs [Dise\u00F1o]",
+              "RelativeToolTip": "UI-Libreria\\EncargadoDeStock\\InicioEncargadoStock.cs [Dise\u00F1o]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-07T00:49:16.687Z",
-              "EditorCaption": " [Dise\u00F1o]"
+              "WhenOpened": "2026-05-08T21:16:52.184Z"
             }
           ]
         }

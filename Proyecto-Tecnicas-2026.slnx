@@ -1,6 +1,6 @@
 <Solution>
-  <Project Path="BE-Libreria/BE-Libreria.csproj" />
-  <Project Path="BLL-Libreria/BLL-Libreria.csproj" />
-  <Project Path="DAL-Libreria/DAL-Libreria.csproj" />
-  <Project Path="UI-Libreria/UI-Libreria.csproj" />
+  <Project Path="BE-Libreria/BE-Libreria.csproj" Id="541cf52d-fa6e-425d-b952-33ae33ae9fe0" />
+  <Project Path="BLL-Libreria/BLL-Libreria.csproj" Id="c170df4a-752e-4a23-89ca-2a9a76fb55ee" />
+  <Project Path="DAL-Libreria/DAL-Libreria.csproj" Id="547d1123-684a-4250-9a4e-c62b13138369" />
+  <Project Path="UI-Libreria/UI-Libreria.csproj" Id="2e16cf76-5676-4457-98a0-99ec6d89a2c6" />
 </Solution>
