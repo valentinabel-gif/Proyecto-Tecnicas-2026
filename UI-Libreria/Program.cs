@@ -18,7 +18,7 @@ namespace UI_Libreria
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            //Application.Run(new InicioEncargadoStock());
+            //Application.Run(new InicioEncargadoStock()); 
             Application.Run(new FormVendedor());
         }
     }
