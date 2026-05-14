@@ -45,7 +45,6 @@ namespace UI_Libreria.EncargadoDeStock
 
             uc.BringToFront();
         }
-
         private void timer1_Tick(object sender, EventArgs e)
         {
             Date.Text = DateTime.Now.ToString("dd/MM/yyyy HH:mm:ss");
@@ -127,6 +126,11 @@ namespace UI_Libreria.EncargadoDeStock
         }
 
         private void InicioPanel_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void radioButton1_CheckedChanged(object sender, EventArgs e)
         {
 
         }
