@@ -4,11 +4,11 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using UI_Libreria.EncargadoDeStock;
-<<<<<<< HEAD
+
 using UI_Libreria.Administrador;
-=======
+
 using UI_Libreria.VendedorMayorista;
->>>>>>> main
+
 
 namespace UI_Libreria
 {
@@ -22,12 +22,12 @@ namespace UI_Libreria
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-<<<<<<< HEAD
-            Application.Run(new Inicioadministrador());
-=======
+
+           // Application.Run(new FormVendedor());
+
             //Application.Run(new InicioEncargadoStock()); 
-            Application.Run(new FormVendedor());
->>>>>>> main
+             Application.Run(new Inicioadministrador());
+
         }
     }
 }

@@ -21,8 +21,7 @@ namespace UI_Libreria
         {
 
         }
-<<<<<<< HEAD
-=======
+
 
         public void AbrirFicha(UserControl controlHijo)
         {
@@ -36,6 +35,6 @@ namespace UI_Libreria
             controlHijo.BringToFront();
             controlHijo.Show();
         }
->>>>>>> main
+
     }
 }
