@@ -1,0 +1,13 @@
+# Visual Studio
+.vs/
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+
+# Archivos compilados
+bin/
+obj/
+*.exe
+*.pdb
+*.cache
