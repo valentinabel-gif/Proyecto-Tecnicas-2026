@@ -54,6 +54,49 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Administrador\FrmCrearUsuario..cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Administrador\.Designer.cs">
+      <DependentUpon>FrmCrearUsuario..cs</DependentUpon>
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Administrador\Inicioadministrador.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Administrador\Inicioadministrador.Designer.cs">
+      <DependentUpon>Inicioadministrador.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Administrador\admiInicio.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Administrador\admiInicio.Designer.cs">
+      <DependentUpon>admiInicio.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Administrador\admiUsuario.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Administrador\admiUsuario.Designer.cs">
+      <DependentUpon>admiUsuario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Administrador\admiRol.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Administrador\admiRol.Designer.cs">
+      <DependentUpon>admiRol.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Administrador\admiPermisos.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Administrador\admiPermisos.Designer.cs">
+      <DependentUpon>admiPermisos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Administrador\admiCategoria.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Administrador\admiCategoria.Designer.cs">
+      <DependentUpon>admiCategoria.cs</DependentUpon>
+    </Compile>
     <Compile Include="EncargadoDeStock\InicioEncargadoStock.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -65,6 +108,36 @@
     </Compile>
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="VendedorMayorista\FormVendedor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VendedorMayorista\FormVendedor.Designer.cs">
+      <DependentUpon>FormVendedor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="VendedorMayorista\UcVenta.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="VendedorMayorista\UcVenta.Designer.cs">
+      <DependentUpon>UcVenta.cs</DependentUpon>
+    </Compile>
+    <Compile Include="VendedorMayorista\UcConsultarPrecio.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="VendedorMayorista\UcConsultarPrecio.Designer.cs">
+      <DependentUpon>UcConsultarPrecio.cs</DependentUpon>
+    </Compile>
+    <Compile Include="VendedorMayorista\UcGestionClientes.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="VendedorMayorista\UcGestionClientes.Designer.cs">
+      <DependentUpon>UcGestionClientes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="VendedorMayorista\UcInicioVendedor.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="VendedorMayorista\UcInicioVendedor.Designer.cs">
+      <DependentUpon>UcInicioVendedor.cs</DependentUpon>
     </Compile>
     <Compile Include="Ingresos.cs">
       <SubType>UserControl</SubType>
@@ -104,8 +177,33 @@
     <Compile Include="UcStock.Designer.cs">
       <DependentUpon>UcStock.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Administrador\admiCategoria.resx">
+      <DependentUpon>admiCategoria.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Administrador\admiInicio.resx">
+      <DependentUpon>admiInicio.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Administrador\admiRol.resx">
+      <DependentUpon>admiRol.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Administrador\admiUsuario.resx">
+      <DependentUpon>admiUsuario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Administrador\FrmCrearUsuario..resx">
+      <DependentUpon>FrmCrearUsuario..cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Administrador\Inicioadministrador.resx">
+      <DependentUpon>Inicioadministrador.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="EncargadoDeStock\InicioEncargadoStock.resx">
       <DependentUpon>InicioEncargadoStock.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VendedorMayorista\FormVendedor.resx">
+      <DependentUpon>FormVendedor.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Ingresos.resx">
       <DependentUpon>Ingresos.cs</DependentUpon>
@@ -133,6 +231,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UcStock.resx">
       <DependentUpon>UcStock.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VendedorMayorista\UcVenta.resx">
+      <DependentUpon>UcVenta.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
