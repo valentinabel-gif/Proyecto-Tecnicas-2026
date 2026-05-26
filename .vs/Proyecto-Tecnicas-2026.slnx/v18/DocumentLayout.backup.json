@@ -1,42 +1,22 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\arace\\OneDrive\\Escritorio\\Proyecto-Tecnicas-2026\\",
+  "WorkspaceRootPath": "C:\\Users\\tiago\\Desktop\\UPE\\Proyecto-Tecnicas-2026\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{2E16CF76-5676-4457-98A0-99EC6D89A2C6}|UI-Libreria\\UI-Libreria.csproj|c:\\users\\arace\\onedrive\\escritorio\\proyecto-tecnicas-2026\\ui-libreria\\administrador\\frmcrearusuario..cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{2E16CF76-5676-4457-98A0-99EC6D89A2C6}|UI-Libreria\\UI-Libreria.csproj|solutionrelative:ui-libreria\\administrador\\frmcrearusuario..cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{541CF52D-FA6E-425D-B952-33AE33AE9FE0}|BE-Libreria\\BE-Libreria.csproj|c:\\users\\tiago\\desktop\\upe\\proyecto-tecnicas-2026\\be-libreria\\usuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{541CF52D-FA6E-425D-B952-33AE33AE9FE0}|BE-Libreria\\BE-Libreria.csproj|solutionrelative:be-libreria\\usuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{2E16CF76-5676-4457-98A0-99EC6D89A2C6}|UI-Libreria\\UI-Libreria.csproj|c:\\users\\arace\\onedrive\\escritorio\\proyecto-tecnicas-2026\\ui-libreria\\administrador\\frmcrearusuario..cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2E16CF76-5676-4457-98A0-99EC6D89A2C6}|UI-Libreria\\UI-Libreria.csproj|solutionrelative:ui-libreria\\administrador\\frmcrearusuario..cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{541CF52D-FA6E-425D-B952-33AE33AE9FE0}|BE-Libreria\\BE-Libreria.csproj|c:\\users\\tiago\\desktop\\upe\\proyecto-tecnicas-2026\\be-libreria\\medidadeseguridad.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{541CF52D-FA6E-425D-B952-33AE33AE9FE0}|BE-Libreria\\BE-Libreria.csproj|solutionrelative:be-libreria\\medidadeseguridad.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{2E16CF76-5676-4457-98A0-99EC6D89A2C6}|UI-Libreria\\UI-Libreria.csproj|c:\\users\\arace\\onedrive\\escritorio\\proyecto-tecnicas-2026\\ui-libreria\\administrador\\admiinicio.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2E16CF76-5676-4457-98A0-99EC6D89A2C6}|UI-Libreria\\UI-Libreria.csproj|solutionrelative:ui-libreria\\administrador\\admiinicio.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{541CF52D-FA6E-425D-B952-33AE33AE9FE0}|BE-Libreria\\BE-Libreria.csproj|c:\\users\\tiago\\desktop\\upe\\proyecto-tecnicas-2026\\be-libreria\\permiso.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{541CF52D-FA6E-425D-B952-33AE33AE9FE0}|BE-Libreria\\BE-Libreria.csproj|solutionrelative:be-libreria\\permiso.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{2E16CF76-5676-4457-98A0-99EC6D89A2C6}|UI-Libreria\\UI-Libreria.csproj|c:\\users\\arace\\onedrive\\escritorio\\proyecto-tecnicas-2026\\ui-libreria\\administrador\\admiinicio.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{2E16CF76-5676-4457-98A0-99EC6D89A2C6}|UI-Libreria\\UI-Libreria.csproj|solutionrelative:ui-libreria\\administrador\\admiinicio.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{2E16CF76-5676-4457-98A0-99EC6D89A2C6}|UI-Libreria\\UI-Libreria.csproj|c:\\users\\arace\\onedrive\\escritorio\\proyecto-tecnicas-2026\\ui-libreria\\administrador\\inicioadministrador.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{2E16CF76-5676-4457-98A0-99EC6D89A2C6}|UI-Libreria\\UI-Libreria.csproj|solutionrelative:ui-libreria\\administrador\\inicioadministrador.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{2E16CF76-5676-4457-98A0-99EC6D89A2C6}|UI-Libreria\\UI-Libreria.csproj|c:\\users\\arace\\onedrive\\escritorio\\proyecto-tecnicas-2026\\ui-libreria\\administrador\\admicategoria.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2E16CF76-5676-4457-98A0-99EC6D89A2C6}|UI-Libreria\\UI-Libreria.csproj|solutionrelative:ui-libreria\\administrador\\admicategoria.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{2E16CF76-5676-4457-98A0-99EC6D89A2C6}|UI-Libreria\\UI-Libreria.csproj|c:\\users\\arace\\onedrive\\escritorio\\proyecto-tecnicas-2026\\ui-libreria\\administrador\\admicategoria.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{2E16CF76-5676-4457-98A0-99EC6D89A2C6}|UI-Libreria\\UI-Libreria.csproj|solutionrelative:ui-libreria\\administrador\\admicategoria.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{2E16CF76-5676-4457-98A0-99EC6D89A2C6}|UI-Libreria\\UI-Libreria.csproj|c:\\users\\arace\\onedrive\\escritorio\\proyecto-tecnicas-2026\\ui-libreria\\administrador\\admirol.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{2E16CF76-5676-4457-98A0-99EC6D89A2C6}|UI-Libreria\\UI-Libreria.csproj|solutionrelative:ui-libreria\\administrador\\admirol.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{2E16CF76-5676-4457-98A0-99EC6D89A2C6}|UI-Libreria\\UI-Libreria.csproj|c:\\users\\arace\\onedrive\\escritorio\\proyecto-tecnicas-2026\\ui-libreria\\administrador\\admiusuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{2E16CF76-5676-4457-98A0-99EC6D89A2C6}|UI-Libreria\\UI-Libreria.csproj|solutionrelative:ui-libreria\\administrador\\admiusuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{541CF52D-FA6E-425D-B952-33AE33AE9FE0}|BE-Libreria\\BE-Libreria.csproj|c:\\users\\tiago\\desktop\\upe\\proyecto-tecnicas-2026\\be-libreria\\rol.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{541CF52D-FA6E-425D-B952-33AE33AE9FE0}|BE-Libreria\\BE-Libreria.csproj|solutionrelative:be-libreria\\rol.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -46,122 +26,67 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 5,
           "Children": [
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{eefa5220-e298-11d0-8f78-00a0c9110057}"
             },
             {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{b1e99781-ab81-11d0-b683-00aa00a3ee26}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Rol.cs",
+              "DocumentMoniker": "C:\\Users\\tiago\\Desktop\\UPE\\Proyecto-Tecnicas-2026\\BE-Libreria\\Rol.cs",
+              "RelativeDocumentMoniker": "BE-Libreria\\Rol.cs",
+              "ToolTip": "C:\\Users\\tiago\\Desktop\\UPE\\Proyecto-Tecnicas-2026\\BE-Libreria\\Rol.cs",
+              "RelativeToolTip": "BE-Libreria\\Rol.cs",
+              "ViewState": "AgIAAA4AAAAAAAAAAAAQwCEAAAAKAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-26T00:06:40.097Z",
+              "EditorCaption": ""
+            },
+            {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "admiInicio.cs",
-              "DocumentMoniker": "C:\\Users\\arace\\OneDrive\\Escritorio\\Proyecto-Tecnicas-2026\\UI-Libreria\\Administrador\\admiInicio.cs",
-              "RelativeDocumentMoniker": "UI-Libreria\\Administrador\\admiInicio.cs",
-              "ToolTip": "C:\\Users\\arace\\OneDrive\\Escritorio\\Proyecto-Tecnicas-2026\\UI-Libreria\\Administrador\\admiInicio.cs",
-              "RelativeToolTip": "UI-Libreria\\Administrador\\admiInicio.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABoAAAAMAAAAAAAAAA==",
+              "Title": "Permiso.cs",
+              "DocumentMoniker": "C:\\Users\\tiago\\Desktop\\UPE\\Proyecto-Tecnicas-2026\\BE-Libreria\\Permiso.cs",
+              "RelativeDocumentMoniker": "BE-Libreria\\Permiso.cs",
+              "ToolTip": "C:\\Users\\tiago\\Desktop\\UPE\\Proyecto-Tecnicas-2026\\BE-Libreria\\Permiso.cs",
+              "RelativeToolTip": "BE-Libreria\\Permiso.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAVAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-14T20:22:14.121Z",
+              "WhenOpened": "2026-05-26T00:00:23.931Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "MedidaDeSeguridad.cs",
+              "DocumentMoniker": "C:\\Users\\tiago\\Desktop\\UPE\\Proyecto-Tecnicas-2026\\BE-Libreria\\MedidaDeSeguridad.cs",
+              "RelativeDocumentMoniker": "BE-Libreria\\MedidaDeSeguridad.cs",
+              "ToolTip": "C:\\Users\\tiago\\Desktop\\UPE\\Proyecto-Tecnicas-2026\\BE-Libreria\\MedidaDeSeguridad.cs",
+              "RelativeToolTip": "BE-Libreria\\MedidaDeSeguridad.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACUAAADiAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-25T23:40:53.843Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "FrmCrearUsuario..cs [Dise\u00F1o]",
-              "DocumentMoniker": "C:\\Users\\arace\\OneDrive\\Escritorio\\Proyecto-Tecnicas-2026\\UI-Libreria\\Administrador\\FrmCrearUsuario..cs",
-              "RelativeDocumentMoniker": "UI-Libreria\\Administrador\\FrmCrearUsuario..cs",
-              "ToolTip": "C:\\Users\\arace\\OneDrive\\Escritorio\\Proyecto-Tecnicas-2026\\UI-Libreria\\Administrador\\FrmCrearUsuario..cs [Dise\u00F1o]",
-              "RelativeToolTip": "UI-Libreria\\Administrador\\FrmCrearUsuario..cs [Dise\u00F1o]",
+              "Title": "Usuario.cs",
+              "DocumentMoniker": "C:\\Users\\tiago\\Desktop\\UPE\\Proyecto-Tecnicas-2026\\BE-Libreria\\Usuario.cs",
+              "RelativeDocumentMoniker": "BE-Libreria\\Usuario.cs",
+              "ToolTip": "C:\\Users\\tiago\\Desktop\\UPE\\Proyecto-Tecnicas-2026\\BE-Libreria\\Usuario.cs",
+              "RelativeToolTip": "BE-Libreria\\Usuario.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABcAAAAUAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-14T19:58:08.509Z",
-              "EditorCaption": " [Dise\u00F1o]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "FrmCrearUsuario..cs",
-              "DocumentMoniker": "C:\\Users\\arace\\OneDrive\\Escritorio\\Proyecto-Tecnicas-2026\\UI-Libreria\\Administrador\\FrmCrearUsuario..cs",
-              "RelativeDocumentMoniker": "UI-Libreria\\Administrador\\FrmCrearUsuario..cs",
-              "ToolTip": "C:\\Users\\arace\\OneDrive\\Escritorio\\Proyecto-Tecnicas-2026\\UI-Libreria\\Administrador\\FrmCrearUsuario..cs",
-              "RelativeToolTip": "UI-Libreria\\Administrador\\FrmCrearUsuario..cs",
-              "ViewState": "AgIAAD4AAAAAAAAAAAD4v0wAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-14T20:18:28.363Z",
+              "WhenOpened": "2026-05-25T23:22:56.953Z",
               "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "admiInicio.cs [Dise\u00F1o]",
-              "DocumentMoniker": "C:\\Users\\arace\\OneDrive\\Escritorio\\Proyecto-Tecnicas-2026\\UI-Libreria\\Administrador\\admiInicio.cs",
-              "RelativeDocumentMoniker": "UI-Libreria\\Administrador\\admiInicio.cs",
-              "ToolTip": "C:\\Users\\arace\\OneDrive\\Escritorio\\Proyecto-Tecnicas-2026\\UI-Libreria\\Administrador\\admiInicio.cs [Dise\u00F1o]",
-              "RelativeToolTip": "UI-Libreria\\Administrador\\admiInicio.cs [Dise\u00F1o]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-14T19:19:02.173Z",
-              "EditorCaption": " [Dise\u00F1o]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "Inicioadministrador.cs [Dise\u00F1o]",
-              "DocumentMoniker": "C:\\Users\\arace\\OneDrive\\Escritorio\\Proyecto-Tecnicas-2026\\UI-Libreria\\Administrador\\Inicioadministrador.cs",
-              "RelativeDocumentMoniker": "UI-Libreria\\Administrador\\Inicioadministrador.cs",
-              "ToolTip": "C:\\Users\\arace\\OneDrive\\Escritorio\\Proyecto-Tecnicas-2026\\UI-Libreria\\Administrador\\Inicioadministrador.cs [Dise\u00F1o]",
-              "RelativeToolTip": "UI-Libreria\\Administrador\\Inicioadministrador.cs [Dise\u00F1o]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-14T16:49:05.158Z",
-              "EditorCaption": " [Dise\u00F1o]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "admiCategoria.cs",
-              "DocumentMoniker": "C:\\Users\\arace\\OneDrive\\Escritorio\\Proyecto-Tecnicas-2026\\UI-Libreria\\Administrador\\admiCategoria.cs",
-              "RelativeDocumentMoniker": "UI-Libreria\\Administrador\\admiCategoria.cs",
-              "ToolTip": "C:\\Users\\arace\\OneDrive\\Escritorio\\Proyecto-Tecnicas-2026\\UI-Libreria\\Administrador\\admiCategoria.cs",
-              "RelativeToolTip": "UI-Libreria\\Administrador\\admiCategoria.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABkAAAAJAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-14T19:40:06.545Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "admiCategoria.cs [Dise\u00F1o]",
-              "DocumentMoniker": "C:\\Users\\arace\\OneDrive\\Escritorio\\Proyecto-Tecnicas-2026\\UI-Libreria\\Administrador\\admiCategoria.cs",
-              "RelativeDocumentMoniker": "UI-Libreria\\Administrador\\admiCategoria.cs",
-              "ToolTip": "C:\\Users\\arace\\OneDrive\\Escritorio\\Proyecto-Tecnicas-2026\\UI-Libreria\\Administrador\\admiCategoria.cs [Dise\u00F1o]",
-              "RelativeToolTip": "UI-Libreria\\Administrador\\admiCategoria.cs [Dise\u00F1o]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-14T19:32:53.122Z",
-              "EditorCaption": " [Dise\u00F1o]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "admiRol.cs [Dise\u00F1o]",
-              "DocumentMoniker": "C:\\Users\\arace\\OneDrive\\Escritorio\\Proyecto-Tecnicas-2026\\UI-Libreria\\Administrador\\admiRol.cs",
-              "RelativeDocumentMoniker": "UI-Libreria\\Administrador\\admiRol.cs",
-              "ToolTip": "C:\\Users\\arace\\OneDrive\\Escritorio\\Proyecto-Tecnicas-2026\\UI-Libreria\\Administrador\\admiRol.cs [Dise\u00F1o]",
-              "RelativeToolTip": "UI-Libreria\\Administrador\\admiRol.cs [Dise\u00F1o]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-14T19:32:42.446Z",
-              "EditorCaption": " [Dise\u00F1o]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "admiUsuario.cs [Dise\u00F1o]",
-              "DocumentMoniker": "C:\\Users\\arace\\OneDrive\\Escritorio\\Proyecto-Tecnicas-2026\\UI-Libreria\\Administrador\\admiUsuario.cs",
-              "RelativeDocumentMoniker": "UI-Libreria\\Administrador\\admiUsuario.cs",
-              "ToolTip": "C:\\Users\\arace\\OneDrive\\Escritorio\\Proyecto-Tecnicas-2026\\UI-Libreria\\Administrador\\admiUsuario.cs [Dise\u00F1o]",
-              "RelativeToolTip": "UI-Libreria\\Administrador\\admiUsuario.cs [Dise\u00F1o]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-14T17:49:58.505Z",
-              "EditorCaption": " [Dise\u00F1o]"
             }
           ]
         }

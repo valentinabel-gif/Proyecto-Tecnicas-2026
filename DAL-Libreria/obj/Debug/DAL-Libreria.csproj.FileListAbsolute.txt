@@ -10,3 +10,9 @@ C:\Users\arace\OneDrive\Escritorio\Proyecto-Tecnicas-2026\DAL-Libreria\obj\Debug
 C:\Users\arace\OneDrive\Escritorio\Proyecto-Tecnicas-2026\DAL-Libreria\obj\Debug\DAL-Libreria.csproj.CoreCompileInputs.cache
 C:\Users\arace\OneDrive\Escritorio\Proyecto-Tecnicas-2026\DAL-Libreria\obj\Debug\DAL-Libreria.dll
 C:\Users\arace\OneDrive\Escritorio\Proyecto-Tecnicas-2026\DAL-Libreria\obj\Debug\DAL-Libreria.pdb
+C:\Users\tiago\Desktop\UPE\Proyecto-Tecnicas-2026\DAL-Libreria\bin\Debug\DAL-Libreria.dll
+C:\Users\tiago\Desktop\UPE\Proyecto-Tecnicas-2026\DAL-Libreria\bin\Debug\DAL-Libreria.pdb
+C:\Users\tiago\Desktop\UPE\Proyecto-Tecnicas-2026\DAL-Libreria\obj\Debug\DAL-Libreria.csproj.AssemblyReference.cache
+C:\Users\tiago\Desktop\UPE\Proyecto-Tecnicas-2026\DAL-Libreria\obj\Debug\DAL-Libreria.csproj.CoreCompileInputs.cache
+C:\Users\tiago\Desktop\UPE\Proyecto-Tecnicas-2026\DAL-Libreria\obj\Debug\DAL-Libreria.dll
+C:\Users\tiago\Desktop\UPE\Proyecto-Tecnicas-2026\DAL-Libreria\obj\Debug\DAL-Libreria.pdb

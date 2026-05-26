@@ -42,13 +42,11 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Class1.cs" />
+    <Compile Include="MedidaDeSeguridad.cs" />
+    <Compile Include="Permiso.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\DAL-Libreria\DAL-Libreria.csproj">
-      <Project>{547d1123-684a-4250-9a4e-c62b13138369}</Project>
-      <Name>DAL-Libreria</Name>
-    </ProjectReference>
+    <Compile Include="Rol.cs" />
+    <Compile Include="Usuario.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
