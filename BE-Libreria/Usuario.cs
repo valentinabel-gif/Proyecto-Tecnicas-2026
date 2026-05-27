@@ -16,10 +16,10 @@ namespace BE_Libreria
         private string _dniUsuario;
         private string _contraseniaUsuario;
         private string _usernameUsuario;
-        //private Rol _rolUsuario;
+        private MedidaDeSeguridad _rolUsuario;
 
         //constructor
-        public Usuario(int idUsuario, string nombreUsuario, string apellidoUsuario, string correoUsuario, string dniUsuario, string contraseniaUsuario, string usernameUsuario)
+        public Usuario(int idUsuario, string nombreUsuario, string apellidoUsuario, string correoUsuario, string dniUsuario, string contraseniaUsuario, string usernameUsuario, MedidaDeSeguridad rolUsuario)
         {
             _idUsuario = idUsuario;
             _nombreUsuario = nombreUsuario;
@@ -28,7 +28,7 @@ namespace BE_Libreria
             _dniUsuario = dniUsuario;
             _contraseniaUsuario = contraseniaUsuario;
             _usernameUsuario = usernameUsuario;
-            //_rolUsuario = new Rol();
+            _rolUsuario = rolUsuario;
         }
 
         //propiedades
@@ -60,15 +60,15 @@ namespace BE_Libreria
         {
             get { return _usernameUsuario; }
         }
-        /*public Rol RolUsuario
+        public MedidaDeSeguridad RolUsuario
         {
             get { return _rolUsuario; }
-        }*/
+        }
 
         //metodos
-        /*public bool ValidarDatosEstructurales()
+        public bool ValidarDatosEstructurales()
         {
-            return !string.IsNullOrEmpty(_nombreUsuario) && !string.IsNullOrEmpty(_contraseniaUsuario) && _rol != null;
-        }*/
+            return !string.IsNullOrEmpty(_nombreUsuario) && !string.IsNullOrEmpty(_contraseniaUsuario) && _rolUsuario != null;
+        }
     }
 }
