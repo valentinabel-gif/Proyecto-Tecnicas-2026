@@ -157,7 +157,7 @@
             this.BtnIngresos.Name = "BtnIngresos";
             this.BtnIngresos.Size = new System.Drawing.Size(134, 49);
             this.BtnIngresos.TabIndex = 2;
-            this.BtnIngresos.Text = "Ingresos";
+            this.BtnIngresos.Text = "Ingreso";
             this.BtnIngresos.UseVisualStyleBackColor = false;
             this.BtnIngresos.Click += new System.EventHandler(this.BtnIngresos_Click);
             // 
@@ -281,7 +281,7 @@
             this.Controls.Add(this.panel1);
             this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "InicioEncargadoStock";
-            this.Text = "Form1";
+            this.Text = "-";
             this.Load += new System.EventHandler(this.InicioEncargadoStock_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();

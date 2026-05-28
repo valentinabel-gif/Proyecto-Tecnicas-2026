@@ -25,8 +25,8 @@ namespace UI_Libreria
 
            // Application.Run(new FormVendedor());
 
-            //Application.Run(new InicioEncargadoStock()); 
-             Application.Run(new Inicioadministrador());
+            Application.Run(new InicioEncargadoStock()); 
+             //Application.Run(new Inicioadministrador());
 
         }
     }

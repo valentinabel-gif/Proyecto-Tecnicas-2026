@@ -153,6 +153,12 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="prueba.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="prueba.Designer.cs">
+      <DependentUpon>prueba.cs</DependentUpon>
+    </Compile>
     <Compile Include="UcProductos.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -214,6 +220,9 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="prueba.resx">
+      <DependentUpon>prueba.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UcProductos.resx">
       <DependentUpon>UcProductos.cs</DependentUpon>
     </EmbeddedResource>
