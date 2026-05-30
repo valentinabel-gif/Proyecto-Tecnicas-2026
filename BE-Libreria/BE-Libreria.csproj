@@ -41,19 +41,25 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Class1.cs" />
-    <Compile Include="Debito.cs" />
-    <Compile Include="DetalleVenta.cs" />
-    <Compile Include="Efectivo.cs" />
-    <Compile Include="MedidaDeSeguridad.cs" />
-    <Compile Include="MedioDePago.cs" />
-    <Compile Include="Permiso.cs" />
+    <Compile Include="Ventas\Pago.cs" />
+    <Compile Include="Ventas\Cliente.cs" />
+    <Compile Include="Stock\Categoria.cs" />
+    <Compile Include="Ventas\Debito.cs" />
+    <Compile Include="Stock\DetalleIngreso.cs" />
+    <Compile Include="Ventas\DetalleVenta.cs" />
+    <Compile Include="Ventas\Efectivo.cs" />
+    <Compile Include="Stock\IngresoDeProducto.cs" />
+    <Compile Include="Seguridad y Usuario\MedidaDeSeguridad.cs" />
+    <Compile Include="Ventas\MedioDePago.cs" />
+    <Compile Include="Seguridad y Usuario\Permiso.cs" />
+    <Compile Include="Stock\Producto.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Rol.cs" />
-    <Compile Include="TarjetaCredito.cs" />
-    <Compile Include="Transferencia.cs" />
-    <Compile Include="Usuario.cs" />
-    <Compile Include="Venta.cs" />
+    <Compile Include="Stock\Proveedor.cs" />
+    <Compile Include="Seguridad y Usuario\Rol.cs" />
+    <Compile Include="Ventas\TarjetaCredito.cs" />
+    <Compile Include="Ventas\Transferencia.cs" />
+    <Compile Include="Seguridad y Usuario\Usuario.cs" />
+    <Compile Include="Ventas\Venta.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

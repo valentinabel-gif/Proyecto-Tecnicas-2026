@@ -34,7 +34,7 @@ namespace BE_Libreria
             get { return _nombreMedioPago; }
         }
 
-        public double PorcentajeAjuste
+        public int PorcentajeAjuste
         {
             get { return _porcentajeAjuste; }
         }

@@ -42,7 +42,7 @@ namespace BE_Libreria
             get { return _detalles; }
         }
 
-        // Lleva 'set' para que el vendedor pueda modificar el descuento desde la pantalla
+        //lleva set para que el vendedor pueda modificar el descuento desde la pantalla
         public int PorcentajeDescuento
         {
             get { return _porcentajeDescuento; }

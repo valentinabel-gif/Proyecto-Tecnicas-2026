@@ -16,7 +16,7 @@ namespace BE_Libreria
 
         public override double CalcularTotalConAjuste(double montoBase)
         {
-            return (montoBase * 1.10); //10% de recargo
+            return montoBase;
         }
     }
 }

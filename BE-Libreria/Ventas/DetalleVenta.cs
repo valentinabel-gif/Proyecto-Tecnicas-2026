@@ -13,17 +13,15 @@ namespace BE_Libreria
         private int _cantidadProducto;
         private double _precioUnitario;
         private double _subtotalDetalleVenta;
-        //private Producto _productoItem;
+        private Producto _productoItem;
 
         //constructor
-        public DetalleVenta(int idDetalleVenta, /*Producto productoItem*/ int cantidadProducto, double precioUnitario)
+        public DetalleVenta(int idDetalleVenta, Producto productoItem, int cantidadProducto, double precioUnitario)
         {
             _idDetalleVenta = idDetalleVenta;
-            //_productoItem = productoItem;
+            _productoItem = productoItem;
             _cantidadProducto = cantidadProducto;
             _precioUnitario = precioUnitario;
-
-            // Calculamos el subtotal automáticamente en el constructor para asegurar la consistencia del dato
             _subtotalDetalleVenta = precioUnitario * cantidadProducto;
         }
 
@@ -44,16 +42,16 @@ namespace BE_Libreria
         {
             get { return _subtotalDetalleVenta;}
         }
-        /*public Producto ProductoItem
-          {
-            get { return _productoItem}
-          }*/
+        public Producto ProductoItem
+        {
+            get { return _productoItem; }
+        }
 
         //metodo para la interfaz grafica
-        /*public override string ToString()
+        public override string ToString()
         {
             return $"{_productoItem.NombreProducto} (x{_cantidadProducto}) - Subtotal: ${_subtotalDetalleVenta}";
-        }*/
+        }
 
     }
 }
