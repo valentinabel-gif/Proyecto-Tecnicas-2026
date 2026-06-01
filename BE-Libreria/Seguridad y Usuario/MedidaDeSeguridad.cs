@@ -33,6 +33,7 @@ namespace BE_Libreria
 
         //metodos
 
+        public abstract bool TienePermiso(string nombrePermisoBusca);
         public abstract void Agregar(MedidaDeSeguridad medida);
         public abstract void Quitar(MedidaDeSeguridad medida);
         public abstract List<MedidaDeSeguridad> ObtenerMedidas(); //El rol q es el contenedor de permisos va a devolver la lista de permisos que tiene y el permiso va a devolver una lista vacia porque no tiene permisos adentro.

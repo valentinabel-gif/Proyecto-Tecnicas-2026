@@ -47,5 +47,18 @@ namespace BE_Libreria
             return _listaMedidas;
         }
 
+        public override bool TienePermiso(string nombrePermisoBusca)
+        {
+            foreach (MedidaDeSeguridad medida in _listaMedidas)
+            {
+                //si la medida es un permiso lo valida directamente y si llega a ser un rol hijo eel foreach vuelve a arrancar adentro de ese rol
+                if (medida.TienePermiso(nombrePermisoBusca))
+                {
+                    return true;
+                }
+            }
+            return false; //si recorre todo el asrbol y no encuentra nada manda false
+        }
+
     }
 }

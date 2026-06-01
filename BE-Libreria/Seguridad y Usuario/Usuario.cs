@@ -14,7 +14,7 @@ namespace BE_Libreria
         private string _apellidoUsuario;
         private string _correoUsuario;
         private string _dniUsuario;
-        private string _contraseniaUsuario;
+        private string _contraseniaUsuario; //va a guardar la contraseña hasheada, no opera con la de texto plano
         private string _usernameUsuario;
         private MedidaDeSeguridad _rolUsuario;
 

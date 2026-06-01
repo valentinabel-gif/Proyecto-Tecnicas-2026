@@ -12,16 +12,16 @@ namespace BE_Libreria
         private DateTime _fechaVenta;
         private List<DetalleVenta> _detalles;
         private int _porcentajeDescuento;// descuento arbitrario que puede elegir el vendedor  5% / 10% / 15%
-        //private Cliente _cliente;//cliente asociado a la venta            
+        private Cliente _cliente;//cliente asociado a la venta            
         private Usuario _usuario;//empleado q hizo la venta
         private MedioDePago _medioPago;
 
-        public Venta(int idVenta, DateTime fechaVenta, /*Cliente cliente*/ Usuario usuario, MedioDePago medioPago)
+        public Venta(int idVenta, DateTime fechaVenta, Cliente cliente, Usuario usuario, MedioDePago medioPago)
         {
             _idVenta = idVenta;
             _fechaVenta = fechaVenta;
             _porcentajeDescuento = 0;
-            //_cliente = cliente;
+            _cliente = cliente;
             _usuario = usuario;
             _medioPago = medioPago;
             _detalles = new List<DetalleVenta>();
@@ -57,6 +57,11 @@ namespace BE_Libreria
         public MedioDePago MedioPago
         {
             get { return _medioPago; }
+        }
+
+        public Cliente Cliente
+        {
+            get { return _cliente; }
         }
 
         //metodos

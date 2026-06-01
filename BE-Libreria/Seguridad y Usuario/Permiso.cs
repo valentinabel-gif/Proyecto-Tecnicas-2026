@@ -30,5 +30,11 @@ namespace BE_Libreria
         {
             return new List<MedidaDeSeguridad>();
         }
+
+        public override bool TienePermiso(string nombrePermisoBusca)
+        {
+            //si este permiso se llama igual al que busca la BLL devuelve true
+            return this.NombreMedidaDeSeguridad.Equals(nombrePermisoBusca, StringComparison.OrdinalIgnoreCase);
+        }
     }
 }
