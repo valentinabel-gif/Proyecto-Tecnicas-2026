@@ -14,7 +14,7 @@ namespace BLL_Libreria
         private static Sesion _instancia;// variable estatica del singleton
         private Usuario _usuarioActivo;
 
-        //ccosntructor privado del sinfgleton
+        //ccosntructor privado del singleton
         private Sesion() 
         {
 

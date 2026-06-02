@@ -70,5 +70,16 @@ namespace BE_Libreria
         {
             return !string.IsNullOrEmpty(_nombreUsuario) && !string.IsNullOrEmpty(_contraseniaUsuario) && _rolUsuario != null;
         }
+
+        public bool TienePermiso(string nombrePermiso)
+        {
+            //si el usuario no tiene rol lo reboto
+            if (_rolUsuario == null)
+            {
+                return false;
+            }
+            //el objeto va a buscar en el arbol
+            return _rolUsuario.TienePermiso(nombrePermiso);
+        }
     }
 }
