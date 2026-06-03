@@ -127,13 +127,14 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(622, 70);
             this.panel1.TabIndex = 1;
+            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
             // Date
             // 
             this.Date.AutoSize = true;
             this.Date.Font = new System.Drawing.Font("Microsoft YaHei", 9F);
             this.Date.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.Date.Location = new System.Drawing.Point(445, 28);
+            this.Date.Location = new System.Drawing.Point(445, 27);
             this.Date.Name = "Date";
             this.Date.Size = new System.Drawing.Size(0, 20);
             this.Date.TabIndex = 2;
@@ -141,7 +142,7 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(374, 12);
+            this.pictureBox1.Location = new System.Drawing.Point(374, 11);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(51, 53);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;

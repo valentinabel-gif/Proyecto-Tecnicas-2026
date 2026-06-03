@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace UI_Libreria
 {
-    public partial class Form1 : Form
+    public partial class login : Form
     {
-        public Form1()
+        public login()
         {
             InitializeComponent();
         }
@@ -36,5 +36,19 @@ namespace UI_Libreria
             controlHijo.Show();
         }
 
+        private void labelNombreLo_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -23,11 +23,12 @@ namespace UI_Libreria
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
 
-           // Application.Run(new FormVendedor());
+            //Application.Run(new FormVendedor());
 
-            Application.Run(new InicioEncargadoStock()); 
+            //Application.Run(new InicioEncargadoStock()); 
              //Application.Run(new Inicioadministrador());
-
+            //Application.Run(new login());
+            Application.Run(new Gerente.inicioGerente());
         }
     }
 }

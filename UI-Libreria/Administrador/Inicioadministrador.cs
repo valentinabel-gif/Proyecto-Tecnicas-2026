@@ -83,5 +83,10 @@ namespace UI_Libreria.Administrador
         {
             AbrirUserControl(VistaCategoriaAdmi);
         }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }

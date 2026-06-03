@@ -103,11 +103,47 @@
     <Compile Include="EncargadoDeStock\InicioEncargadoStock.Designer.cs">
       <DependentUpon>InicioEncargadoStock.cs</DependentUpon>
     </Compile>
-    <Compile Include="Form1.cs">
+    <Compile Include="Gerente\FinanzaGerente.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Gerente\FinanzaGerente.Designer.cs">
+      <DependentUpon>FinanzaGerente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Gerente\InicioGeren.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Gerente\InicioGeren.Designer.cs">
+      <DependentUpon>InicioGeren.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Gerente\inicioGerente.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="Gerente\inicioGerente.Designer.cs">
+      <DependentUpon>inicioGerente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Gerente\ProductosGerente.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Gerente\ProductosGerente.Designer.cs">
+      <DependentUpon>ProductosGerente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Gerente\ProveedorGerente.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Gerente\ProveedorGerente.Designer.cs">
+      <DependentUpon>ProveedorGerente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Gerente\VendedoresGerente.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Gerente\VendedoresGerente.Designer.cs">
+      <DependentUpon>VendedoresGerente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="login.Designer.cs">
+      <DependentUpon>login.cs</DependentUpon>
     </Compile>
     <Compile Include="VendedorMayorista\FormVendedor.cs">
       <SubType>Form</SubType>
@@ -199,8 +235,26 @@
       <DependentUpon>InicioEncargadoStock.cs</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form1.resx">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <EmbeddedResource Include="Gerente\FinanzaGerente.resx">
+      <DependentUpon>FinanzaGerente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Gerente\InicioGeren.resx">
+      <DependentUpon>InicioGeren.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Gerente\inicioGerente.resx">
+      <DependentUpon>inicioGerente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Gerente\ProductosGerente.resx">
+      <DependentUpon>ProductosGerente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Gerente\ProveedorGerente.resx">
+      <DependentUpon>ProveedorGerente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Gerente\VendedoresGerente.resx">
+      <DependentUpon>VendedoresGerente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="login.resx">
+      <DependentUpon>login.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="VendedorMayorista\FormVendedor.resx">
       <DependentUpon>FormVendedor.cs</DependentUpon>
@@ -231,6 +285,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UcStock.resx">
       <DependentUpon>UcStock.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VendedorMayorista\UcInicioVendedor.resx">
+      <DependentUpon>UcInicioVendedor.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="VendedorMayorista\UcVenta.resx">
       <DependentUpon>UcVenta.cs</DependentUpon>

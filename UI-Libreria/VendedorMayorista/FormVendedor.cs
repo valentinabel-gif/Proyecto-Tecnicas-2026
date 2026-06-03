@@ -72,5 +72,15 @@ namespace UI_Libreria
                 this.InicioPanel.Controls.RemoveAt(0);
             }
         }
+
+        private void InicioPanel_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void FormVendedor_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

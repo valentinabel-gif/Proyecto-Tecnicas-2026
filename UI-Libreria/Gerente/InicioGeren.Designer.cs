@@ -1,6 +1,6 @@
-﻿namespace UI_Libreria.VendedorMayorista
+﻿namespace UI_Libreria.Gerente
 {
-    partial class UcInicioVendedor
+    partial class InicioGeren
     {
         /// <summary> 
         /// Variable del diseñador necesaria.
@@ -30,13 +30,14 @@
         {
             this.SuspendLayout();
             // 
-            // UcInicioVendedor
+            // InicioGeren
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Location = new System.Drawing.Point(179, 70);
-            this.Name = "UcInicioVendedor";
-            this.Size = new System.Drawing.Size(1189, 606);
+            this.BackColor = System.Drawing.Color.RosyBrown;
+            this.Location = new System.Drawing.Point(179, 90);
+            this.Name = "InicioGeren";
+            this.Size = new System.Drawing.Size(1189, 586);
             this.ResumeLayout(false);
 
         }
