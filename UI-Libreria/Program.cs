@@ -20,6 +20,7 @@ namespace UI_Libreria
         [STAThread]
         static void Main()
         {
+
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
 
@@ -27,8 +28,8 @@ namespace UI_Libreria
 
             //Application.Run(new InicioEncargadoStock()); 
              //Application.Run(new Inicioadministrador());
-            //Application.Run(new login());
-            Application.Run(new Gerente.inicioGerente());
+            Application.Run(new login());
+            //Application.Run(new Gerente.inicioGerente());
         }
     }
 }

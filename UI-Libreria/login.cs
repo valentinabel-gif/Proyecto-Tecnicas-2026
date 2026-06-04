@@ -7,6 +7,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using BLL_Libreria;
+using BE_Libreria;
+using UI_Libreria.Administrador;
 
 namespace UI_Libreria
 {
@@ -49,6 +52,19 @@ namespace UI_Libreria
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void btnIniciarSesion_Click(object sender, EventArgs e)
+        {
+            string usuarioIngresado = txtUsuario.Text;
+            string contraseñaIngresada = txtContraseña.Text;
+            UsuarioBLL usuarioBLL = new UsuarioBLL();
+            Usuario usuarioLogeado = usuarioBLL.RecuperarUsuarioPorCredenciales(usuarioIngresado, contraseñaIngresada);
+            Sesion.Instancia.RegistrarSesion(usuarioLogeado);
+            if (Sesion.Instancia.HaySesionActiva())
+            {
+
+            }
         }
     }
 }
