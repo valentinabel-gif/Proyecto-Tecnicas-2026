@@ -18,7 +18,7 @@ namespace UI_Libreria.Administrador
         admiInicio VistaInicioAdmi;
         admiUsuario VistaUsuarioAdmi;
         admiRol VistaRolAdmi;
-        admiPermisos VistaPermisoAdmi;
+
         admiCategoria VistaCategoriaAdmi;
         public Inicioadministrador()
         {
@@ -31,7 +31,6 @@ namespace UI_Libreria.Administrador
             VistaInicioAdmi = new admiInicio();
             VistaUsuarioAdmi = new admiUsuario();
             VistaRolAdmi = new admiRol();
-            VistaPermisoAdmi = new admiPermisos();
             VistaCategoriaAdmi = new admiCategoria();
 
             //Cuando abre el formm, simpre muestra el de inicio
@@ -74,17 +73,17 @@ namespace UI_Libreria.Administrador
             AbrirUserControl(VistaRolAdmi);
         }
 
-        private void btnPermisos_Click(object sender, EventArgs e)
-        {
-            AbrirUserControl(VistaPermisoAdmi);
-        }
-
         private void button1_Click(object sender, EventArgs e)
         {
             AbrirUserControl(VistaCategoriaAdmi);
         }
 
         private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void panelInicioAdmi_Paint(object sender, PaintEventArgs e)
         {
 
         }

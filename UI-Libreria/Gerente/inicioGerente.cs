@@ -18,7 +18,7 @@ namespace UI_Libreria.Gerente
         InicioGeren VistaInicioGerente;
         ProductosGerente VistaProductos;
         ProveedorGerente VistaProveedores;
-        FinanzaGerente VistaFinanza;
+        VentaGerente VistaVenta;
         VendedoresGerente VistaVendedores;
 
         public inicioGerente()
@@ -29,7 +29,7 @@ namespace UI_Libreria.Gerente
             VistaInicioGerente = new InicioGeren();
             VistaProductos = new ProductosGerente();
             VistaProveedores = new ProveedorGerente();
-            VistaFinanza = new FinanzaGerente();
+            VistaVenta = new VentaGerente();
             VistaVendedores = new VendedoresGerente();
 
         }
@@ -55,7 +55,7 @@ namespace UI_Libreria.Gerente
 
         private void panelInicioGerente_Paint(object sender, PaintEventArgs e)
         {
-
+      
         }
 
         private void btnInicioGerente_Click(object sender, EventArgs e)
@@ -75,7 +75,7 @@ namespace UI_Libreria.Gerente
 
         private void button2_Click(object sender, EventArgs e)
         {
-            AbrirUserControl(VistaFinanza);
+            AbrirUserControl(VistaVenta);
         }
 
         private void button3_Click(object sender, EventArgs e)

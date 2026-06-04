@@ -45,5 +45,10 @@ namespace UI_Libreria.Administrador
             dgvUsuarios.Rows.Add("2", "mlopez", "Empleado");
         
     }
+
+        private void btnBuscarUsuario_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
