@@ -28,47 +28,39 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.labelNombreLo = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.btnIniciarSesion = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.txtContraseña = new System.Windows.Forms.TextBox();
             this.txtUsuario = new System.Windows.Forms.TextBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
-            // 
-            // labelNombreLo
-            // 
-            this.labelNombreLo.Font = new System.Drawing.Font("Segoe UI Semibold", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelNombreLo.ForeColor = System.Drawing.Color.White;
-            this.labelNombreLo.Location = new System.Drawing.Point(57, 71);
-            this.labelNombreLo.Margin = new System.Windows.Forms.Padding(7, 0, 7, 0);
-            this.labelNombreLo.Name = "labelNombreLo";
-            this.labelNombreLo.Size = new System.Drawing.Size(305, 41);
-            this.labelNombreLo.TabIndex = 0;
-            this.labelNombreLo.Text = "Libreria Mayorista";
-            this.labelNombreLo.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.labelNombreLo.Click += new System.EventHandler(this.labelNombreLo_Click);
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(142)))), ((int)(((byte)(171)))), ((int)(((byte)(225)))));
+            this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel1.Controls.Add(this.btnIniciarSesion);
             this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.txtContraseña);
             this.panel1.Controls.Add(this.txtUsuario);
-            this.panel1.Location = new System.Drawing.Point(64, 134);
+            this.panel1.Cursor = System.Windows.Forms.Cursors.Default;
+            this.panel1.Location = new System.Drawing.Point(59, 212);
             this.panel1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(271, 335);
             this.panel1.TabIndex = 2;
+            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
             // btnIniciarSesion
             // 
             this.btnIniciarSesion.BackColor = System.Drawing.Color.MidnightBlue;
             this.btnIniciarSesion.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.btnIniciarSesion.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnIniciarSesion.ForeColor = System.Drawing.Color.White;
             this.btnIniciarSesion.Location = new System.Drawing.Point(32, 218);
             this.btnIniciarSesion.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
@@ -119,14 +111,24 @@
             this.txtUsuario.TabIndex = 0;
             this.txtUsuario.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::UI_Libreria.Properties.Resources.logo;
+            this.pictureBox1.Location = new System.Drawing.Point(37, -2);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(312, 206);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 3;
+            this.pictureBox1.TabStop = false;
+            // 
             // login
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(99)))), ((int)(((byte)(150)))));
             this.ClientSize = new System.Drawing.Size(391, 561);
+            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.panel1);
-            this.Controls.Add(this.labelNombreLo);
             this.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Location = new System.Drawing.Point(130, 220);
@@ -137,18 +139,19 @@
             this.Load += new System.EventHandler(this.Form1_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
-        private System.Windows.Forms.Label labelNombreLo;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Button btnIniciarSesion;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox txtContraseña;
         private System.Windows.Forms.TextBox txtUsuario;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }
 
