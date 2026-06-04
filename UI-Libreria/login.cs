@@ -1,4 +1,6 @@
-﻿using System;
+﻿using BE_Libreria;
+using BLL_Libreria;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -7,9 +9,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using BLL_Libreria;
-using BE_Libreria;
 using UI_Libreria.Administrador;
+using UI_Libreria.Gerente;
+using UI_Libreria.VendedorMayorista;
+using UI_Libreria.EncargadoDeStock;
 
 namespace UI_Libreria
 {
@@ -56,14 +59,55 @@ namespace UI_Libreria
 
         private void btnIniciarSesion_Click(object sender, EventArgs e)
         {
-            string usuarioIngresado = txtUsuario.Text;
-            string contraseñaIngresada = txtContraseña.Text;
-            UsuarioBLL usuarioBLL = new UsuarioBLL();
-            Usuario usuarioLogeado = usuarioBLL.RecuperarUsuarioPorCredenciales(usuarioIngresado, contraseñaIngresada);
-            Sesion.Instancia.RegistrarSesion(usuarioLogeado);
-            if (Sesion.Instancia.HaySesionActiva())
+            try
             {
+                string usuarioIngresado = txtUsuario.Text;
+                string contraseñaIngresada = txtContraseña.Text;
 
+                UsuarioBLL usuarioBLL = new UsuarioBLL();
+                Usuario usuarioLogeado = usuarioBLL.RecuperarUsuarioPorCredenciales(usuarioIngresado, contraseñaIngresada);
+
+                Sesion.Instancia.RegistrarSesion(usuarioLogeado);
+
+                if (Sesion.Instancia.HaySesionActiva())
+                {
+                    MessageBox.Show("Bienvenido " + usuarioLogeado.NombreUsuario + "!","Login exitoso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                    string rolDelUsuario = usuarioLogeado.RolUsuario.NombreMedidaDeSeguridad;
+
+                    switch (rolDelUsuario)
+                    {
+                        case "Administrador":
+                            Inicioadministrador formAdmin = new Inicioadministrador();
+                            formAdmin.Show();
+                            break;
+
+                        case "Gerente":
+                            inicioGerente formGerente = new inicioGerente();
+                            formGerente.Show();
+                            break;
+
+                        case "Vendedor":
+                            FormVendedor formVendedor = new FormVendedor();
+                            formVendedor.Show();
+                            break;
+
+                        case "Encargado de Stock":
+                            InicioEncargadoStock formStock = new InicioEncargadoStock();
+                            formStock.Show();
+                            break;
+
+                        default:
+                            //seguridad, si el rol no coincide con ninguno, tira un error controlado
+                            throw new Exception("El rol asignado no posee una pantalla de inicio configurada.");
+                    }
+
+                    this.Hide();
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message,"Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
     }

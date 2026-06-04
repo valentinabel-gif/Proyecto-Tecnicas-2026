@@ -13,9 +13,21 @@ namespace UI_Libreria
 {
     public partial class FormVendedor : Form
     {
+        //instancio una unica vez cada user
+        UcVenta VistaVenta;
+        UcConsultarPrecio VistaConsultarPrecio;
+        UcGestionClientes VistaGestionClientes;
+        UcInicioVendedor VistaInicio;
+
         public FormVendedor()
         {
             InitializeComponent();
+
+            VistaVenta = new UcVenta();
+            VistaConsultarPrecio = new UcConsultarPrecio();
+            VistaGestionClientes = new UcGestionClientes();
+            VistaInicio = new UcInicioVendedor();
+    
         }
 
         private void label3_Click(object sender, EventArgs e)
@@ -25,38 +37,30 @@ namespace UI_Libreria
 
         private void BtnVenta_Click(object sender, EventArgs e)
         {
-            AbrirFicha(new UcVenta());
+            AbrirFicha(VistaVenta);
         }
 
         public void AbrirFicha(UserControl controlHijo)
         {
-            // Limpiamos lo que haya en el fondo blanco
-            if (this.InicioPanel.Controls.Count > 0)
-                this.InicioPanel.Controls.RemoveAt(0);
-
-            // Ajustamos la pantalla de venta al tamaño del fondo
+            InicioPanel.Controls.Clear();
             controlHijo.Dock = DockStyle.Fill;
-            this.InicioPanel.Controls.Add(controlHijo);
-            this.InicioPanel.Tag = controlHijo;
+            InicioPanel.Controls.Add(controlHijo);
             controlHijo.BringToFront();
-            controlHijo.Show();
         }
 
         private void BtnInicioVenta_Click(object sender, EventArgs e)
         {
-
+            AbrirFicha(VistaInicio);
         }
 
         private void BtnConsultaPrecio_Click(object sender, EventArgs e)
         {
-            LimpiarPanel();
-            MessageBox.Show("El módulo de Consulta de Precios estará disponible pronto.", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            AbrirFicha(VistaConsultarPrecio);
         }
 
         private void BtnGestionClientes_Click(object sender, EventArgs e)
         {
-            LimpiarPanel();
-            MessageBox.Show("El módulo de Gestion de Clientes estará disponible pronto.", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            AbrirFicha(VistaGestionClientes);
 
         }
 
@@ -80,6 +84,7 @@ namespace UI_Libreria
 
         private void FormVendedor_Load(object sender, EventArgs e)
         {
+            AbrirFicha(VistaInicio);
 
         }
     }

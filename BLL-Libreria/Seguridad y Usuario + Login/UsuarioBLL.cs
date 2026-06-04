@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Security.Cryptography;
 using BE_Libreria;
-//using DAL_Libreria; para cuando empecemos a usarla
+using DAL_Libreria; 
 //dato importante cuando guardemos la contraseña en la DAL el SELECT seria algo asi:
 // SELECT * FROM Usuario WHERE username = @username AND contrasenia = @passwordEncriptada
 //otro dato importante, cuando llamo a tienepermiso que viene de usuario le paso gestionarusarios, no se si en la BD se va a llamar asi o se va a llamar de otra forma, pero lo importante es que el string que le paso a permiso tiene q ser exactamente igual al string que esta guardado en la BD para ese permiso, porque si no no va a encontrarlo y va a devolver false aunque el usuario tenga ese permiso. 
@@ -14,29 +14,31 @@ namespace BLL_Libreria
 {
     public class UsuarioBLL
     {
-        // private UsuarioDAL _usuarioDAL = new UsuarioDAL(); el gestor va a usdar esta instancia para hablar con la BD
+        private UsuarioDAL _usuarioDAL = new UsuarioDAL();
 
 
         //valido las credenciales del usuario y retorno el objeto Usuario si son correctas. la contraseña se hashea con SHA256 antes de compararse con la BD
         public Usuario RecuperarUsuarioPorCredenciales(string username, string password)
         {
             if (string.IsNullOrWhiteSpace(username))
+            {
                 throw new Exception("El nombre de usuario es obligatorio.");
+            }
 
             if (string.IsNullOrWhiteSpace(password))
+            {
                 throw new Exception("La contraseña es obligatoria.");
+            }
 
             string passwordHasheada = EncriptarContrasenia(password);
 
-            //cuando este hecha la dal pongo esto
-            // Usuario usuario = _usuarioDAL.Autenticar(username, passwordHasheada);
-            // if (usuario == null)
-            //{
-            //     throw new Exception("Usuario o contraseña incorrectos.");
-            //}
-            // return usuario;
-
-            throw new NotImplementedException("pendiente conexion con DAL.");// y cuando ya este hecha la dal borro toda esta linea
+            
+            Usuario usuario = _usuarioDAL.Autenticar(username, passwordHasheada);
+            if (usuario == null)
+            {
+                 throw new Exception("Usuario o contraseña incorrectos.");
+            }
+            return usuario;
         }
 
         private string EncriptarContrasenia(string passwordPlana)
