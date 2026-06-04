@@ -65,5 +65,10 @@ namespace UI_Libreria.VendedorMayorista
             txtSubtotal.Text = subtotal.ToString("N2");
             txtTotal.Text = subtotal.ToString("N2");
         }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

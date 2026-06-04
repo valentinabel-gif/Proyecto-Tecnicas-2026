@@ -61,10 +61,9 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(17, 17);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Location = new System.Drawing.Point(13, 14);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(158, 16);
+            this.label1.Size = new System.Drawing.Size(124, 13);
             this.label1.TabIndex = 0;
             this.label1.Text = "Ingrese codigo de barras";
             // 
@@ -73,10 +72,9 @@
             this.txtBusqueda.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.txtBusqueda.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtBusqueda.Location = new System.Drawing.Point(21, 49);
-            this.txtBusqueda.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtBusqueda.Location = new System.Drawing.Point(16, 40);
             this.txtBusqueda.Name = "txtBusqueda";
-            this.txtBusqueda.Size = new System.Drawing.Size(209, 26);
+            this.txtBusqueda.Size = new System.Drawing.Size(155, 22);
             this.txtBusqueda.TabIndex = 1;
             this.txtBusqueda.TextChanged += new System.EventHandler(this.txtBusqueda_TextChanged);
             this.txtBusqueda.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtBusqueda_KeyDown);
@@ -93,11 +91,10 @@
             this.Cantidad,
             this.Detalle,
             this.Subtotal});
-            this.dgvDetalle.Location = new System.Drawing.Point(0, 84);
-            this.dgvDetalle.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dgvDetalle.Location = new System.Drawing.Point(0, 68);
             this.dgvDetalle.Name = "dgvDetalle";
             this.dgvDetalle.RowHeadersWidth = 51;
-            this.dgvDetalle.Size = new System.Drawing.Size(813, 518);
+            this.dgvDetalle.Size = new System.Drawing.Size(607, 405);
             this.dgvDetalle.TabIndex = 2;
             // 
             // Cantidad
@@ -123,11 +120,9 @@
             this.groupBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.groupBox1.Controls.Add(this.txtDniCuitCliente);
             this.groupBox1.Controls.Add(this.label2);
-            this.groupBox1.Location = new System.Drawing.Point(878, 4);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox1.Location = new System.Drawing.Point(655, 3);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.groupBox1.Size = new System.Drawing.Size(267, 106);
+            this.groupBox1.Size = new System.Drawing.Size(200, 70);
             this.groupBox1.TabIndex = 3;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Identificacion Del Cliente";
@@ -135,22 +130,21 @@
             // txtDniCuitCliente
             // 
             this.txtDniCuitCliente.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtDniCuitCliente.Location = new System.Drawing.Point(9, 45);
-            this.txtDniCuitCliente.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtDniCuitCliente.Location = new System.Drawing.Point(25, 37);
             this.txtDniCuitCliente.Name = "txtDniCuitCliente";
-            this.txtDniCuitCliente.Size = new System.Drawing.Size(163, 22);
+            this.txtDniCuitCliente.Size = new System.Drawing.Size(123, 20);
             this.txtDniCuitCliente.TabIndex = 1;
             // 
             // label2
             // 
             this.label2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(8, 25);
-            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label2.Location = new System.Drawing.Point(25, 21);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(65, 16);
+            this.label2.Size = new System.Drawing.Size(56, 13);
             this.label2.TabIndex = 0;
             this.label2.Text = "CUIT/DNI";
+            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // gpMedioPago
             // 
@@ -159,11 +153,9 @@
             this.gpMedioPago.Controls.Add(this.btnCredito);
             this.gpMedioPago.Controls.Add(this.btnDebito);
             this.gpMedioPago.Controls.Add(this.btnEfectivo);
-            this.gpMedioPago.Location = new System.Drawing.Point(821, 117);
-            this.gpMedioPago.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.gpMedioPago.Location = new System.Drawing.Point(613, 79);
             this.gpMedioPago.Name = "gpMedioPago";
-            this.gpMedioPago.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.gpMedioPago.Size = new System.Drawing.Size(360, 85);
+            this.gpMedioPago.Size = new System.Drawing.Size(270, 69);
             this.gpMedioPago.TabIndex = 4;
             this.gpMedioPago.TabStop = false;
             this.gpMedioPago.Text = "Medio De Pago";
@@ -172,10 +164,9 @@
             // 
             this.btnTransferencia.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btnTransferencia.AutoSize = true;
-            this.btnTransferencia.Location = new System.Drawing.Point(253, 44);
-            this.btnTransferencia.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnTransferencia.Location = new System.Drawing.Point(184, 35);
             this.btnTransferencia.Name = "btnTransferencia";
-            this.btnTransferencia.Size = new System.Drawing.Size(111, 20);
+            this.btnTransferencia.Size = new System.Drawing.Size(90, 17);
             this.btnTransferencia.TabIndex = 3;
             this.btnTransferencia.TabStop = true;
             this.btnTransferencia.Text = "Transferencia";
@@ -185,10 +176,9 @@
             // 
             this.btnCredito.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btnCredito.AutoSize = true;
-            this.btnCredito.Location = new System.Drawing.Point(165, 44);
-            this.btnCredito.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnCredito.Location = new System.Drawing.Point(120, 35);
             this.btnCredito.Name = "btnCredito";
-            this.btnCredito.Size = new System.Drawing.Size(71, 20);
+            this.btnCredito.Size = new System.Drawing.Size(58, 17);
             this.btnCredito.TabIndex = 2;
             this.btnCredito.TabStop = true;
             this.btnCredito.Text = "Credito";
@@ -198,10 +188,9 @@
             // 
             this.btnDebito.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btnDebito.AutoSize = true;
-            this.btnDebito.Location = new System.Drawing.Point(96, 44);
-            this.btnDebito.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnDebito.Location = new System.Drawing.Point(67, 35);
             this.btnDebito.Name = "btnDebito";
-            this.btnDebito.Size = new System.Drawing.Size(68, 20);
+            this.btnDebito.Size = new System.Drawing.Size(56, 17);
             this.btnDebito.TabIndex = 1;
             this.btnDebito.TabStop = true;
             this.btnDebito.Text = "Debito";
@@ -211,10 +200,9 @@
             // 
             this.btnEfectivo.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btnEfectivo.AutoSize = true;
-            this.btnEfectivo.Location = new System.Drawing.Point(17, 44);
-            this.btnEfectivo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnEfectivo.Location = new System.Drawing.Point(6, 35);
             this.btnEfectivo.Name = "btnEfectivo";
-            this.btnEfectivo.Size = new System.Drawing.Size(76, 20);
+            this.btnEfectivo.Size = new System.Drawing.Size(64, 17);
             this.btnEfectivo.TabIndex = 0;
             this.btnEfectivo.TabStop = true;
             this.btnEfectivo.Text = "Efectivo";
@@ -226,10 +214,9 @@
             this.lSubtotal.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.lSubtotal.AutoSize = true;
             this.lSubtotal.Font = new System.Drawing.Font("Microsoft YaHei UI", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lSubtotal.Location = new System.Drawing.Point(817, 289);
-            this.lSubtotal.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lSubtotal.Location = new System.Drawing.Point(610, 219);
             this.lSubtotal.Name = "lSubtotal";
-            this.lSubtotal.Size = new System.Drawing.Size(144, 40);
+            this.lSubtotal.Size = new System.Drawing.Size(117, 31);
             this.lSubtotal.TabIndex = 5;
             this.lSubtotal.Text = "Subtotal";
             // 
@@ -238,10 +225,9 @@
             this.lTotal.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.lTotal.AutoSize = true;
             this.lTotal.Font = new System.Drawing.Font("Microsoft YaHei UI", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lTotal.Location = new System.Drawing.Point(817, 399);
-            this.lTotal.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lTotal.Location = new System.Drawing.Point(610, 308);
             this.lTotal.Name = "lTotal";
-            this.lTotal.Size = new System.Drawing.Size(94, 40);
+            this.lTotal.Size = new System.Drawing.Size(76, 31);
             this.lTotal.TabIndex = 6;
             this.lTotal.Text = "Total";
             // 
@@ -249,11 +235,10 @@
             // 
             this.txtSubtotal.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.txtSubtotal.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtSubtotal.Location = new System.Drawing.Point(836, 331);
-            this.txtSubtotal.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtSubtotal.Location = new System.Drawing.Point(624, 253);
             this.txtSubtotal.Name = "txtSubtotal";
             this.txtSubtotal.ReadOnly = true;
-            this.txtSubtotal.Size = new System.Drawing.Size(308, 60);
+            this.txtSubtotal.Size = new System.Drawing.Size(232, 49);
             this.txtSubtotal.TabIndex = 7;
             this.txtSubtotal.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
@@ -261,11 +246,10 @@
             // 
             this.txtTotal.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.txtTotal.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtTotal.Location = new System.Drawing.Point(836, 441);
-            this.txtTotal.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtTotal.Location = new System.Drawing.Point(624, 342);
             this.txtTotal.Name = "txtTotal";
             this.txtTotal.ReadOnly = true;
-            this.txtTotal.Size = new System.Drawing.Size(308, 60);
+            this.txtTotal.Size = new System.Drawing.Size(232, 49);
             this.txtTotal.TabIndex = 8;
             this.txtTotal.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
@@ -274,10 +258,9 @@
             this.btnConfirmarVenta.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btnConfirmarVenta.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.btnConfirmarVenta.Font = new System.Drawing.Font("Microsoft YaHei", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnConfirmarVenta.Location = new System.Drawing.Point(829, 512);
-            this.btnConfirmarVenta.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnConfirmarVenta.Location = new System.Drawing.Point(619, 400);
             this.btnConfirmarVenta.Name = "btnConfirmarVenta";
-            this.btnConfirmarVenta.Size = new System.Drawing.Size(179, 90);
+            this.btnConfirmarVenta.Size = new System.Drawing.Size(134, 73);
             this.btnConfirmarVenta.TabIndex = 9;
             this.btnConfirmarVenta.Text = "Confirmar Venta";
             this.btnConfirmarVenta.UseVisualStyleBackColor = false;
@@ -287,10 +270,9 @@
             this.btnCancelarVenta.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btnCancelarVenta.BackColor = System.Drawing.Color.Brown;
             this.btnCancelarVenta.Font = new System.Drawing.Font("Microsoft YaHei", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCancelarVenta.Location = new System.Drawing.Point(1016, 512);
-            this.btnCancelarVenta.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnCancelarVenta.Location = new System.Drawing.Point(759, 400);
             this.btnCancelarVenta.Name = "btnCancelarVenta";
-            this.btnCancelarVenta.Size = new System.Drawing.Size(169, 90);
+            this.btnCancelarVenta.Size = new System.Drawing.Size(127, 73);
             this.btnCancelarVenta.TabIndex = 10;
             this.btnCancelarVenta.Text = "Cancelar Venta";
             this.btnCancelarVenta.UseVisualStyleBackColor = false;
@@ -301,11 +283,9 @@
             this.gbDescuento.Controls.Add(this.rbDesc15);
             this.gbDescuento.Controls.Add(this.rbDesc10);
             this.gbDescuento.Controls.Add(this.rbDesc5);
-            this.gbDescuento.Location = new System.Drawing.Point(821, 208);
-            this.gbDescuento.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.gbDescuento.Location = new System.Drawing.Point(613, 153);
             this.gbDescuento.Name = "gbDescuento";
-            this.gbDescuento.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.gbDescuento.Size = new System.Drawing.Size(359, 64);
+            this.gbDescuento.Size = new System.Drawing.Size(269, 52);
             this.gbDescuento.TabIndex = 11;
             this.gbDescuento.TabStop = false;
             this.gbDescuento.Text = "Descuento";
@@ -314,10 +294,9 @@
             // 
             this.rbDesc15.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.rbDesc15.AutoSize = true;
-            this.rbDesc15.Location = new System.Drawing.Point(245, 25);
-            this.rbDesc15.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.rbDesc15.Location = new System.Drawing.Point(179, 20);
             this.rbDesc15.Name = "rbDesc15";
-            this.rbDesc15.Size = new System.Drawing.Size(54, 20);
+            this.rbDesc15.Size = new System.Drawing.Size(45, 17);
             this.rbDesc15.TabIndex = 2;
             this.rbDesc15.TabStop = true;
             this.rbDesc15.Text = "15%";
@@ -327,10 +306,9 @@
             // 
             this.rbDesc10.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.rbDesc10.AutoSize = true;
-            this.rbDesc10.Location = new System.Drawing.Point(137, 25);
-            this.rbDesc10.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.rbDesc10.Location = new System.Drawing.Point(99, 20);
             this.rbDesc10.Name = "rbDesc10";
-            this.rbDesc10.Size = new System.Drawing.Size(54, 20);
+            this.rbDesc10.Size = new System.Drawing.Size(45, 17);
             this.rbDesc10.TabIndex = 1;
             this.rbDesc10.TabStop = true;
             this.rbDesc10.Text = "10%";
@@ -340,10 +318,9 @@
             // 
             this.rbDesc5.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.rbDesc5.AutoSize = true;
-            this.rbDesc5.Location = new System.Drawing.Point(15, 25);
-            this.rbDesc5.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.rbDesc5.Location = new System.Drawing.Point(7, 20);
             this.rbDesc5.Name = "rbDesc5";
-            this.rbDesc5.Size = new System.Drawing.Size(47, 20);
+            this.rbDesc5.Size = new System.Drawing.Size(39, 17);
             this.rbDesc5.TabIndex = 0;
             this.rbDesc5.TabStop = true;
             this.rbDesc5.Text = "5%";
@@ -352,7 +329,7 @@
             // 
             // UcVenta
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.gbDescuento);
             this.Controls.Add(this.btnCancelarVenta);
@@ -366,9 +343,9 @@
             this.Controls.Add(this.dgvDetalle);
             this.Controls.Add(this.txtBusqueda);
             this.Controls.Add(this.label1);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Location = new System.Drawing.Point(179, 90);
             this.Name = "UcVenta";
-            this.Size = new System.Drawing.Size(1189, 606);
+            this.Size = new System.Drawing.Size(889, 476);
             ((System.ComponentModel.ISupportInitialize)(this.dgvDetalle)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
