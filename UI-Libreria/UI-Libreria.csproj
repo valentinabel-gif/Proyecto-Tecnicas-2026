@@ -85,12 +85,6 @@
     <Compile Include="Administrador\admiRol.Designer.cs">
       <DependentUpon>admiRol.cs</DependentUpon>
     </Compile>
-    <Compile Include="Administrador\admiPermisos.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="Administrador\admiPermisos.Designer.cs">
-      <DependentUpon>admiPermisos.cs</DependentUpon>
-    </Compile>
     <Compile Include="Administrador\admiCategoria.cs">
       <SubType>UserControl</SubType>
     </Compile>

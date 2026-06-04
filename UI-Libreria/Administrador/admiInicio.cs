@@ -27,5 +27,10 @@ namespace UI_Libreria.Administrador
             FormCrearUsuario form = new FormCrearUsuario();
             form.Show();
         }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
