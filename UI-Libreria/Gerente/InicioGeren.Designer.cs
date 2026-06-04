@@ -34,10 +34,10 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.RosyBrown;
+            this.BackColor = System.Drawing.Color.WhiteSmoke;
             this.Location = new System.Drawing.Point(179, 90);
             this.Name = "InicioGeren";
-            this.Size = new System.Drawing.Size(1189, 586);
+            this.Size = new System.Drawing.Size(1185, 586);
             this.ResumeLayout(false);
 
         }

@@ -37,7 +37,6 @@
             this.btn = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.btnInicioGerente = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.Date = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -45,21 +44,23 @@
             this.label2 = new System.Windows.Forms.Label();
             this.panelInicioGerente = new System.Windows.Forms.Panel();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(47)))), ((int)(((byte)(90)))));
+            this.panel1.Controls.Add(this.pictureBox2);
             this.panel1.Controls.Add(this.button6);
             this.panel1.Controls.Add(this.button3);
             this.panel1.Controls.Add(this.button2);
             this.panel1.Controls.Add(this.btn);
             this.panel1.Controls.Add(this.button1);
             this.panel1.Controls.Add(this.btnInicioGerente);
-            this.panel1.Controls.Add(this.label1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -73,10 +74,10 @@
             this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.button6.Font = new System.Drawing.Font("Microsoft YaHei", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button6.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.button6.Location = new System.Drawing.Point(23, 551);
+            this.button6.Location = new System.Drawing.Point(24, 622);
             this.button6.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(133, 30);
+            this.button6.Size = new System.Drawing.Size(133, 28);
             this.button6.TabIndex = 6;
             this.button6.Text = "Cerrar sesion";
             this.button6.UseVisualStyleBackColor = false;
@@ -105,7 +106,7 @@
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(179, 78);
             this.button2.TabIndex = 4;
-            this.button2.Text = "Finanzas";
+            this.button2.Text = "Ventas";
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
@@ -150,17 +151,6 @@
             this.btnInicioGerente.Text = "Inicio";
             this.btnInicioGerente.UseVisualStyleBackColor = true;
             this.btnInicioGerente.Click += new System.EventHandler(this.btnInicioGerente_Click);
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft YaHei", 10.2F, System.Drawing.FontStyle.Bold);
-            this.label1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label1.Location = new System.Drawing.Point(3, 30);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(164, 24);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Libreria Mayorista";
             // 
             // panel2
             // 
@@ -234,6 +224,16 @@
             // 
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = global::UI_Libreria.Properties.Resources.logo;
+            this.pictureBox2.Location = new System.Drawing.Point(-23, 3);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(220, 87);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox2.TabIndex = 7;
+            this.pictureBox2.TabStop = false;
+            // 
             // inicioGerente
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -247,10 +247,10 @@
             this.Text = "Gerente";
             this.Load += new System.EventHandler(this.inicioGerente_Load);
             this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -260,7 +260,6 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Panel panelInicioGerente;
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btnInicioGerente;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button3;
@@ -272,5 +271,6 @@
         private System.Windows.Forms.Label Date;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Timer timer1;
+        private System.Windows.Forms.PictureBox pictureBox2;
     }
 }

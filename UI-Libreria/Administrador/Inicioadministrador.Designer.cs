@@ -34,7 +34,6 @@
             this.button1 = new System.Windows.Forms.Button();
             this.btnCerrar = new System.Windows.Forms.Button();
             this.btnRol = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
             this.btnUsuAdmi = new System.Windows.Forms.Button();
             this.btnInicioAdmi = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
@@ -44,18 +43,20 @@
             this.labelIniAd = new System.Windows.Forms.Label();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.panelInicioAdmi = new System.Windows.Forms.Panel();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.panelMenuAd.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
             // panelMenuAd
             // 
             this.panelMenuAd.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(47)))), ((int)(((byte)(90)))));
+            this.panelMenuAd.Controls.Add(this.pictureBox2);
             this.panelMenuAd.Controls.Add(this.button1);
             this.panelMenuAd.Controls.Add(this.btnCerrar);
             this.panelMenuAd.Controls.Add(this.btnRol);
-            this.panelMenuAd.Controls.Add(this.label1);
             this.panelMenuAd.Controls.Add(this.btnUsuAdmi);
             this.panelMenuAd.Controls.Add(this.btnInicioAdmi);
             this.panelMenuAd.Dock = System.Windows.Forms.DockStyle.Left;
@@ -104,18 +105,6 @@
             this.btnRol.Text = "Roles";
             this.btnRol.UseVisualStyleBackColor = false;
             this.btnRol.Click += new System.EventHandler(this.btnRol_Click);
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.label1.Font = new System.Drawing.Font("Microsoft YaHei", 10.2F, System.Drawing.FontStyle.Bold);
-            this.label1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label1.Location = new System.Drawing.Point(3, 30);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(164, 24);
-            this.label1.TabIndex = 2;
-            this.label1.Text = "Libreria Mayorista";
             // 
             // btnUsuAdmi
             // 
@@ -214,6 +203,16 @@
             this.panelInicioAdmi.TabIndex = 3;
             this.panelInicioAdmi.Paint += new System.Windows.Forms.PaintEventHandler(this.panelInicioAdmi_Paint);
             // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = global::UI_Libreria.Properties.Resources.logo;
+            this.pictureBox2.Location = new System.Drawing.Point(-22, -1);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(220, 91);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox2.TabIndex = 4;
+            this.pictureBox2.TabStop = false;
+            // 
             // Inicioadministrador
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -227,10 +226,10 @@
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Inicioadministrador_Load);
             this.panelMenuAd.ResumeLayout(false);
-            this.panelMenuAd.PerformLayout();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -239,7 +238,6 @@
 
         private System.Windows.Forms.Panel panelMenuAd;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btnInicioAdmi;
         private System.Windows.Forms.Button btnUsuAdmi;
         private System.Windows.Forms.Button btnRol;
@@ -251,5 +249,6 @@
         private System.Windows.Forms.Label Date;
         private System.Windows.Forms.Timer timer1;
         private System.Windows.Forms.Panel panelInicioAdmi;
+        private System.Windows.Forms.PictureBox pictureBox2;
     }
 }
