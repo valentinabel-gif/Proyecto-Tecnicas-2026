@@ -1,4 +1,7 @@
-﻿using System;
+﻿using BE_Libreria;
+using BLL_Libreria;
+using BLL_Libreria.Seguridad_y_Usuario___Login;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -44,10 +47,12 @@ namespace UI_Libreria.Administrador
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            comboBox2.Items.Add("Administrador");
-            comboBox2.Items.Add("Vendedor");
-            comboBox2.Items.Add("Encargado de Stock");
-            comboBox2.SelectedIndex = 0;
+            RolBLL bll = new RolBLL();
+            List<Rol> roles = bll.ObtenerRoles();
+
+            comboBoxRoles.DataSource = roles;
+            comboBoxRoles.DisplayMember = "NombreMedidaDeSeguridad";
+            comboBoxRoles.ValueMember = "IdMedidaDeSeguridad";
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -57,18 +62,47 @@ namespace UI_Libreria.Administrador
 
         private void button1_Click(object sender, EventArgs e)
         {
-        
-            string nombre = txtNombre.Text;
-            string dni = txtDNI.Text;
-            string rol = comboBox2.SelectedItem.ToString();
+            try
+            {
+                string nombre = txtNombre.Text;
+                string apellido = txtApellido.Text;
+                string correo = txtCorreo.Text;
+                string dni = txtDNI.Text;
+                string contrasena = txtContrasena.Text;
+                string username = txtUsername.Text;
+                if (string.IsNullOrWhiteSpace(nombre))
+                { throw new Exception("El nombre es obligatorio."); }
+                if (string.IsNullOrWhiteSpace(apellido))
+                { throw new Exception("El apellido es obligatorio."); }
+                if (string.IsNullOrWhiteSpace(correo))
+                { throw new Exception("El correo es obligatorio."); }
+                if (string.IsNullOrWhiteSpace(dni))
+                { throw new Exception("El dni es obligatorio."); }
+                if (string.IsNullOrWhiteSpace(contrasena))
+                { throw new Exception("La contraseña es obligatorio."); }
+                if (string.IsNullOrWhiteSpace(username))
+                { throw new Exception("El usuario es obligatorio."); }
 
-            MessageBox.Show(
-                "Usuario guardado:\n" +
-                "Nombre: " + nombre +
-                "\nDNI: " + dni +
-                "\nRol: " + rol
-            );
+                if (comboBoxRoles.SelectedItem == null)
+                {
+                    throw new Exception("Debe seleccionar un rol para el usuario.");
+                }
 
+                Rol rolSeleccionado = (Rol)comboBoxRoles.SelectedItem;
+
+                Usuario nuevoUsuario = new Usuario(0, nombre, apellido, correo, dni, contrasena, username, rolSeleccionado);
+
+                UsuarioBLL _usuarioBLL = new UsuarioBLL();
+
+                _usuarioBLL.AltaUsuario(nuevoUsuario);
+
+                MessageBox.Show("El usuario fue creado exitosamente!","EXITO",MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+            }catch(Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
             this.Close();
         }
 

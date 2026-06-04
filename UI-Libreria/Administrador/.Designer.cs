@@ -33,19 +33,19 @@
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.labelNombre = new System.Windows.Forms.Label();
             this.labelApellido = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.txtApellido = new System.Windows.Forms.TextBox();
             this.txtDNI = new System.Windows.Forms.TextBox();
             this.labelDNI = new System.Windows.Forms.Label();
             this.labelUsuario = new System.Windows.Forms.Label();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.textBox6 = new System.Windows.Forms.TextBox();
+            this.txtUsername = new System.Windows.Forms.TextBox();
+            this.txtCorreo = new System.Windows.Forms.TextBox();
+            this.txtContrasena = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
+            this.comboBoxRoles = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
             // 
             // txtNombre
@@ -81,12 +81,12 @@
             this.labelApellido.TabIndex = 3;
             this.labelApellido.Text = "Apellido";
             // 
-            // textBox2
+            // txtApellido
             // 
-            this.textBox2.Location = new System.Drawing.Point(69, 77);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(135, 22);
-            this.textBox2.TabIndex = 4;
+            this.txtApellido.Location = new System.Drawing.Point(69, 77);
+            this.txtApellido.Name = "txtApellido";
+            this.txtApellido.Size = new System.Drawing.Size(135, 22);
+            this.txtApellido.TabIndex = 4;
             // 
             // txtDNI
             // 
@@ -114,27 +114,27 @@
             this.labelUsuario.TabIndex = 7;
             this.labelUsuario.Text = "Usuario";
             // 
-            // textBox4
+            // txtUsername
             // 
-            this.textBox4.Location = new System.Drawing.Point(316, 74);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(135, 22);
-            this.textBox4.TabIndex = 8;
+            this.txtUsername.Location = new System.Drawing.Point(316, 74);
+            this.txtUsername.Name = "txtUsername";
+            this.txtUsername.Size = new System.Drawing.Size(135, 22);
+            this.txtUsername.TabIndex = 8;
             // 
-            // textBox5
+            // txtCorreo
             // 
-            this.textBox5.Location = new System.Drawing.Point(66, 121);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(135, 22);
-            this.textBox5.TabIndex = 9;
+            this.txtCorreo.Location = new System.Drawing.Point(66, 121);
+            this.txtCorreo.Name = "txtCorreo";
+            this.txtCorreo.Size = new System.Drawing.Size(135, 22);
+            this.txtCorreo.TabIndex = 9;
             // 
-            // textBox6
+            // txtContrasena
             // 
-            this.textBox6.Location = new System.Drawing.Point(315, 118);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.PasswordChar = '*';
-            this.textBox6.Size = new System.Drawing.Size(135, 22);
-            this.textBox6.TabIndex = 10;
+            this.txtContrasena.Location = new System.Drawing.Point(315, 118);
+            this.txtContrasena.Name = "txtContrasena";
+            this.txtContrasena.PasswordChar = '*';
+            this.txtContrasena.Size = new System.Drawing.Size(135, 22);
+            this.txtContrasena.TabIndex = 10;
             // 
             // label1
             // 
@@ -191,33 +191,33 @@
             this.button2.UseVisualStyleBackColor = false;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
-            // comboBox2
+            // comboBoxRoles
             // 
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(66, 179);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(135, 24);
-            this.comboBox2.TabIndex = 17;
-            this.comboBox2.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged_1);
+            this.comboBoxRoles.FormattingEnabled = true;
+            this.comboBoxRoles.Location = new System.Drawing.Point(66, 179);
+            this.comboBoxRoles.Name = "comboBoxRoles";
+            this.comboBoxRoles.Size = new System.Drawing.Size(135, 24);
+            this.comboBoxRoles.TabIndex = 17;
+            this.comboBoxRoles.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged_1);
             // 
             // FormCrearUsuario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(473, 403);
-            this.Controls.Add(this.comboBox2);
+            this.Controls.Add(this.comboBoxRoles);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.textBox6);
-            this.Controls.Add(this.textBox5);
-            this.Controls.Add(this.textBox4);
+            this.Controls.Add(this.txtContrasena);
+            this.Controls.Add(this.txtCorreo);
+            this.Controls.Add(this.txtUsername);
             this.Controls.Add(this.labelUsuario);
             this.Controls.Add(this.labelDNI);
             this.Controls.Add(this.txtDNI);
-            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.txtApellido);
             this.Controls.Add(this.labelApellido);
             this.Controls.Add(this.labelNombre);
             this.Controls.Add(this.txtNombre);
@@ -238,18 +238,18 @@
         private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
         private System.Windows.Forms.Label labelNombre;
         private System.Windows.Forms.Label labelApellido;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox txtApellido;
         private System.Windows.Forms.TextBox txtDNI;
         private System.Windows.Forms.Label labelDNI;
         private System.Windows.Forms.Label labelUsuario;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.TextBox textBox6;
+        private System.Windows.Forms.TextBox txtUsername;
+        private System.Windows.Forms.TextBox txtCorreo;
+        private System.Windows.Forms.TextBox txtContrasena;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.ComboBox comboBox2;
+        private System.Windows.Forms.ComboBox comboBoxRoles;
     }
 }

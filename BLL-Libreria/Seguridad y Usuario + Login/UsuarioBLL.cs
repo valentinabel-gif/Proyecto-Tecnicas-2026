@@ -57,7 +57,7 @@ namespace BLL_Libreria
 
         public void AltaUsuario(Usuario nuevoUsuario)
         {
-            if (!Sesion.Instancia.HaySesionActiva() || !Sesion.Instancia.UsuarioActivo.TienePermiso("GestionarUsuarios"))
+            if (!Sesion.Instancia.HaySesionActiva() || !Sesion.Instancia.UsuarioActivo.TienePermiso("crear_usuario"))
             {
                 throw new Exception("Seguridad: No cuenta con los permisos necesarios para registrar usuarios.");
             }
@@ -68,10 +68,10 @@ namespace BLL_Libreria
             }
 
             //cuando la DAL este lista intercepto la contraseña del nuevo usuario y la hasheamos antes del INSERT
-            //string passHasheada = EncriptarContrasenia(nuevoUsuario.ContraseniaUsuario);
-            //_usuarioDAL.Insertar(nuevoUsuario, passHasheada);
+            string passHasheada = EncriptarContrasenia(nuevoUsuario.ContraseniaUsuario);
+            _usuarioDAL.Insertar(nuevoUsuario, passHasheada);
 
-            throw new NotImplementedException("pendiente conexion con DAL.");// y cuando ya este hecha la dal borro toda esta linea
+            //throw new NotImplementedException("pendiente conexion con DAL.");// y cuando ya este hecha la dal borro toda esta linea
         }
 
         public void ModificarUsuario(Usuario usuarioModificado)
@@ -119,7 +119,7 @@ namespace BLL_Libreria
 
         public Usuario RecuperarUsuarioPorId(int idUsuario)
         {
-            if (!Sesion.Instancia.HaySesionActiva() || !Sesion.Instancia.UsuarioActivo.TienePermiso("GestionarUsuarios"))
+            if (!Sesion.Instancia.HaySesionActiva() || !Sesion.Instancia.UsuarioActivo.TienePermiso("GestionarUsuario"))
             {
                 throw new Exception("Seguridad: No tiene autorización para consultar usuarios.");
             }

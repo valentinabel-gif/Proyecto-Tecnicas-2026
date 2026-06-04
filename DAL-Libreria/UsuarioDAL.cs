@@ -66,5 +66,28 @@ namespace DAL_Libreria
 
             return permisos;
         }
+
+
+
+
+        public void Insertar(Usuario nuevoUsuario, string passwordHasheada)
+        {
+            SqlParameter[] parametros = new SqlParameter[]
+            {
+        _conexion.crearParametro("@nombre",     nuevoUsuario.NombreUsuario),
+        _conexion.crearParametro("@apellido",   nuevoUsuario.ApellidoUsuario),
+        _conexion.crearParametro("@correo",     nuevoUsuario.CorreoUsuario),
+        _conexion.crearParametro("@dni",        nuevoUsuario.DniUsuario),
+        _conexion.crearParametro("@contrasena", passwordHasheada),
+        _conexion.crearParametro("@username",   nuevoUsuario.UsernameUsuario),
+        _conexion.crearParametro("@id_rol",     nuevoUsuario.RolUsuario.IdMedidaDeSeguridad)
+            };
+
+            int filasAfectadas = _conexion.EscribirPorStoreProcedure("sp_CrearUsuario", parametros);
+
+            if (filasAfectadas <= 0)
+                throw new Exception("No se pudo insertar el usuario.");
+        }
+
     }
 }
