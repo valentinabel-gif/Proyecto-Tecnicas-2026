@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Windows.Forms;
 
-namespace UI_Libreria
+namespace UI_Libreria.EncargadoDeStock
 {
     public partial class UcProductos : UserControl
     {

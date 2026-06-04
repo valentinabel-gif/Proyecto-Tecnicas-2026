@@ -175,17 +175,17 @@
     <Compile Include="VendedorMayorista\UcInicioVendedor.Designer.cs">
       <DependentUpon>UcInicioVendedor.cs</DependentUpon>
     </Compile>
-    <Compile Include="Ingresos.cs">
+    <Compile Include="EncargadoDeStock\UcIngresos.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Ingresos.Designer.cs">
-      <DependentUpon>Ingresos.cs</DependentUpon>
+    <Compile Include="EncargadoDeStock\UcIngresos.Designer.cs">
+      <DependentUpon>UcIngresos.cs</DependentUpon>
     </Compile>
-    <Compile Include="Inicio.cs">
+    <Compile Include="EncargadoDeStock\UcInicio.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Inicio.Designer.cs">
-      <DependentUpon>Inicio.cs</DependentUpon>
+    <Compile Include="EncargadoDeStock\UcInicio.Designer.cs">
+      <DependentUpon>UcInicio.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -195,22 +195,22 @@
     <Compile Include="prueba.Designer.cs">
       <DependentUpon>prueba.cs</DependentUpon>
     </Compile>
-    <Compile Include="UcProductos.cs">
+    <Compile Include="EncargadoDeStock\UcProductos.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="UcProductos.Designer.cs">
+    <Compile Include="EncargadoDeStock\UcProductos.Designer.cs">
       <DependentUpon>UcProductos.cs</DependentUpon>
     </Compile>
-    <Compile Include="UcProveedores.cs">
+    <Compile Include="EncargadoDeStock\UcProveedores.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="UcProveedores.Designer.cs">
+    <Compile Include="EncargadoDeStock\UcProveedores.Designer.cs">
       <DependentUpon>UcProveedores.cs</DependentUpon>
     </Compile>
-    <Compile Include="UcStock.cs">
+    <Compile Include="EncargadoDeStock\UcStock.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="UcStock.Designer.cs">
+    <Compile Include="EncargadoDeStock\UcStock.Designer.cs">
       <DependentUpon>UcStock.cs</DependentUpon>
     </Compile>
     <EmbeddedResource Include="Administrador\admiCategoria.resx">
@@ -259,11 +259,11 @@
     <EmbeddedResource Include="VendedorMayorista\FormVendedor.resx">
       <DependentUpon>FormVendedor.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Ingresos.resx">
-      <DependentUpon>Ingresos.cs</DependentUpon>
+    <EmbeddedResource Include="EncargadoDeStock\UcIngresos.resx">
+      <DependentUpon>UcIngresos.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Inicio.resx">
-      <DependentUpon>Inicio.cs</DependentUpon>
+    <EmbeddedResource Include="EncargadoDeStock\UcInicio.resx">
+      <DependentUpon>UcInicio.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -273,17 +273,18 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <EmbeddedResource Include="prueba.resx">
       <DependentUpon>prueba.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UcProductos.resx">
+    <EmbeddedResource Include="EncargadoDeStock\UcProductos.resx">
       <DependentUpon>UcProductos.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UcProveedores.resx">
+    <EmbeddedResource Include="EncargadoDeStock\UcProveedores.resx">
       <DependentUpon>UcProveedores.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UcStock.resx">
+    <EmbeddedResource Include="EncargadoDeStock\UcStock.resx">
       <DependentUpon>UcStock.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="VendedorMayorista\UcInicioVendedor.resx">
@@ -315,6 +316,8 @@
       <Name>BLL-Libreria</Name>
     </ProjectReference>
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <None Include="Recursos\logo.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace UI_Libreria
+namespace UI_Libreria.EncargadoDeStock
 {
     public partial class UcInicio : UserControl
     {

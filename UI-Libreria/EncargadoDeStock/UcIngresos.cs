@@ -56,5 +56,10 @@ namespace UI_Libreria
         {
 
         }
+
+        private void textBox2_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
