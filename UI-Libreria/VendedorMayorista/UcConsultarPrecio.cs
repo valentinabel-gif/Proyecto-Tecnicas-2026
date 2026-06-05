@@ -16,5 +16,10 @@ namespace UI_Libreria.VendedorMayorista
         {
             InitializeComponent();
         }
+
+        private void UcConsultarPrecio_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -92,9 +92,7 @@ namespace UI_Libreria.Administrador
 
         private void btnCerrar_Click(object sender, EventArgs e)
         {
-            DialogResult resultado = MessageBox.Show(
-           "¿Está seguro que desea cerrar sesión?", "Cerrar sesión",
-             MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            DialogResult resultado = MessageBox.Show("¿Está seguro que desea cerrar sesión?", "Cerrar sesión", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
 
             if (resultado == DialogResult.Yes)
             {

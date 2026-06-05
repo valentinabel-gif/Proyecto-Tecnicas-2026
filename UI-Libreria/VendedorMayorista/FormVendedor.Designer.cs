@@ -52,7 +52,7 @@
             // 
             this.InicioPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(255)))), ((int)(((byte)(234)))));
             this.InicioPanel.Location = new System.Drawing.Point(134, 73);
-            this.InicioPanel.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.InicioPanel.Margin = new System.Windows.Forms.Padding(2);
             this.InicioPanel.Name = "InicioPanel";
             this.InicioPanel.Size = new System.Drawing.Size(889, 476);
             this.InicioPanel.TabIndex = 5;
@@ -68,7 +68,7 @@
             this.panel2.Controls.Add(this.label2);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel2.Location = new System.Drawing.Point(134, 0);
-            this.panel2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel2.Margin = new System.Windows.Forms.Padding(2);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(889, 72);
             this.panel2.TabIndex = 4;
@@ -97,8 +97,8 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(292, 10);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBox1.Location = new System.Drawing.Point(623, 11);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(38, 43);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -108,12 +108,12 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft YaHei", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Font = new System.Drawing.Font("Microsoft YaHei", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label3.Location = new System.Drawing.Point(160, 22);
+            this.label3.Location = new System.Drawing.Point(474, 24);
             this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(128, 17);
+            this.label3.Size = new System.Drawing.Size(145, 19);
             this.label3.TabIndex = 2;
             this.label3.Text = "Vendedor Mayorista";
             this.label3.Click += new System.EventHandler(this.label3_Click);
@@ -141,7 +141,7 @@
             this.panel1.Controls.Add(this.BtnInicioVenta);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel1.Margin = new System.Windows.Forms.Padding(2);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(134, 549);
             this.panel1.TabIndex = 3;
@@ -153,7 +153,7 @@
             this.button6.Font = new System.Drawing.Font("Microsoft YaHei", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button6.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.button6.Location = new System.Drawing.Point(20, 379);
-            this.button6.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button6.Margin = new System.Windows.Forms.Padding(2);
             this.button6.Name = "button6";
             this.button6.Size = new System.Drawing.Size(100, 23);
             this.button6.TabIndex = 2;
@@ -181,7 +181,7 @@
             this.BtnGestionClientes.Font = new System.Drawing.Font("Microsoft YaHei", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnGestionClientes.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.BtnGestionClientes.Location = new System.Drawing.Point(0, 273);
-            this.BtnGestionClientes.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.BtnGestionClientes.Margin = new System.Windows.Forms.Padding(2);
             this.BtnGestionClientes.Name = "BtnGestionClientes";
             this.BtnGestionClientes.Size = new System.Drawing.Size(134, 63);
             this.BtnGestionClientes.TabIndex = 2;
@@ -197,7 +197,7 @@
             this.BtnConsultaPrecio.Font = new System.Drawing.Font("Microsoft YaHei", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnConsultaPrecio.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.BtnConsultaPrecio.Location = new System.Drawing.Point(0, 206);
-            this.BtnConsultaPrecio.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.BtnConsultaPrecio.Margin = new System.Windows.Forms.Padding(2);
             this.BtnConsultaPrecio.Name = "BtnConsultaPrecio";
             this.BtnConsultaPrecio.Size = new System.Drawing.Size(134, 63);
             this.BtnConsultaPrecio.TabIndex = 2;
@@ -213,7 +213,7 @@
             this.BtnVenta.Font = new System.Drawing.Font("Microsoft YaHei", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnVenta.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.BtnVenta.Location = new System.Drawing.Point(0, 139);
-            this.BtnVenta.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.BtnVenta.Margin = new System.Windows.Forms.Padding(2);
             this.BtnVenta.Name = "BtnVenta";
             this.BtnVenta.Size = new System.Drawing.Size(134, 63);
             this.BtnVenta.TabIndex = 2;
@@ -230,7 +230,7 @@
             this.BtnInicioVenta.Font = new System.Drawing.Font("Microsoft YaHei", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnInicioVenta.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.BtnInicioVenta.Location = new System.Drawing.Point(0, 73);
-            this.BtnInicioVenta.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.BtnInicioVenta.Margin = new System.Windows.Forms.Padding(2);
             this.BtnInicioVenta.Name = "BtnInicioVenta";
             this.BtnInicioVenta.Size = new System.Drawing.Size(134, 63);
             this.BtnInicioVenta.TabIndex = 2;
