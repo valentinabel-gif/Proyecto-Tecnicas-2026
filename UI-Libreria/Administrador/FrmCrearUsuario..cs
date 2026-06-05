@@ -76,6 +76,8 @@ namespace UI_Libreria.Administrador
                 { throw new Exception("El apellido es obligatorio."); }
                 if (string.IsNullOrWhiteSpace(correo))
                 { throw new Exception("El correo es obligatorio."); }
+                if (!correo.Contains("@") || !correo.Contains("."))
+                { throw new Exception("Ingrese un formato valido para el correo"); }
                 if (string.IsNullOrWhiteSpace(dni))
                 { throw new Exception("El dni es obligatorio."); }
                 if (string.IsNullOrWhiteSpace(contrasena))
@@ -109,6 +111,24 @@ namespace UI_Libreria.Administrador
         private void comboBox1_SelectedIndexChanged_1(object sender, EventArgs e)
         {
 
+        }
+
+        private void txtNombre_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsLetter(e.KeyChar) && !char.IsControl(e.KeyChar) && e.KeyChar != ' ')
+                e.Handled = true;
+        }
+
+        private void txtApellido_TextChanged(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsLetter(e.KeyChar) && !char.IsControl(e.KeyChar) && e.KeyChar != ' ')
+                e.Handled = true;
+        }
+
+        private void txtDNI_TextChanged(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar))
+                e.Handled = true;
         }
     }
 

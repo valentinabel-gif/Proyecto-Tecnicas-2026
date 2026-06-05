@@ -56,6 +56,7 @@
             this.txtNombre.Size = new System.Drawing.Size(135, 22);
             this.txtNombre.TabIndex = 0;
             this.txtNombre.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            this.txtNombre.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNombre_KeyPress);
             // 
             // contextMenuStrip1
             // 
@@ -87,6 +88,7 @@
             this.txtApellido.Name = "txtApellido";
             this.txtApellido.Size = new System.Drawing.Size(135, 22);
             this.txtApellido.TabIndex = 4;
+            this.txtApellido.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtApellido_TextChanged);
             // 
             // txtDNI
             // 
@@ -94,6 +96,7 @@
             this.txtDNI.Name = "txtDNI";
             this.txtDNI.Size = new System.Drawing.Size(135, 22);
             this.txtDNI.TabIndex = 5;
+            this.txtDNI.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtDNI_TextChanged);
             // 
             // labelDNI
             // 
