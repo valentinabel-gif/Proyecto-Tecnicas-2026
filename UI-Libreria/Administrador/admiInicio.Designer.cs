@@ -28,19 +28,20 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1 = new System.Windows.Forms.Panel();
             this.msgBienvenida = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.label5 = new System.Windows.Forms.Label();
+            this.cantUsuarios = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.label6 = new System.Windows.Forms.Label();
+            this.cantRoles = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
             this.label7 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.panel5 = new System.Windows.Forms.Panel();
-            this.label8 = new System.Windows.Forms.Label();
+            this.cantPermisos = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.panel6 = new System.Windows.Forms.Panel();
             this.label9 = new System.Windows.Forms.Label();
@@ -48,8 +49,8 @@
             this.btnCrearRolInicio = new System.Windows.Forms.Button();
             this.btnAgregarCateInicio = new System.Windows.Forms.Button();
             this.panel7 = new System.Windows.Forms.Panel();
+            this.ListaUsuarios = new System.Windows.Forms.DataGridView();
             this.label10 = new System.Windows.Forms.Label();
-            this.fontDialog1 = new System.Windows.Forms.FontDialog();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -57,6 +58,7 @@
             this.panel5.SuspendLayout();
             this.panel6.SuspendLayout();
             this.panel7.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.ListaUsuarios)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -69,6 +71,7 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1185, 82);
             this.panel1.TabIndex = 0;
+            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
             // msgBienvenida
             // 
@@ -87,7 +90,7 @@
             // 
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(230)))), ((int)(((byte)(212)))));
             this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel2.Controls.Add(this.label5);
+            this.panel2.Controls.Add(this.cantUsuarios);
             this.panel2.Controls.Add(this.label1);
             this.panel2.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.panel2.Location = new System.Drawing.Point(21, 102);
@@ -95,16 +98,16 @@
             this.panel2.Size = new System.Drawing.Size(280, 80);
             this.panel2.TabIndex = 1;
             // 
-            // label5
+            // cantUsuarios
             // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Microsoft YaHei UI", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.ForeColor = System.Drawing.Color.RosyBrown;
-            this.label5.Location = new System.Drawing.Point(117, 32);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(36, 40);
-            this.label5.TabIndex = 1;
-            this.label5.Text = "3";
+            this.cantUsuarios.AutoSize = true;
+            this.cantUsuarios.Font = new System.Drawing.Font("Microsoft YaHei UI", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cantUsuarios.ForeColor = System.Drawing.Color.RosyBrown;
+            this.cantUsuarios.Location = new System.Drawing.Point(117, 32);
+            this.cantUsuarios.Name = "cantUsuarios";
+            this.cantUsuarios.Size = new System.Drawing.Size(36, 40);
+            this.cantUsuarios.TabIndex = 1;
+            this.cantUsuarios.Text = "0";
             // 
             // label1
             // 
@@ -123,23 +126,23 @@
             this.panel3.AccessibleName = "";
             this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(230)))), ((int)(((byte)(212)))));
             this.panel3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel3.Controls.Add(this.label6);
+            this.panel3.Controls.Add(this.cantRoles);
             this.panel3.Controls.Add(this.label2);
             this.panel3.Location = new System.Drawing.Point(307, 102);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(280, 80);
             this.panel3.TabIndex = 2;
             // 
-            // label6
+            // cantRoles
             // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Microsoft YaHei UI", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.ForeColor = System.Drawing.SystemColors.ActiveCaption;
-            this.label6.Location = new System.Drawing.Point(117, 32);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(36, 40);
-            this.label6.TabIndex = 1;
-            this.label6.Text = "5";
+            this.cantRoles.AutoSize = true;
+            this.cantRoles.Font = new System.Drawing.Font("Microsoft YaHei UI", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cantRoles.ForeColor = System.Drawing.SystemColors.ActiveCaption;
+            this.cantRoles.Location = new System.Drawing.Point(117, 32);
+            this.cantRoles.Name = "cantRoles";
+            this.cantRoles.Size = new System.Drawing.Size(36, 40);
+            this.cantRoles.TabIndex = 1;
+            this.cantRoles.Text = "0";
             // 
             // label2
             // 
@@ -174,7 +177,7 @@
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(36, 40);
             this.label7.TabIndex = 1;
-            this.label7.Text = "8";
+            this.label7.Text = "0";
             // 
             // label3
             // 
@@ -191,23 +194,23 @@
             // 
             this.panel5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(230)))), ((int)(((byte)(212)))));
             this.panel5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel5.Controls.Add(this.label8);
+            this.panel5.Controls.Add(this.cantPermisos);
             this.panel5.Controls.Add(this.label4);
             this.panel5.Location = new System.Drawing.Point(879, 102);
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(280, 80);
             this.panel5.TabIndex = 4;
             // 
-            // label8
+            // cantPermisos
             // 
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Microsoft YaHei UI", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.label8.Location = new System.Drawing.Point(119, 32);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(36, 40);
-            this.label8.TabIndex = 1;
-            this.label8.Text = "5";
+            this.cantPermisos.AutoSize = true;
+            this.cantPermisos.Font = new System.Drawing.Font("Microsoft YaHei UI", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cantPermisos.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.cantPermisos.Location = new System.Drawing.Point(119, 32);
+            this.cantPermisos.Name = "cantPermisos";
+            this.cantPermisos.Size = new System.Drawing.Size(36, 40);
+            this.cantPermisos.TabIndex = 1;
+            this.cantPermisos.Text = "0";
             // 
             // label4
             // 
@@ -291,11 +294,28 @@
             // 
             this.panel7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(230)))), ((int)(((byte)(212)))));
             this.panel7.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.panel7.Controls.Add(this.ListaUsuarios);
             this.panel7.Controls.Add(this.label10);
             this.panel7.Location = new System.Drawing.Point(19, 203);
             this.panel7.Name = "panel7";
             this.panel7.Size = new System.Drawing.Size(565, 360);
             this.panel7.TabIndex = 6;
+            // 
+            // ListaUsuarios
+            // 
+            this.ListaUsuarios.BackgroundColor = System.Drawing.SystemColors.ActiveBorder;
+            this.ListaUsuarios.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.ListaUsuarios.GridColor = System.Drawing.SystemColors.ActiveBorder;
+            this.ListaUsuarios.Location = new System.Drawing.Point(37, 88);
+            this.ListaUsuarios.Name = "ListaUsuarios";
+            this.ListaUsuarios.RowHeadersWidth = 51;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.Transparent;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
+            this.ListaUsuarios.RowsDefaultCellStyle = dataGridViewCellStyle1;
+            this.ListaUsuarios.RowTemplate.Height = 24;
+            this.ListaUsuarios.Size = new System.Drawing.Size(482, 236);
+            this.ListaUsuarios.TabIndex = 1;
             // 
             // label10
             // 
@@ -325,6 +345,7 @@
             this.Location = new System.Drawing.Point(179, 90);
             this.Name = "admiInicio";
             this.Size = new System.Drawing.Size(1185, 586);
+            this.Load += new System.EventHandler(this.admiInicio_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.panel2.ResumeLayout(false);
@@ -339,6 +360,7 @@
             this.panel6.PerformLayout();
             this.panel7.ResumeLayout(false);
             this.panel7.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.ListaUsuarios)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -355,17 +377,17 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label cantUsuarios;
+        private System.Windows.Forms.Label cantRoles;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Label cantPermisos;
         private System.Windows.Forms.Panel panel6;
         private System.Windows.Forms.Panel panel7;
-        private System.Windows.Forms.FontDialog fontDialog1;
         private System.Windows.Forms.Button btnCrearRolInicio;
         private System.Windows.Forms.Button btnAgregarCateInicio;
         private System.Windows.Forms.Button btnCrearUsuInicio;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.DataGridView ListaUsuarios;
     }
 }

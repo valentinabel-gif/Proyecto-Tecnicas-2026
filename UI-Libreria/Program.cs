@@ -30,6 +30,7 @@ namespace UI_Libreria
              //Application.Run(new Inicioadministrador());
             Application.Run(new login());
             //Application.Run(new Gerente.inicioGerente());
+            
         }
     }
 }

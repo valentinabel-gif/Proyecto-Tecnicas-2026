@@ -97,6 +97,7 @@
     <Compile Include="EncargadoDeStock\InicioEncargadoStock.Designer.cs">
       <DependentUpon>InicioEncargadoStock.cs</DependentUpon>
     </Compile>
+    <Compile Include="FactoryUsuario.cs" />
     <Compile Include="Gerente\VentaGerente.cs">
       <SubType>UserControl</SubType>
     </Compile>

@@ -108,12 +108,12 @@ namespace BLL_Libreria
         
         public List<Usuario> RecuperarTodosLosUsuarios()
         {
-            if (!Sesion.Instancia.HaySesionActiva() || !Sesion.Instancia.UsuarioActivo.TienePermiso("GestionarUsuarios"))
+            if (!Sesion.Instancia.HaySesionActiva() || !Sesion.Instancia.UsuarioActivo.TienePermiso("ver_usuarios"))
             {
                 throw new Exception("Seguridad: No tiene autorización para visualizar el listado de usuarios.");
             }
 
-            // return _usuarioDAL.RecuperarTodos();
+            return _usuarioDAL.RecuperarTodos();
             throw new NotImplementedException("pendiente conexion con DAL.");
         }
 
@@ -131,6 +131,11 @@ namespace BLL_Libreria
             // return _usuarioDAL.RecuperarPorId(idUsuario);
 
             throw new NotImplementedException("Pendiente conexión con DAL.");
+        }
+        public int ContarUsuarios()
+        {
+            UsuarioDAL dal = new UsuarioDAL();
+            return dal.ContarUsuarios();
         }
     }
 }

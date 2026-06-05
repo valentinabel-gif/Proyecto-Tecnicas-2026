@@ -67,26 +67,58 @@ namespace DAL_Libreria
             return permisos;
         }
 
-
-
-
         public void Insertar(Usuario nuevoUsuario, string passwordHasheada)
         {
             SqlParameter[] parametros = new SqlParameter[]
             {
-        _conexion.crearParametro("@nombre",     nuevoUsuario.NombreUsuario),
-        _conexion.crearParametro("@apellido",   nuevoUsuario.ApellidoUsuario),
-        _conexion.crearParametro("@correo",     nuevoUsuario.CorreoUsuario),
-        _conexion.crearParametro("@dni",        nuevoUsuario.DniUsuario),
-        _conexion.crearParametro("@contrasena", passwordHasheada),
-        _conexion.crearParametro("@username",   nuevoUsuario.UsernameUsuario),
-        _conexion.crearParametro("@id_rol",     nuevoUsuario.RolUsuario.IdMedidaDeSeguridad)
+                _conexion.crearParametro("@nombre",     nuevoUsuario.NombreUsuario),
+                _conexion.crearParametro("@apellido",   nuevoUsuario.ApellidoUsuario),
+                _conexion.crearParametro("@correo",     nuevoUsuario.CorreoUsuario),
+                _conexion.crearParametro("@dni",        nuevoUsuario.DniUsuario),
+                _conexion.crearParametro("@contrasena", passwordHasheada),
+                _conexion.crearParametro("@username",   nuevoUsuario.UsernameUsuario),
+                _conexion.crearParametro("@id_rol",     nuevoUsuario.RolUsuario.IdMedidaDeSeguridad)
             };
 
             int filasAfectadas = _conexion.EscribirPorStoreProcedure("sp_CrearUsuario", parametros);
 
             if (filasAfectadas <= 0)
                 throw new Exception("No se pudo insertar el usuario.");
+        }
+
+        public int ContarUsuarios()
+        {
+            DataTable tabla = _conexion.LeerPorStoreProcedure("sp_ContarUsuarios");
+            if (tabla != null && tabla.Rows.Count > 0)
+            {
+                return Convert.ToInt32(tabla.Rows[0]["total"]);
+            }
+            return 0;
+        }
+
+        public List<Usuario> RecuperarTodos()
+        {
+            DataTable tabla = _conexion.LeerPorStoreProcedure("sp_RecuperarUsuarios");
+            List<Usuario> usuarios = new List<Usuario>();
+
+            if (tabla != null)
+            {
+                foreach (DataRow fila in tabla.Rows)
+                {
+                    Rol rol = new Rol(Convert.ToInt32(fila["id_rol"]), fila["nombre_rol"].ToString());
+                    usuarios.Add(new Usuario(
+                        Convert.ToInt32(fila["id_usuario"]),
+                        fila["nombre"].ToString(),
+                        fila["apellido"].ToString(),
+                        fila["correo"].ToString(),
+                        fila["dni"].ToString(),
+                        "",
+                        fila["nombre_usuario"].ToString(),
+                        rol
+                    ));
+                }
+            }
+            return usuarios;
         }
 
     }

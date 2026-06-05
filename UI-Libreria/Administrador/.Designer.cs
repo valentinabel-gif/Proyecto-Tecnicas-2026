@@ -51,6 +51,7 @@
             // txtNombre
             // 
             this.txtNombre.Location = new System.Drawing.Point(69, 31);
+            this.txtNombre.MaxLength = 50;
             this.txtNombre.Multiline = true;
             this.txtNombre.Name = "txtNombre";
             this.txtNombre.Size = new System.Drawing.Size(135, 22);
@@ -85,6 +86,7 @@
             // txtApellido
             // 
             this.txtApellido.Location = new System.Drawing.Point(69, 77);
+            this.txtApellido.MaxLength = 50;
             this.txtApellido.Name = "txtApellido";
             this.txtApellido.Size = new System.Drawing.Size(135, 22);
             this.txtApellido.TabIndex = 4;
@@ -93,6 +95,7 @@
             // txtDNI
             // 
             this.txtDNI.Location = new System.Drawing.Point(315, 34);
+            this.txtDNI.MaxLength = 8;
             this.txtDNI.Name = "txtDNI";
             this.txtDNI.Size = new System.Drawing.Size(135, 22);
             this.txtDNI.TabIndex = 5;
@@ -120,6 +123,7 @@
             // txtUsername
             // 
             this.txtUsername.Location = new System.Drawing.Point(316, 74);
+            this.txtUsername.MaxLength = 15;
             this.txtUsername.Name = "txtUsername";
             this.txtUsername.Size = new System.Drawing.Size(135, 22);
             this.txtUsername.TabIndex = 8;
@@ -127,6 +131,7 @@
             // txtCorreo
             // 
             this.txtCorreo.Location = new System.Drawing.Point(66, 121);
+            this.txtCorreo.MaxLength = 50;
             this.txtCorreo.Name = "txtCorreo";
             this.txtCorreo.Size = new System.Drawing.Size(135, 22);
             this.txtCorreo.TabIndex = 9;
@@ -134,6 +139,7 @@
             // txtContrasena
             // 
             this.txtContrasena.Location = new System.Drawing.Point(315, 118);
+            this.txtContrasena.MaxLength = 10;
             this.txtContrasena.Name = "txtContrasena";
             this.txtContrasena.PasswordChar = '*';
             this.txtContrasena.Size = new System.Drawing.Size(135, 22);

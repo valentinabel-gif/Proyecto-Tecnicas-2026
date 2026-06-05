@@ -18,7 +18,16 @@ namespace BLL_Libreria.Seguridad_y_Usuario___Login
             return dal.RecuperarRoles();
         }
 
+        public int ContarRoles()
+        {
+            RolDAL dal = new RolDAL();
+            return dal.ContarRoles();
+        }
 
-
+        public int ContarPermisos()
+        {
+            RolDAL dal = new RolDAL();
+            return dal.ContarPermisos();
+        }
     }
 }

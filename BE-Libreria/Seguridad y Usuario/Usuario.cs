@@ -81,5 +81,10 @@ namespace BE_Libreria
             //el objeto va a buscar en el arbol
             return _rolUsuario.TienePermiso(nombrePermiso);
         }
+
+        public string NombreRolUsuario
+        {
+            get { return _rolUsuario != null ? _rolUsuario.NombreMedidaDeSeguridad : ""; }
+        }
     }
 }

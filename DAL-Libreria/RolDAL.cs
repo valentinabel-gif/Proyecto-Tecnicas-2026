@@ -30,5 +30,23 @@ namespace DAL_Libreria
             return roles;
         }
 
+        public int ContarRoles()
+        {
+            DataTable tabla = _conexion.LeerPorStoreProcedure("sp_ContarRoles");
+            if (tabla != null && tabla.Rows.Count > 0)
+            {
+                return Convert.ToInt32(tabla.Rows[0]["total"]);
+            }
+            return 0;
+        }
+        public int ContarPermisos()
+        {
+            DataTable tabla = _conexion.LeerPorStoreProcedure("sp_ContarPermisos");
+            if (tabla != null && tabla.Rows.Count > 0)
+            {
+                return Convert.ToInt32(tabla.Rows[0]["total"]);
+            }
+            return 0;
+        }
     }
 }
