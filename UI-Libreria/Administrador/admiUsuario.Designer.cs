@@ -28,30 +28,31 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.textBuscar = new System.Windows.Forms.TextBox();
+            this.txtBuscar = new System.Windows.Forms.TextBox();
             this.btnBuscarUsuario = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.dgvUsuarios = new System.Windows.Forms.DataGridView();
+            this.panel1 = new System.Windows.Forms.Panel();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column4 = new System.Windows.Forms.DataGridViewButtonColumn();
             this.Column5 = new System.Windows.Forms.DataGridViewButtonColumn();
             this.Column6 = new System.Windows.Forms.DataGridViewButtonColumn();
-            this.panel1 = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.dgvUsuarios)).BeginInit();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
-            // textBuscar
+            // txtBuscar
             // 
-            this.textBuscar.Font = new System.Drawing.Font("Microsoft YaHei UI Light", 7.8F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBuscar.Location = new System.Drawing.Point(21, 33);
-            this.textBuscar.Multiline = true;
-            this.textBuscar.Name = "textBuscar";
-            this.textBuscar.Size = new System.Drawing.Size(868, 25);
-            this.textBuscar.TabIndex = 0;
-            this.textBuscar.Text = "Buscar Usuario...";
+            this.txtBuscar.Font = new System.Drawing.Font("Microsoft YaHei UI Light", 7.8F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtBuscar.Location = new System.Drawing.Point(21, 33);
+            this.txtBuscar.Multiline = true;
+            this.txtBuscar.Name = "txtBuscar";
+            this.txtBuscar.Size = new System.Drawing.Size(868, 25);
+            this.txtBuscar.TabIndex = 0;
+            this.txtBuscar.Text = "Buscar Usuario...";
+            this.txtBuscar.TextChanged += new System.EventHandler(this.textBuscar_TextChanged);
             // 
             // btnBuscarUsuario
             // 
@@ -105,18 +106,34 @@
             this.dgvUsuarios.TabIndex = 3;
             this.dgvUsuarios.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick_1);
             // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.LightGray;
+            this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.panel1.Controls.Add(this.button2);
+            this.panel1.Controls.Add(this.btnBuscarUsuario);
+            this.panel1.Controls.Add(this.txtBuscar);
+            this.panel1.Location = new System.Drawing.Point(16, 37);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(1148, 521);
+            this.panel1.TabIndex = 4;
+            // 
             // Column1
             // 
             this.Column1.HeaderText = "ID";
             this.Column1.MinimumWidth = 6;
             this.Column1.Name = "Column1";
-            this.Column1.Width = 50;
+            this.Column1.ReadOnly = true;
+            this.Column1.Visible = false;
+            this.Column1.Width = 125;
             // 
             // Column2
             // 
             this.Column2.HeaderText = "USUARIO";
             this.Column2.MinimumWidth = 6;
             this.Column2.Name = "Column2";
+            this.Column2.ReadOnly = true;
+            this.Column2.Visible = false;
             this.Column2.Width = 125;
             // 
             // Column3
@@ -124,6 +141,8 @@
             this.Column3.HeaderText = "ROL";
             this.Column3.MinimumWidth = 6;
             this.Column3.Name = "Column3";
+            this.Column3.ReadOnly = true;
+            this.Column3.Visible = false;
             this.Column3.Width = 125;
             // 
             // Column4
@@ -153,18 +172,6 @@
             this.Column6.UseColumnTextForButtonValue = true;
             this.Column6.Width = 125;
             // 
-            // panel1
-            // 
-            this.panel1.BackColor = System.Drawing.Color.LightGray;
-            this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.panel1.Controls.Add(this.button2);
-            this.panel1.Controls.Add(this.btnBuscarUsuario);
-            this.panel1.Controls.Add(this.textBuscar);
-            this.panel1.Location = new System.Drawing.Point(16, 37);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1148, 521);
-            this.panel1.TabIndex = 4;
-            // 
             // admiUsuario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -185,16 +192,16 @@
 
         #endregion
 
-        private System.Windows.Forms.TextBox textBuscar;
+        private System.Windows.Forms.TextBox txtBuscar;
         private System.Windows.Forms.Button btnBuscarUsuario;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.DataGridView dgvUsuarios;
+        private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
         private System.Windows.Forms.DataGridViewButtonColumn Column4;
         private System.Windows.Forms.DataGridViewButtonColumn Column5;
         private System.Windows.Forms.DataGridViewButtonColumn Column6;
-        private System.Windows.Forms.Panel panel1;
     }
 }
