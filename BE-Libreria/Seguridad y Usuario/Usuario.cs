@@ -65,10 +65,18 @@ namespace BE_Libreria
             get { return _rolUsuario; }
         }
 
+        public string NombreRol {
+            get { return _rolUsuario.NombreMedidaDeSeguridad; }
+        }
+
+
         //metodos
-        public bool ValidarDatosEstructurales()
-        {
-            return !string.IsNullOrEmpty(_nombreUsuario) && !string.IsNullOrEmpty(_contraseniaUsuario) && _rolUsuario != null;
+        public bool ValidarDatosEstructurales(bool validarContrasena=true)
+        {   if (validarContrasena)
+            {
+                return !string.IsNullOrEmpty(_nombreUsuario) && !string.IsNullOrEmpty(_contraseniaUsuario) && _rolUsuario != null;
+            }
+            return !string.IsNullOrEmpty(_nombreUsuario) && _rolUsuario != null;
         }
 
         public bool TienePermiso(string nombrePermiso)

@@ -16,7 +16,7 @@ namespace UI_Libreria.Administrador
     {
 
         //declaro userControls
-
+        private UsuarioBLL _usuarioBLL = new UsuarioBLL();
         admiInicio VistaInicioAdmi;
         admiUsuario VistaUsuarioAdmi;
         admiRol VistaRolAdmi;
@@ -30,8 +30,8 @@ namespace UI_Libreria.Administrador
 
             //creamos solo una vez los userControl
 
-            VistaInicioAdmi = new admiInicio();
-            VistaUsuarioAdmi = new admiUsuario();
+            VistaInicioAdmi = new admiInicio(_usuarioBLL);
+            VistaUsuarioAdmi = new admiUsuario(_usuarioBLL);
             VistaRolAdmi = new admiRol();
             VistaCategoriaAdmi = new admiCategoria();
 

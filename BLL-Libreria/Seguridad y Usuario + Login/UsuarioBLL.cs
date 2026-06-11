@@ -5,20 +5,22 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Security.Cryptography;
 using BE_Libreria;
-using DAL_Libreria; 
+using DAL_Libreria;
+using BE_Libreria.Seguridad_y_Usuario;
 //dato importante cuando guardemos la contraseña en la DAL el SELECT seria algo asi:
 // SELECT * FROM Usuario WHERE username = @username AND contrasenia = @passwordEncriptada
 //otro dato importante, cuando llamo a tienepermiso que viene de usuario le paso gestionarusarios, no se si en la BD se va a llamar asi o se va a llamar de otra forma, pero lo importante es que el string que le paso a permiso tiene q ser exactamente igual al string que esta guardado en la BD para ese permiso, porque si no no va a encontrarlo y va a devolver false aunque el usuario tenga ese permiso. 
 
 namespace BLL_Libreria
 {
-    public class UsuarioBLL
+    public class UsuarioBLL : ISujetoUsuario
     {
         private UsuarioDAL _usuarioDAL = new UsuarioDAL();
+        private List<IObservadorUsuario> _observadores = new List<IObservadorUsuario>();
 
 
-        //valido las credenciales del usuario y retorno el objeto Usuario si son correctas. la contraseña se hashea con SHA256 antes de compararse con la BD
-        public Usuario RecuperarUsuarioPorCredenciales(string username, string password)
+    //valido las credenciales del usuario y retorno el objeto Usuario si son correctas. la contraseña se hashea con SHA256 antes de compararse con la BD
+    public Usuario RecuperarUsuarioPorCredenciales(string username, string password)
         {
             if (string.IsNullOrWhiteSpace(username))
             {
@@ -72,21 +74,27 @@ namespace BLL_Libreria
             _usuarioDAL.Insertar(nuevoUsuario, passHasheada);
 
             //throw new NotImplementedException("pendiente conexion con DAL.");// y cuando ya este hecha la dal borro toda esta linea
+
+            Notificar();
         }
 
         public void ModificarUsuario(Usuario usuarioModificado)
         {
-            if (!Sesion.Instancia.HaySesionActiva() || !Sesion.Instancia.UsuarioActivo.TienePermiso("GestionarUsuarios"))
+            if (!Sesion.Instancia.HaySesionActiva() || !Sesion.Instancia.UsuarioActivo.TienePermiso("Editar_Usuario"))
             {
                 throw new Exception("Seguridad: No cuenta con los permisos necesarios para modificar usuarios.");
             }
 
-            if (!usuarioModificado.ValidarDatosEstructurales())
+            if (!usuarioModificado.ValidarDatosEstructurales(false))
+            {
                 throw new Exception("Los datos del usuario son inválidos.");
+            }
 
-            // _usuarioDAL.Modificar(usuarioModificado);
+            _usuarioDAL.Modificar(usuarioModificado);
 
-            throw new NotImplementedException("pendiente conexion con DAL.");// y cuando ya este hecha la dal borro toda esta linea
+            Notificar();
+
+            //throw new NotImplementedException("pendiente conexion con DAL.");// y cuando ya este hecha la dal borro toda esta linea
         }
 
         public void BajaUsuario(int idUsuario)
@@ -115,11 +123,12 @@ namespace BLL_Libreria
 
             return _usuarioDAL.RecuperarTodos();
             throw new NotImplementedException("pendiente conexion con DAL.");
+            
         }
 
         public Usuario RecuperarUsuarioPorId(int idUsuario)
         {
-            if (!Sesion.Instancia.HaySesionActiva() || !Sesion.Instancia.UsuarioActivo.TienePermiso("GestionarUsuario"))
+            if (!Sesion.Instancia.HaySesionActiva() || !Sesion.Instancia.UsuarioActivo.TienePermiso("buscar_usuario"))
             {
                 throw new Exception("Seguridad: No tiene autorización para consultar usuarios.");
             }
@@ -128,7 +137,7 @@ namespace BLL_Libreria
             {
                 throw new Exception("El ID de usuario es inválido.");
             }
-            // return _usuarioDAL.RecuperarPorId(idUsuario);
+            return _usuarioDAL.RecuperarPorId(idUsuario);
 
             throw new NotImplementedException("Pendiente conexión con DAL.");
         }
@@ -137,5 +146,25 @@ namespace BLL_Libreria
             UsuarioDAL dal = new UsuarioDAL();
             return dal.ContarUsuarios();
         }
+
+
+    //observer 
+    public void RegistrarObservador(IObservadorUsuario observer)
+    {
+        if (!_observadores.Contains(observer))
+            _observadores.Add(observer);
+    }
+
+    public void EliminarObservador(IObservadorUsuario observer)
+    {
+        _observadores.Remove(observer);
+    }
+
+    public void Notificar()
+    {
+        foreach (var obs in _observadores)
+            obs.Actualizar();
+    }
+
     }
 }
