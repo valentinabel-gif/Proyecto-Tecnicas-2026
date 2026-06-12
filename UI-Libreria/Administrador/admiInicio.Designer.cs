@@ -300,6 +300,7 @@
             this.panel7.Name = "panel7";
             this.panel7.Size = new System.Drawing.Size(565, 360);
             this.panel7.TabIndex = 6;
+            this.panel7.Paint += new System.Windows.Forms.PaintEventHandler(this.panel7_Paint);
             // 
             // ListaUsuarios
             // 

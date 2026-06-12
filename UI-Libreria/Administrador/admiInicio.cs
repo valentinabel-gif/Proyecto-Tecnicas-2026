@@ -78,5 +78,10 @@ namespace UI_Libreria.Administrador
             List<Usuario> usuarios = _usuarioBLL.RecuperarTodosLosUsuarios();
             ListaUsuarios.DataSource = usuarios;
         }
+
+        private void panel7_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }

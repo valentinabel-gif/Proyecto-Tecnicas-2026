@@ -32,6 +32,8 @@ namespace UI_Libreria.Gerente
             VistaVenta = new VentaGerente();
             VistaVendedores = new VendedoresGerente();
 
+            AbrirUserControl(VistaInicioGerente);
+
         }
         private void AbrirUserControl(UserControl uc)
         {
