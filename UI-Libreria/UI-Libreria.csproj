@@ -54,6 +54,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Administrador\FormEditarUsuario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Administrador\FormEditarUsuario.Designer.cs">
+      <DependentUpon>FormEditarUsuario.cs</DependentUpon>
+    </Compile>
     <Compile Include="Administrador\FrmCrearUsuario..cs">
       <SubType>Form</SubType>
     </Compile>
@@ -219,6 +225,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Administrador\admiUsuario.resx">
       <DependentUpon>admiUsuario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Administrador\FormEditarUsuario.resx">
+      <DependentUpon>FormEditarUsuario.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Administrador\FrmCrearUsuario..resx">
       <DependentUpon>FrmCrearUsuario..cs</DependentUpon>
