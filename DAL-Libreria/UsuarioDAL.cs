@@ -172,6 +172,21 @@ namespace DAL_Libreria
 
             _conexion.EscribirPorStoreProcedure("sp_ModificarUsuario", parametros);
         }
-        
+
+        public void DesactivarUsuario(int idUsuario)
+        {
+            SqlParameter[] parametros = new SqlParameter[]
+            {
+                _conexion.crearParametro("@id_usuario", idUsuario)
+            };
+
+            int filasAfectadas = _conexion.EscribirPorStoreProcedure("sp_DesactivarUsuario", parametros);
+
+            if (filasAfectadas <= 0)
+            {
+                throw new Exception("No se pudo desactivar el usuario.");
+            }
+        }
+
     }
 }
