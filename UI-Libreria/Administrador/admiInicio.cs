@@ -1,4 +1,5 @@
 ﻿using BE_Libreria;
+using BE_Libreria.Seguridad_y_Usuario;
 using BLL_Libreria;
 using BLL_Libreria.Seguridad_y_Usuario___Login;
 using System;
@@ -11,19 +12,22 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-
 namespace UI_Libreria.Administrador
 {
-    public partial class admiInicio : UserControl
+    public partial class admiInicio : UserControl , IObservadorUsuario
     {
 
-        private UsuarioBLL _usuarioBLL = new UsuarioBLL();
+        private UsuarioBLL _usuarioBLL; //= new UsuarioBLL();
         private RolBLL _rolBLL = new RolBLL();
+        private CategoriaBLL _categoriaBLL = new CategoriaBLL();
 
-        private UsuarioBLL _listaUsuarioBLL = new UsuarioBLL();
-        public admiInicio()
+    
+        public admiInicio(UsuarioBLL usuarioBLL)
         {
             InitializeComponent();
+            _usuarioBLL = usuarioBLL;
+            _usuarioBLL.RegistrarObservador(this);
+            DatosGrilla();
 
         }
 
@@ -34,7 +38,7 @@ namespace UI_Libreria.Administrador
 
         private void btnCrearUsuInicio_Click(object sender, EventArgs e)
         {
-            FormCrearUsuario form = new FormCrearUsuario();
+            FormCrearUsuario form = new FormCrearUsuario(_usuarioBLL);
             form.Show();
         }
 
@@ -61,6 +65,7 @@ namespace UI_Libreria.Administrador
             cantUsuarios.Text = _usuarioBLL.ContarUsuarios().ToString();
             cantRoles.Text = _rolBLL.ContarRoles().ToString();
             cantPermisos.Text = _rolBLL.ContarPermisos().ToString();
+            txtCategoria.Text = _categoriaBLL.ContarCategoria().ToString();
         }
         private void DatosGrilla()
         {
@@ -79,7 +84,25 @@ namespace UI_Libreria.Administrador
             ListaUsuarios.DataSource = usuarios;
         }
 
-        private void panel7_Paint(object sender, PaintEventArgs e)
+        private void ListaUsuarios_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        public void Actualizar()
+        {
+            MessageBox.Show("Observer ejecutando");
+            CargarListaUsuarios();
+            CargarEstadisticas();// también actualiza el contador
+
+        }
+
+        private void label7_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void cantRoles_Click(object sender, EventArgs e)
         {
 
         }

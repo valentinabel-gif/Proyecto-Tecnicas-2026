@@ -15,9 +15,11 @@ namespace UI_Libreria.Administrador
 {
     public partial class FormCrearUsuario : Form
     {
-        public FormCrearUsuario()
+        private UsuarioBLL _usuarioBLL;
+        public FormCrearUsuario(UsuarioBLL usuarioBLL)
         {
             InitializeComponent();
+            _usuarioBLL = usuarioBLL;
         }
 
         private void textBox1_TextChanged(object sender, EventArgs e)
@@ -94,7 +96,7 @@ namespace UI_Libreria.Administrador
 
                 Usuario nuevoUsuario = new Usuario(0, nombre, apellido, correo, dni, contrasena, username, rolSeleccionado);
 
-                UsuarioBLL _usuarioBLL = new UsuarioBLL();
+                //UsuarioBLL _usuarioBLL = new UsuarioBLL();
 
                 _usuarioBLL.AltaUsuario(nuevoUsuario);
 

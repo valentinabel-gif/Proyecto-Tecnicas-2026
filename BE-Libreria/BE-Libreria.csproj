@@ -41,6 +41,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Seguridad y Usuario\IObservadorUsuario.cs" />
+    <Compile Include="Seguridad y Usuario\ISujetoUsuario.cs" />
     <Compile Include="Stock\Reporte.cs" />
     <Compile Include="Stock\AlertaStock.cs" />
     <Compile Include="Ventas\Pago.cs" />

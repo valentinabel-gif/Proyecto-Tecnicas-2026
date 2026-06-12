@@ -70,7 +70,7 @@
             this.panel2.Location = new System.Drawing.Point(134, 0);
             this.panel2.Margin = new System.Windows.Forms.Padding(2);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(889, 72);
+            this.panel2.Size = new System.Drawing.Size(889, 73);
             this.panel2.TabIndex = 4;
             // 
             // Date
@@ -97,36 +97,34 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(623, 11);
+            this.pictureBox1.Location = new System.Drawing.Point(627, 9);
             this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(38, 43);
+            this.pictureBox1.Size = new System.Drawing.Size(45, 50);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 2;
             this.pictureBox1.TabStop = false;
             // 
             // label3
             // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft YaHei", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Font = new System.Drawing.Font("Microsoft YaHei", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label3.Location = new System.Drawing.Point(474, 24);
+            this.label3.Location = new System.Drawing.Point(508, 28);
             this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(145, 19);
+            this.label3.Size = new System.Drawing.Size(117, 19);
             this.label3.TabIndex = 2;
             this.label3.Text = "Vendedor Mayorista";
             this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
             // label2
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft YaHei", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Font = new System.Drawing.Font("Microsoft YaHei", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label2.Location = new System.Drawing.Point(11, 18);
+            this.label2.Location = new System.Drawing.Point(11, 20);
             this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(50, 19);
+            this.label2.Size = new System.Drawing.Size(73, 30);
             this.label2.TabIndex = 2;
             this.label2.Text = "Inicio";
             // 
@@ -152,7 +150,7 @@
             this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.button6.Font = new System.Drawing.Font("Microsoft YaHei", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button6.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.button6.Location = new System.Drawing.Point(20, 379);
+            this.button6.Location = new System.Drawing.Point(20, 466);
             this.button6.Margin = new System.Windows.Forms.Padding(2);
             this.button6.Name = "button6";
             this.button6.Size = new System.Drawing.Size(100, 23);
@@ -180,7 +178,7 @@
             this.BtnGestionClientes.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtnGestionClientes.Font = new System.Drawing.Font("Microsoft YaHei", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnGestionClientes.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.BtnGestionClientes.Location = new System.Drawing.Point(0, 273);
+            this.BtnGestionClientes.Location = new System.Drawing.Point(0, 262);
             this.BtnGestionClientes.Margin = new System.Windows.Forms.Padding(2);
             this.BtnGestionClientes.Name = "BtnGestionClientes";
             this.BtnGestionClientes.Size = new System.Drawing.Size(134, 63);
@@ -196,7 +194,7 @@
             this.BtnConsultaPrecio.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtnConsultaPrecio.Font = new System.Drawing.Font("Microsoft YaHei", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnConsultaPrecio.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.BtnConsultaPrecio.Location = new System.Drawing.Point(0, 206);
+            this.BtnConsultaPrecio.Location = new System.Drawing.Point(0, 199);
             this.BtnConsultaPrecio.Margin = new System.Windows.Forms.Padding(2);
             this.BtnConsultaPrecio.Name = "BtnConsultaPrecio";
             this.BtnConsultaPrecio.Size = new System.Drawing.Size(134, 63);
@@ -212,7 +210,7 @@
             this.BtnVenta.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtnVenta.Font = new System.Drawing.Font("Microsoft YaHei", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnVenta.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.BtnVenta.Location = new System.Drawing.Point(0, 139);
+            this.BtnVenta.Location = new System.Drawing.Point(0, 136);
             this.BtnVenta.Margin = new System.Windows.Forms.Padding(2);
             this.BtnVenta.Name = "BtnVenta";
             this.BtnVenta.Size = new System.Drawing.Size(134, 63);

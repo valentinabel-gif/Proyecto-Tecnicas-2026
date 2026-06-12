@@ -38,7 +38,7 @@
             this.cantRoles = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
-            this.label7 = new System.Windows.Forms.Label();
+            this.txtCategoria = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.panel5 = new System.Windows.Forms.Panel();
             this.cantPermisos = new System.Windows.Forms.Label();
@@ -143,6 +143,7 @@
             this.cantRoles.Size = new System.Drawing.Size(36, 40);
             this.cantRoles.TabIndex = 1;
             this.cantRoles.Text = "0";
+            this.cantRoles.Click += new System.EventHandler(this.cantRoles_Click);
             // 
             // label2
             // 
@@ -161,23 +162,24 @@
             // 
             this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(230)))), ((int)(((byte)(212)))));
             this.panel4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel4.Controls.Add(this.label7);
+            this.panel4.Controls.Add(this.txtCategoria);
             this.panel4.Controls.Add(this.label3);
             this.panel4.Location = new System.Drawing.Point(594, 102);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(280, 80);
             this.panel4.TabIndex = 3;
             // 
-            // label7
+            // txtCategoria
             // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Microsoft YaHei UI", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.ForeColor = System.Drawing.Color.Green;
-            this.label7.Location = new System.Drawing.Point(129, 32);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(36, 40);
-            this.label7.TabIndex = 1;
-            this.label7.Text = "0";
+            this.txtCategoria.AutoSize = true;
+            this.txtCategoria.Font = new System.Drawing.Font("Microsoft YaHei UI", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtCategoria.ForeColor = System.Drawing.Color.Green;
+            this.txtCategoria.Location = new System.Drawing.Point(129, 32);
+            this.txtCategoria.Name = "txtCategoria";
+            this.txtCategoria.Size = new System.Drawing.Size(36, 40);
+            this.txtCategoria.TabIndex = 1;
+            this.txtCategoria.Text = "0";
+            this.txtCategoria.Click += new System.EventHandler(this.label7_Click);
             // 
             // label3
             // 
@@ -317,6 +319,7 @@
             this.ListaUsuarios.RowTemplate.Height = 24;
             this.ListaUsuarios.Size = new System.Drawing.Size(482, 236);
             this.ListaUsuarios.TabIndex = 1;
+            this.ListaUsuarios.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.ListaUsuarios_CellContentClick);
             // 
             // label10
             // 
@@ -380,7 +383,7 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label cantUsuarios;
         private System.Windows.Forms.Label cantRoles;
-        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label txtCategoria;
         private System.Windows.Forms.Label cantPermisos;
         private System.Windows.Forms.Panel panel6;
         private System.Windows.Forms.Panel panel7;

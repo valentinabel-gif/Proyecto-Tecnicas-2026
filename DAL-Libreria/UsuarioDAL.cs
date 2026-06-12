@@ -1,4 +1,5 @@
 ﻿using BE_Libreria;
+using BE_Libreria.Seguridad_y_Usuario;
 using System;
 using System.Collections.Generic;
 using System.Data;
@@ -12,6 +13,7 @@ namespace DAL_Libreria
     public class UsuarioDAL
     {
         private Conexion _conexion = new Conexion();
+        //private List<IObservadorUsuario> _observadores = new List<IObservadorUsuario>();
 
         public Usuario Autenticar(string username, string passwordHasheada)
         {
@@ -71,20 +73,23 @@ namespace DAL_Libreria
         {
             SqlParameter[] parametros = new SqlParameter[]
             {
-                _conexion.crearParametro("@nombre",     nuevoUsuario.NombreUsuario),
-                _conexion.crearParametro("@apellido",   nuevoUsuario.ApellidoUsuario),
-                _conexion.crearParametro("@correo",     nuevoUsuario.CorreoUsuario),
-                _conexion.crearParametro("@dni",        nuevoUsuario.DniUsuario),
-                _conexion.crearParametro("@contrasena", passwordHasheada),
-                _conexion.crearParametro("@username",   nuevoUsuario.UsernameUsuario),
-                _conexion.crearParametro("@id_rol",     nuevoUsuario.RolUsuario.IdMedidaDeSeguridad)
+            _conexion.crearParametro("@nombre",     nuevoUsuario.NombreUsuario),
+            _conexion.crearParametro("@apellido",   nuevoUsuario.ApellidoUsuario),
+            _conexion.crearParametro("@correo",     nuevoUsuario.CorreoUsuario),
+            _conexion.crearParametro("@dni",        nuevoUsuario.DniUsuario),
+            _conexion.crearParametro("@contrasena", passwordHasheada),
+            _conexion.crearParametro("@username",   nuevoUsuario.UsernameUsuario),
+            _conexion.crearParametro("@id_rol",     nuevoUsuario.RolUsuario.IdMedidaDeSeguridad)
             };
 
             int filasAfectadas = _conexion.EscribirPorStoreProcedure("sp_CrearUsuario", parametros);
 
             if (filasAfectadas <= 0)
                 throw new Exception("No se pudo insertar el usuario.");
+
+            //Notificar();
         }
+
 
         public int ContarUsuarios()
         {
@@ -119,6 +124,68 @@ namespace DAL_Libreria
                 }
             }
             return usuarios;
+        }
+        //Modificar usuario
+        public Usuario RecuperarPorId(int idUsuario)
+        {
+            SqlParameter[] parametros = new SqlParameter[]
+            {
+        _conexion.crearParametro("@id_usuario", idUsuario)
+            };
+
+            DataTable tabla = _conexion.LeerPorStoreProcedure("sp_RecuperarUsuarioPorId", parametros);
+
+            if (tabla == null || tabla.Rows.Count == 0)
+                return null;
+
+            DataRow fila = tabla.Rows[0];
+            Rol rol = new Rol(Convert.ToInt32(fila["id_rol"]), fila["nombre_rol"].ToString());
+
+            return new Usuario(
+                Convert.ToInt32(fila["id_usuario"]),
+                fila["nombre"].ToString(),
+                fila["apellido"].ToString(),
+                fila["correo"].ToString(),
+                fila["dni"].ToString(),
+                "",
+                fila["nombre_usuario"].ToString(),
+                rol
+            );
+        }
+
+        public void Modificar(Usuario usuario, string passwordHasheada = null)
+        {
+            SqlParameter paramContrasena = new SqlParameter("@contrasena", SqlDbType.NVarChar);
+            paramContrasena.Value = passwordHasheada != null ? (object)passwordHasheada : DBNull.Value;
+
+            SqlParameter[] parametros = new SqlParameter[]
+            {
+        _conexion.crearParametro("@id_usuario", usuario.IdUsuario),
+        _conexion.crearParametro("@nombre",     usuario.NombreUsuario),
+        _conexion.crearParametro("@apellido",   usuario.ApellidoUsuario),
+        _conexion.crearParametro("@correo",     usuario.CorreoUsuario),
+        _conexion.crearParametro("@dni",        usuario.DniUsuario),
+        _conexion.crearParametro("@username",   usuario.UsernameUsuario),
+        _conexion.crearParametro("@id_rol",     usuario.RolUsuario.IdMedidaDeSeguridad),
+        paramContrasena
+            };
+
+            _conexion.EscribirPorStoreProcedure("sp_ModificarUsuario", parametros);
+        }
+
+        public void DesactivarUsuario(int idUsuario)
+        {
+            SqlParameter[] parametros = new SqlParameter[]
+            {
+                _conexion.crearParametro("@id_usuario", idUsuario)
+            };
+
+            int filasAfectadas = _conexion.EscribirPorStoreProcedure("sp_DesactivarUsuario", parametros);
+
+            if (filasAfectadas <= 0)
+            {
+                throw new Exception("No se pudo desactivar el usuario.");
+            }
         }
 
     }

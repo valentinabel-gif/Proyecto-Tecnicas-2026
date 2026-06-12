@@ -1,4 +1,5 @@
-﻿using System;
+﻿using BLL_Libreria;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -102,7 +103,15 @@ namespace UI_Libreria.EncargadoDeStock
 
         private void button6_Click(object sender, EventArgs e)
         {
+            DialogResult resultado = MessageBox.Show("¿Está seguro que desea cerrar sesión?", "Cerrar sesión", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
 
+            if (resultado == DialogResult.Yes)
+            {
+                Sesion.Instancia.CerrarSesion(); // Singleton limpia la sesión
+                login loginForm = new login();  // abrís el form de login
+                loginForm.Show();
+                this.Close();
+            }
         }
 
         private void BtnIngresos_Click(object sender, EventArgs e)
