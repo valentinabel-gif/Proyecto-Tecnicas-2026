@@ -52,6 +52,8 @@
             this.rbDesc15 = new System.Windows.Forms.RadioButton();
             this.rbDesc10 = new System.Windows.Forms.RadioButton();
             this.rbDesc5 = new System.Windows.Forms.RadioButton();
+            this.RazonSociallbl = new System.Windows.Forms.Label();
+            this.CondFiscallbl = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDetalle)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.gpMedioPago.SuspendLayout();
@@ -63,9 +65,9 @@
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(13, 14);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(124, 13);
+            this.label1.Size = new System.Drawing.Size(233, 13);
             this.label1.TabIndex = 0;
-            this.label1.Text = "Ingrese codigo de barras";
+            this.label1.Text = "Ingrese codigo de barras o nombre del producto";
             // 
             // txtBusqueda
             // 
@@ -118,11 +120,13 @@
             // groupBox1
             // 
             this.groupBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.groupBox1.Controls.Add(this.CondFiscallbl);
+            this.groupBox1.Controls.Add(this.RazonSociallbl);
             this.groupBox1.Controls.Add(this.txtDniCuitCliente);
             this.groupBox1.Controls.Add(this.label2);
-            this.groupBox1.Location = new System.Drawing.Point(655, 3);
+            this.groupBox1.Location = new System.Drawing.Point(613, 3);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(200, 70);
+            this.groupBox1.Size = new System.Drawing.Size(269, 91);
             this.groupBox1.TabIndex = 3;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Identificacion Del Cliente";
@@ -130,16 +134,16 @@
             // txtDniCuitCliente
             // 
             this.txtDniCuitCliente.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtDniCuitCliente.Location = new System.Drawing.Point(25, 37);
+            this.txtDniCuitCliente.Location = new System.Drawing.Point(7, 39);
             this.txtDniCuitCliente.Name = "txtDniCuitCliente";
-            this.txtDniCuitCliente.Size = new System.Drawing.Size(123, 20);
+            this.txtDniCuitCliente.Size = new System.Drawing.Size(98, 20);
             this.txtDniCuitCliente.TabIndex = 1;
             // 
             // label2
             // 
             this.label2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(25, 21);
+            this.label2.Location = new System.Drawing.Point(8, 23);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(56, 13);
             this.label2.TabIndex = 0;
@@ -153,9 +157,9 @@
             this.gpMedioPago.Controls.Add(this.btnCredito);
             this.gpMedioPago.Controls.Add(this.btnDebito);
             this.gpMedioPago.Controls.Add(this.btnEfectivo);
-            this.gpMedioPago.Location = new System.Drawing.Point(613, 79);
+            this.gpMedioPago.Location = new System.Drawing.Point(613, 100);
             this.gpMedioPago.Name = "gpMedioPago";
-            this.gpMedioPago.Size = new System.Drawing.Size(270, 69);
+            this.gpMedioPago.Size = new System.Drawing.Size(270, 58);
             this.gpMedioPago.TabIndex = 4;
             this.gpMedioPago.TabStop = false;
             this.gpMedioPago.Text = "Medio De Pago";
@@ -164,7 +168,7 @@
             // 
             this.btnTransferencia.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btnTransferencia.AutoSize = true;
-            this.btnTransferencia.Location = new System.Drawing.Point(184, 35);
+            this.btnTransferencia.Location = new System.Drawing.Point(184, 24);
             this.btnTransferencia.Name = "btnTransferencia";
             this.btnTransferencia.Size = new System.Drawing.Size(90, 17);
             this.btnTransferencia.TabIndex = 3;
@@ -176,7 +180,7 @@
             // 
             this.btnCredito.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btnCredito.AutoSize = true;
-            this.btnCredito.Location = new System.Drawing.Point(120, 35);
+            this.btnCredito.Location = new System.Drawing.Point(120, 24);
             this.btnCredito.Name = "btnCredito";
             this.btnCredito.Size = new System.Drawing.Size(58, 17);
             this.btnCredito.TabIndex = 2;
@@ -188,7 +192,7 @@
             // 
             this.btnDebito.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btnDebito.AutoSize = true;
-            this.btnDebito.Location = new System.Drawing.Point(67, 35);
+            this.btnDebito.Location = new System.Drawing.Point(67, 24);
             this.btnDebito.Name = "btnDebito";
             this.btnDebito.Size = new System.Drawing.Size(56, 17);
             this.btnDebito.TabIndex = 1;
@@ -200,7 +204,7 @@
             // 
             this.btnEfectivo.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btnEfectivo.AutoSize = true;
-            this.btnEfectivo.Location = new System.Drawing.Point(6, 35);
+            this.btnEfectivo.Location = new System.Drawing.Point(6, 24);
             this.btnEfectivo.Name = "btnEfectivo";
             this.btnEfectivo.Size = new System.Drawing.Size(64, 17);
             this.btnEfectivo.TabIndex = 0;
@@ -283,7 +287,7 @@
             this.gbDescuento.Controls.Add(this.rbDesc15);
             this.gbDescuento.Controls.Add(this.rbDesc10);
             this.gbDescuento.Controls.Add(this.rbDesc5);
-            this.gbDescuento.Location = new System.Drawing.Point(613, 153);
+            this.gbDescuento.Location = new System.Drawing.Point(613, 164);
             this.gbDescuento.Name = "gbDescuento";
             this.gbDescuento.Size = new System.Drawing.Size(269, 52);
             this.gbDescuento.TabIndex = 11;
@@ -326,6 +330,26 @@
             this.rbDesc5.Text = "5%";
             this.rbDesc5.UseVisualStyleBackColor = true;
             this.rbDesc5.CheckedChanged += new System.EventHandler(this.radioButton1_CheckedChanged);
+            // 
+            // RazonSociallbl
+            // 
+            this.RazonSociallbl.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.RazonSociallbl.AutoSize = true;
+            this.RazonSociallbl.Location = new System.Drawing.Point(108, 16);
+            this.RazonSociallbl.Name = "RazonSociallbl";
+            this.RazonSociallbl.Size = new System.Drawing.Size(73, 13);
+            this.RazonSociallbl.TabIndex = 2;
+            this.RazonSociallbl.Text = "Razon Social:";
+            // 
+            // CondFiscallbl
+            // 
+            this.CondFiscallbl.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.CondFiscallbl.AutoSize = true;
+            this.CondFiscallbl.Location = new System.Drawing.Point(113, 42);
+            this.CondFiscallbl.Name = "CondFiscallbl";
+            this.CondFiscallbl.Size = new System.Drawing.Size(65, 13);
+            this.CondFiscallbl.TabIndex = 3;
+            this.CondFiscallbl.Text = "Cond Fiscal:";
             // 
             // UcVenta
             // 
@@ -384,5 +408,7 @@
         private System.Windows.Forms.RadioButton rbDesc10;
         private System.Windows.Forms.RadioButton rbDesc5;
         private System.Windows.Forms.RadioButton rbDesc15;
+        private System.Windows.Forms.Label CondFiscallbl;
+        private System.Windows.Forms.Label RazonSociallbl;
     }
 }

@@ -121,5 +121,63 @@ namespace DAL_Libreria
             return usuarios;
         }
 
+        public Usuario RecuperarPorId(int idUsuario)
+        {
+            SqlParameter[] parametros = new SqlParameter[]
+            {
+                _conexion.crearParametro("@id_usuario", idUsuario)
+            };
+
+            DataTable tabla = _conexion.LeerPorStoreProcedure("sp_RecuperarUsuarioPorId", parametros);
+
+            if (tabla == null || tabla.Rows.Count == 0)
+            {
+                return null;
+            }
+
+            DataRow fila = tabla.Rows[0];
+
+            Rol rol = new Rol(Convert.ToInt32(fila["id_rol"]), fila["nombre_rol"].ToString());
+
+            return new Usuario(Convert.ToInt32(fila["id_usuario"]), fila["nombre"].ToString(), fila["apellido"].ToString(), fila["correo"].ToString(), fila["dni"].ToString(), "", fila["nombre_usuario"].ToString(), rol);
+        }
+
+        public void Modificar(Usuario usuarioModificado)
+        {
+            SqlParameter[] parametros = new SqlParameter[]
+            {
+                _conexion.crearParametro("@id_usuario", usuarioModificado.IdUsuario),
+                _conexion.crearParametro("@nombre",     usuarioModificado.NombreUsuario),
+                _conexion.crearParametro("@apellido",   usuarioModificado.ApellidoUsuario),
+                _conexion.crearParametro("@correo",     usuarioModificado.CorreoUsuario),
+                _conexion.crearParametro("@dni",        usuarioModificado.DniUsuario),
+                _conexion.crearParametro("@username",   usuarioModificado.UsernameUsuario),
+                _conexion.crearParametro("@id_rol",
+                usuarioModificado.RolUsuario.IdMedidaDeSeguridad)
+            };
+
+            int filasAfectadas = _conexion.EscribirPorStoreProcedure("sp_ModificarUsuario", parametros);
+
+            if (filasAfectadas <= 0)
+            {
+                throw new Exception("No se pudo modificar el usuario.");
+            }
+        }
+
+        public void DesactivarUsuario(int idUsuario)
+        {
+            SqlParameter[] parametros = new SqlParameter[]
+            {
+                _conexion.crearParametro("@id_usuario", idUsuario)
+            };
+
+            int filasAfectadas = _conexion.EscribirPorStoreProcedure("sp_DesactivarUsuario", parametros);
+
+            if (filasAfectadas <= 0)
+            {
+                throw new Exception("No se pudo desactivar el usuario.");
+            }
+        }
+
     }
 }

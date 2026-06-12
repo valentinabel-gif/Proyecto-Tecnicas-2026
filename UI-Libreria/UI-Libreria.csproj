@@ -285,6 +285,9 @@
     <EmbeddedResource Include="VendedorMayorista\UcConsultarPrecio.resx">
       <DependentUpon>UcConsultarPrecio.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="VendedorMayorista\UcGestionClientes.resx">
+      <DependentUpon>UcGestionClientes.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="VendedorMayorista\UcInicioVendedor.resx">
       <DependentUpon>UcInicioVendedor.cs</DependentUpon>
     </EmbeddedResource>
