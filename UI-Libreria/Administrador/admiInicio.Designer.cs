@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1 = new System.Windows.Forms.Panel();
             this.msgBienvenida = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
@@ -108,6 +108,7 @@
             this.cantUsuarios.Size = new System.Drawing.Size(36, 40);
             this.cantUsuarios.TabIndex = 1;
             this.cantUsuarios.Text = "0";
+            this.cantUsuarios.Click += new System.EventHandler(this.cantUsuarios_Click);
             // 
             // label1
             // 
@@ -279,6 +280,7 @@
             this.btnCrearRolInicio.TabIndex = 1;
             this.btnCrearRolInicio.Text = "Crear Nuevo Rol";
             this.btnCrearRolInicio.UseVisualStyleBackColor = false;
+            this.btnCrearRolInicio.Click += new System.EventHandler(this.btnCrearRolInicio_Click);
             // 
             // btnAgregarCateInicio
             // 
@@ -302,22 +304,21 @@
             this.panel7.Name = "panel7";
             this.panel7.Size = new System.Drawing.Size(565, 360);
             this.panel7.TabIndex = 6;
-            this.panel7.Paint += new System.Windows.Forms.PaintEventHandler(this.panel7_Paint);
             // 
             // ListaUsuarios
             // 
             this.ListaUsuarios.BackgroundColor = System.Drawing.SystemColors.ActiveBorder;
             this.ListaUsuarios.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.ListaUsuarios.GridColor = System.Drawing.SystemColors.ActiveBorder;
-            this.ListaUsuarios.Location = new System.Drawing.Point(37, 88);
+            this.ListaUsuarios.Location = new System.Drawing.Point(37, 72);
             this.ListaUsuarios.Name = "ListaUsuarios";
             this.ListaUsuarios.RowHeadersWidth = 51;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.Transparent;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
-            this.ListaUsuarios.RowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.Transparent;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.Black;
+            this.ListaUsuarios.RowsDefaultCellStyle = dataGridViewCellStyle2;
             this.ListaUsuarios.RowTemplate.Height = 24;
-            this.ListaUsuarios.Size = new System.Drawing.Size(482, 236);
+            this.ListaUsuarios.Size = new System.Drawing.Size(482, 252);
             this.ListaUsuarios.TabIndex = 1;
             this.ListaUsuarios.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.ListaUsuarios_CellContentClick);
             // 

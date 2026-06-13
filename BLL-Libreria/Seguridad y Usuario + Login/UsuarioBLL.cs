@@ -99,7 +99,7 @@ namespace BLL_Libreria
 
         public void BajaUsuario(int idUsuario)
         {
-            if (!Sesion.Instancia.HaySesionActiva() || !Sesion.Instancia.UsuarioActivo.TienePermiso("GestionarUsuarios"))
+            if (!Sesion.Instancia.HaySesionActiva() || !Sesion.Instancia.UsuarioActivo.TienePermiso("eliminar_usuario"))
             {
                 throw new Exception("Seguridad: No cuenta con los permisos necesarios para dar de baja usuarios.");
             }
@@ -108,9 +108,10 @@ namespace BLL_Libreria
                 throw new Exception("El ID de usuario es inválido.");
 
             //en el procedimiento almacenado en la DAL ejecuto una baja logica (UPDATE estado = 0)
-            // _usuarioDAL.DesactivarUsuario(idUsuario);
+             _usuarioDAL.DesactivarUsuario(idUsuario);
+            Notificar();
 
-            throw new NotImplementedException("pendiente conexion con DAL.");// y cuando ya este hecha la dal borro toda esta linea
+           //throw new NotImplementedException("pendiente conexion con DAL.");// y cuando ya este hecha la dal borro toda esta linea
         }
 
         

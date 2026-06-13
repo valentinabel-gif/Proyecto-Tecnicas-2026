@@ -59,7 +59,11 @@ namespace UI_Libreria.Administrador
 
         private void button2_Click(object sender, EventArgs e)
         {
-            this.Close();
+             DialogResult resultado = MessageBox.Show("¿Desea salir sin guardar?", "Confirmar",MessageBoxButtons.YesNo,MessageBoxIcon.Question);
+            if (resultado == DialogResult.Yes)
+            {
+                this.Close();
+            }
         }
 
         private void button1_Click(object sender, EventArgs e)

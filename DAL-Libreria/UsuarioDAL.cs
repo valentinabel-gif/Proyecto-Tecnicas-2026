@@ -160,14 +160,14 @@ namespace DAL_Libreria
 
             SqlParameter[] parametros = new SqlParameter[]
             {
-        _conexion.crearParametro("@id_usuario", usuario.IdUsuario),
-        _conexion.crearParametro("@nombre",     usuario.NombreUsuario),
-        _conexion.crearParametro("@apellido",   usuario.ApellidoUsuario),
-        _conexion.crearParametro("@correo",     usuario.CorreoUsuario),
-        _conexion.crearParametro("@dni",        usuario.DniUsuario),
-        _conexion.crearParametro("@username",   usuario.UsernameUsuario),
-        _conexion.crearParametro("@id_rol",     usuario.RolUsuario.IdMedidaDeSeguridad),
-        paramContrasena
+                    _conexion.crearParametro("@id_usuario", usuario.IdUsuario),
+                    _conexion.crearParametro("@nombre",     usuario.NombreUsuario),
+                    _conexion.crearParametro("@apellido",   usuario.ApellidoUsuario),
+                    _conexion.crearParametro("@correo",     usuario.CorreoUsuario),
+                    _conexion.crearParametro("@dni",        usuario.DniUsuario),
+                    _conexion.crearParametro("@username",   usuario.UsernameUsuario),
+                    _conexion.crearParametro("@id_rol",     usuario.RolUsuario.IdMedidaDeSeguridad),
+                    paramContrasena
             };
 
             _conexion.EscribirPorStoreProcedure("sp_ModificarUsuario", parametros);

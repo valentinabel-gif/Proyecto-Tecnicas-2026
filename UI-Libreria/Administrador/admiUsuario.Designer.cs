@@ -31,8 +31,10 @@
             this.txtBuscar = new System.Windows.Forms.TextBox();
             this.button2 = new System.Windows.Forms.Button();
             this.dgvUsuarios = new System.Windows.Forms.DataGridView();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.lblSinResultados = new System.Windows.Forms.Label();
             this.id_usuario = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nombre_usuario = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colNombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colDni = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -40,8 +42,6 @@
             this.colApellido = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colEditar = new System.Windows.Forms.DataGridViewButtonColumn();
             this.colEliminar = new System.Windows.Forms.DataGridViewButtonColumn();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.lblSinResultados = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgvUsuarios)).BeginInit();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -79,7 +79,7 @@
             this.dgvUsuarios.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvUsuarios.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.id_usuario,
-            this.Column2,
+            this.nombre_usuario,
             this.Column3,
             this.colNombre,
             this.colDni,
@@ -96,6 +96,34 @@
             this.dgvUsuarios.TabIndex = 3;
             this.dgvUsuarios.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick_1);
             // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.LightGray;
+            this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.panel1.Controls.Add(this.lblSinResultados);
+            this.panel1.Controls.Add(this.dgvUsuarios);
+            this.panel1.Controls.Add(this.button2);
+            this.panel1.Controls.Add(this.txtBuscar);
+            this.panel1.Location = new System.Drawing.Point(16, 37);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(1148, 521);
+            this.panel1.TabIndex = 4;
+            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
+            // 
+            // lblSinResultados
+            // 
+            this.lblSinResultados.AutoSize = true;
+            this.lblSinResultados.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.lblSinResultados.Font = new System.Drawing.Font("Microsoft YaHei", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblSinResultados.ForeColor = System.Drawing.Color.Maroon;
+            this.lblSinResultados.Location = new System.Drawing.Point(409, 249);
+            this.lblSinResultados.Name = "lblSinResultados";
+            this.lblSinResultados.Size = new System.Drawing.Size(243, 27);
+            this.lblSinResultados.TabIndex = 5;
+            this.lblSinResultados.Text = "Usuario no encontrado";
+            this.lblSinResultados.Visible = false;
+            this.lblSinResultados.Click += new System.EventHandler(this.lblSinResultados_Click);
+            // 
             // id_usuario
             // 
             this.id_usuario.DataPropertyName = "IdUsuario";
@@ -105,14 +133,14 @@
             this.id_usuario.ReadOnly = true;
             this.id_usuario.Width = 125;
             // 
-            // Column2
+            // nombre_usuario
             // 
-            this.Column2.DataPropertyName = "UsernameUsuario";
-            this.Column2.HeaderText = "USUARIO";
-            this.Column2.MinimumWidth = 6;
-            this.Column2.Name = "Column2";
-            this.Column2.ReadOnly = true;
-            this.Column2.Width = 125;
+            this.nombre_usuario.DataPropertyName = "UsernameUsuario";
+            this.nombre_usuario.HeaderText = "USUARIO";
+            this.nombre_usuario.MinimumWidth = 6;
+            this.nombre_usuario.Name = "nombre_usuario";
+            this.nombre_usuario.ReadOnly = true;
+            this.nombre_usuario.Width = 125;
             // 
             // Column3
             // 
@@ -173,34 +201,6 @@
             this.colEliminar.UseColumnTextForButtonValue = true;
             this.colEliminar.Width = 80;
             // 
-            // panel1
-            // 
-            this.panel1.BackColor = System.Drawing.Color.LightGray;
-            this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.panel1.Controls.Add(this.lblSinResultados);
-            this.panel1.Controls.Add(this.dgvUsuarios);
-            this.panel1.Controls.Add(this.button2);
-            this.panel1.Controls.Add(this.txtBuscar);
-            this.panel1.Location = new System.Drawing.Point(16, 37);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1148, 521);
-            this.panel1.TabIndex = 4;
-            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
-            // 
-            // lblSinResultados
-            // 
-            this.lblSinResultados.AutoSize = true;
-            this.lblSinResultados.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.lblSinResultados.Font = new System.Drawing.Font("Microsoft YaHei", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblSinResultados.ForeColor = System.Drawing.Color.Maroon;
-            this.lblSinResultados.Location = new System.Drawing.Point(409, 249);
-            this.lblSinResultados.Name = "lblSinResultados";
-            this.lblSinResultados.Size = new System.Drawing.Size(243, 27);
-            this.lblSinResultados.TabIndex = 5;
-            this.lblSinResultados.Text = "Usuario no encontrado";
-            this.lblSinResultados.Visible = false;
-            this.lblSinResultados.Click += new System.EventHandler(this.lblSinResultados_Click);
-            // 
             // admiUsuario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -224,8 +224,9 @@
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.DataGridView dgvUsuarios;
         private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Label lblSinResultados;
         private System.Windows.Forms.DataGridViewTextBoxColumn id_usuario;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn nombre_usuario;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
         private System.Windows.Forms.DataGridViewTextBoxColumn colNombre;
         private System.Windows.Forms.DataGridViewTextBoxColumn colDni;
@@ -233,6 +234,5 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn colApellido;
         private System.Windows.Forms.DataGridViewButtonColumn colEditar;
         private System.Windows.Forms.DataGridViewButtonColumn colEliminar;
-        private System.Windows.Forms.Label lblSinResultados;
     }
 }

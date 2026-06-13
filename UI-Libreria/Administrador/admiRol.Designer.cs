@@ -29,44 +29,27 @@
         private void InitializeComponent()
         {
             this.labelbuscarRol = new System.Windows.Forms.TextBox();
-            this.btnBuscarUsuario = new System.Windows.Forms.Button();
             this.dgvRoles = new System.Windows.Forms.DataGridView();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column4 = new System.Windows.Forms.DataGridViewButtonColumn();
             this.Column5 = new System.Windows.Forms.DataGridViewButtonColumn();
-            this.Column6 = new System.Windows.Forms.DataGridViewButtonColumn();
             this.button2 = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.lblBusqueda = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.dgvRoles)).BeginInit();
             this.panel1.SuspendLayout();
+            this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // labelbuscarRol
             // 
             this.labelbuscarRol.Font = new System.Drawing.Font("Microsoft YaHei UI Light", 7.8F, System.Drawing.FontStyle.Italic);
-            this.labelbuscarRol.Location = new System.Drawing.Point(22, 46);
+            this.labelbuscarRol.Location = new System.Drawing.Point(165, 46);
             this.labelbuscarRol.Name = "labelbuscarRol";
             this.labelbuscarRol.Size = new System.Drawing.Size(797, 25);
             this.labelbuscarRol.TabIndex = 0;
             this.labelbuscarRol.Text = "Buscar Rol";
-            // 
-            // btnBuscarUsuario
-            // 
-            this.btnBuscarUsuario.BackColor = System.Drawing.Color.Chocolate;
-            this.btnBuscarUsuario.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.btnBuscarUsuario.FlatAppearance.BorderColor = System.Drawing.Color.RosyBrown;
-            this.btnBuscarUsuario.FlatAppearance.BorderSize = 5;
-            this.btnBuscarUsuario.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnBuscarUsuario.ForeColor = System.Drawing.Color.Black;
-            this.btnBuscarUsuario.Location = new System.Drawing.Point(825, 47);
-            this.btnBuscarUsuario.Name = "btnBuscarUsuario";
-            this.btnBuscarUsuario.Size = new System.Drawing.Size(216, 25);
-            this.btnBuscarUsuario.TabIndex = 2;
-            this.btnBuscarUsuario.Text = "BUSCAR";
-            this.btnBuscarUsuario.UseVisualStyleBackColor = false;
+            this.labelbuscarRol.TextChanged += new System.EventHandler(this.labelbuscarRol_TextChanged);
             // 
             // dgvRoles
             // 
@@ -74,39 +57,16 @@
             this.dgvRoles.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.dgvRoles.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvRoles.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Column1,
-            this.Column2,
-            this.Column3,
             this.Column4,
-            this.Column5,
-            this.Column6});
-            this.dgvRoles.Location = new System.Drawing.Point(22, 109);
+            this.Column5});
+            this.dgvRoles.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dgvRoles.Location = new System.Drawing.Point(0, 0);
             this.dgvRoles.Name = "dgvRoles";
             this.dgvRoles.RowHeadersWidth = 51;
             this.dgvRoles.RowTemplate.Height = 24;
-            this.dgvRoles.Size = new System.Drawing.Size(1019, 298);
+            this.dgvRoles.Size = new System.Drawing.Size(943, 298);
             this.dgvRoles.TabIndex = 3;
-            // 
-            // Column1
-            // 
-            this.Column1.HeaderText = "ID";
-            this.Column1.MinimumWidth = 6;
-            this.Column1.Name = "Column1";
-            this.Column1.Width = 50;
-            // 
-            // Column2
-            // 
-            this.Column2.HeaderText = "NOMBRE ROL";
-            this.Column2.MinimumWidth = 6;
-            this.Column2.Name = "Column2";
-            this.Column2.Width = 85;
-            // 
-            // Column3
-            // 
-            this.Column3.HeaderText = "PERMISOS";
-            this.Column3.MinimumWidth = 6;
-            this.Column3.Name = "Column3";
-            this.Column3.Width = 125;
+            this.dgvRoles.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvRoles_CellContentClick);
             // 
             // Column4
             // 
@@ -126,15 +86,6 @@
             this.Column5.UseColumnTextForButtonValue = true;
             this.Column5.Width = 110;
             // 
-            // Column6
-            // 
-            this.Column6.HeaderText = "ASIGNAR PERMISO";
-            this.Column6.MinimumWidth = 6;
-            this.Column6.Name = "Column6";
-            this.Column6.Text = "ASIGNAR PERMISO";
-            this.Column6.UseColumnTextForButtonValue = true;
-            this.Column6.Width = 125;
-            // 
             // button2
             // 
             this.button2.BackColor = System.Drawing.Color.Wheat;
@@ -147,12 +98,12 @@
             this.button2.TabIndex = 4;
             this.button2.Text = "CREAR NUEVO ROL";
             this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // panel1
             // 
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.panel1.Controls.Add(this.btnBuscarUsuario);
-            this.panel1.Controls.Add(this.dgvRoles);
+            this.panel1.Controls.Add(this.lblBusqueda);
             this.panel1.Controls.Add(this.labelbuscarRol);
             this.panel1.Controls.Add(this.button2);
             this.panel1.Controls.Add(this.panel2);
@@ -160,13 +111,26 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1148, 521);
             this.panel1.TabIndex = 5;
+            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
+            // 
+            // lblBusqueda
+            // 
+            this.lblBusqueda.AutoSize = true;
+            this.lblBusqueda.ForeColor = System.Drawing.Color.Maroon;
+            this.lblBusqueda.Location = new System.Drawing.Point(458, 302);
+            this.lblBusqueda.Name = "lblBusqueda";
+            this.lblBusqueda.Size = new System.Drawing.Size(121, 16);
+            this.lblBusqueda.TabIndex = 6;
+            this.lblBusqueda.Text = "Rol No Encontrado";
+            this.lblBusqueda.Visible = false;
             // 
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.panel2.Location = new System.Drawing.Point(22, 109);
+            this.panel2.Controls.Add(this.dgvRoles);
+            this.panel2.Location = new System.Drawing.Point(98, 109);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1019, 298);
+            this.panel2.Size = new System.Drawing.Size(943, 298);
             this.panel2.TabIndex = 5;
             // 
             // admiRol
@@ -181,6 +145,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.dgvRoles)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            this.panel2.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -188,16 +153,12 @@
         #endregion
 
         private System.Windows.Forms.TextBox labelbuscarRol;
-        private System.Windows.Forms.Button btnBuscarUsuario;
         private System.Windows.Forms.DataGridView dgvRoles;
         private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
-        private System.Windows.Forms.DataGridViewButtonColumn Column4;
-        private System.Windows.Forms.DataGridViewButtonColumn Column5;
-        private System.Windows.Forms.DataGridViewButtonColumn Column6;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.DataGridViewButtonColumn Column4;
+        private System.Windows.Forms.DataGridViewButtonColumn Column5;
+        private System.Windows.Forms.Label lblBusqueda;
     }
 }

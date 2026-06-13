@@ -54,6 +54,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Administrador\FormCrearRol.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Administrador\FormCrearRol.Designer.cs">
+      <DependentUpon>FormCrearRol.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Administrador\FormEditarRol.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Administrador\FormEditarRol.Designer.cs">
+      <DependentUpon>FormEditarRol.cs</DependentUpon>
+    </Compile>
     <Compile Include="Administrador\FormEditarUsuario.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -225,6 +237,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Administrador\admiUsuario.resx">
       <DependentUpon>admiUsuario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Administrador\FormCrearRol.resx">
+      <DependentUpon>FormCrearRol.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Administrador\FormEditarRol.resx">
+      <DependentUpon>FormEditarRol.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Administrador\FormEditarUsuario.resx">
       <DependentUpon>FormEditarUsuario.cs</DependentUpon>

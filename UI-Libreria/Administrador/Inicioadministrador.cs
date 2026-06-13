@@ -1,4 +1,5 @@
 ﻿using BLL_Libreria;
+using BLL_Libreria.Seguridad_y_Usuario___Login;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -17,6 +18,7 @@ namespace UI_Libreria.Administrador
 
         //declaro userControls
         private UsuarioBLL _usuarioBLL = new UsuarioBLL();
+        private RolBLL _rolBLL = new RolBLL();
         admiInicio VistaInicioAdmi;
         admiUsuario VistaUsuarioAdmi;
         admiRol VistaRolAdmi;
@@ -30,9 +32,9 @@ namespace UI_Libreria.Administrador
 
             //creamos solo una vez los userControl
 
-            VistaInicioAdmi = new admiInicio(_usuarioBLL);
+            VistaInicioAdmi = new admiInicio(_usuarioBLL, _rolBLL);
             VistaUsuarioAdmi = new admiUsuario(_usuarioBLL);
-            VistaRolAdmi = new admiRol();
+            VistaRolAdmi = new admiRol(_rolBLL);
             VistaCategoriaAdmi = new admiCategoria();
 
             //Cuando abre el formm, simpre muestra el de inicio

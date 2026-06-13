@@ -14,19 +14,21 @@ using System.Windows.Forms;
 
 namespace UI_Libreria.Administrador
 {
-    public partial class admiInicio : UserControl , IObservadorUsuario
+    public partial class admiInicio : UserControl , IObservadorUsuario, IObservadorRol
     {
 
         private UsuarioBLL _usuarioBLL; //= new UsuarioBLL();
-        private RolBLL _rolBLL = new RolBLL();
+        private RolBLL _rolBLL;
         private CategoriaBLL _categoriaBLL = new CategoriaBLL();
 
     
-        public admiInicio(UsuarioBLL usuarioBLL)
+        public admiInicio(UsuarioBLL usuarioBLL, RolBLL rolBLL)
         {
             InitializeComponent();
             _usuarioBLL = usuarioBLL;
+            _rolBLL = rolBLL;
             _usuarioBLL.RegistrarObservador(this);
+            _rolBLL.RegistrarObservador(this);
             DatosGrilla();
 
         }
@@ -55,7 +57,7 @@ namespace UI_Libreria.Administrador
         private void admiInicio_Load(object sender, EventArgs e)
         {
             CargarEstadisticas();
-            DatosGrilla();
+            //DatosGrilla();
             CargarListaUsuarios();
 
         }
@@ -76,12 +78,16 @@ namespace UI_Libreria.Administrador
             { HeaderText = "Usuario", DataPropertyName = "UsernameUsuario", Width = 150 });
             ListaUsuarios.Columns.Add(new DataGridViewTextBoxColumn
             { HeaderText = "Rol", DataPropertyName = "NombreRolUsuario", Width = 150 });
+
+
         }
 
         private void CargarListaUsuarios()
         {
             List<Usuario> usuarios = _usuarioBLL.RecuperarTodosLosUsuarios();
+            ListaUsuarios.DataSource = null;
             ListaUsuarios.DataSource = usuarios;
+            ListaUsuarios.Refresh();
         }
 
         private void ListaUsuarios_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -89,14 +95,17 @@ namespace UI_Libreria.Administrador
 
         }
 
-        public void Actualizar()
+        void IObservadorUsuario.Actualizar()
         {
-            MessageBox.Show("Observer ejecutando");
             CargarListaUsuarios();
-            CargarEstadisticas();// también actualiza el contador
-
+            CargarEstadisticas();
         }
 
+        void IObservadorRol.Actualizar()
+        {
+            CargarEstadisticas(); // actualiza el contador de roles
+            
+        }
         private void label7_Click(object sender, EventArgs e)
         {
 
@@ -105,6 +114,17 @@ namespace UI_Libreria.Administrador
         private void cantRoles_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void cantUsuarios_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnCrearRolInicio_Click(object sender, EventArgs e)
+        {
+            FormCrearRol form = new FormCrearRol(_rolBLL);
+            form.ShowDialog();
         }
     }
 }

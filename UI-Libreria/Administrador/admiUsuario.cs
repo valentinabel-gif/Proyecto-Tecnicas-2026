@@ -38,6 +38,7 @@ namespace UI_Libreria.Administrador
 
         private void dataGridView1_CellContentClick_1(object sender, DataGridViewCellEventArgs e)
         {
+            //editar usuario
             if (e.RowIndex < 0) return;
 
             if (dgvUsuarios.Columns[e.ColumnIndex].Name == "colEditar")
@@ -47,6 +48,35 @@ namespace UI_Libreria.Administrador
                 FormEditarUsuario frm = new FormEditarUsuario(idUsuario, _usuarioBLL);
                 frm.FormClosed += (s, args) => CargarListaUsuarios();
                 frm.ShowDialog();
+            }
+
+
+            //eliminar usuario
+
+            if (dgvUsuarios.Columns[e.ColumnIndex].Name == "colEliminar")
+            {
+                int idUsuario = Convert.ToInt32(dgvUsuarios.Rows[e.RowIndex].Cells["id_usuario"].Value);
+                string username = dgvUsuarios.Rows[e.RowIndex].Cells["nombre_usuario"].Value.ToString();
+
+                DialogResult confirmacion = MessageBox.Show(
+                    $"¿Está seguro que desea eliminar al usuario {username}?",
+                    "Confirmar eliminación",
+                    MessageBoxButtons.YesNo,
+                    MessageBoxIcon.Warning
+                );
+
+                if (confirmacion == DialogResult.Yes)
+                {
+                    try
+                    {
+                        _usuarioBLL.BajaUsuario(idUsuario);
+                        MessageBox.Show("Usuario eliminado correctamente.", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                }
             }
         }
 
