@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1 = new System.Windows.Forms.Panel();
             this.msgBienvenida = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
@@ -293,6 +293,7 @@
             this.btnAgregarCateInicio.TabIndex = 0;
             this.btnAgregarCateInicio.Text = "Agregar Categoria";
             this.btnAgregarCateInicio.UseVisualStyleBackColor = false;
+            this.btnAgregarCateInicio.Click += new System.EventHandler(this.btnAgregarCateInicio_Click);
             // 
             // panel7
             // 
@@ -313,10 +314,10 @@
             this.ListaUsuarios.Location = new System.Drawing.Point(37, 72);
             this.ListaUsuarios.Name = "ListaUsuarios";
             this.ListaUsuarios.RowHeadersWidth = 51;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.Transparent;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.Black;
-            this.ListaUsuarios.RowsDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.Transparent;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
+            this.ListaUsuarios.RowsDefaultCellStyle = dataGridViewCellStyle1;
             this.ListaUsuarios.RowTemplate.Height = 24;
             this.ListaUsuarios.Size = new System.Drawing.Size(482, 252);
             this.ListaUsuarios.TabIndex = 1;

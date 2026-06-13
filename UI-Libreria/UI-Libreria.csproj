@@ -54,11 +54,23 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Administrador\FormCrearCategoria.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Administrador\FormCrearCategoria.Designer.cs">
+      <DependentUpon>FormCrearCategoria.cs</DependentUpon>
+    </Compile>
     <Compile Include="Administrador\FormCrearRol.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Administrador\FormCrearRol.Designer.cs">
       <DependentUpon>FormCrearRol.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Administrador\FormEditarCategoria.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Administrador\FormEditarCategoria.Designer.cs">
+      <DependentUpon>FormEditarCategoria.cs</DependentUpon>
     </Compile>
     <Compile Include="Administrador\FormEditarRol.cs">
       <SubType>Form</SubType>
@@ -238,8 +250,14 @@
     <EmbeddedResource Include="Administrador\admiUsuario.resx">
       <DependentUpon>admiUsuario.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Administrador\FormCrearCategoria.resx">
+      <DependentUpon>FormCrearCategoria.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Administrador\FormCrearRol.resx">
       <DependentUpon>FormCrearRol.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Administrador\FormEditarCategoria.resx">
+      <DependentUpon>FormEditarCategoria.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Administrador\FormEditarRol.resx">
       <DependentUpon>FormEditarRol.cs</DependentUpon>

@@ -19,6 +19,7 @@ namespace UI_Libreria.Administrador
         //declaro userControls
         private UsuarioBLL _usuarioBLL = new UsuarioBLL();
         private RolBLL _rolBLL = new RolBLL();
+        private CategoriaBLL _categoriaBLL = new CategoriaBLL();
         admiInicio VistaInicioAdmi;
         admiUsuario VistaUsuarioAdmi;
         admiRol VistaRolAdmi;
@@ -32,10 +33,10 @@ namespace UI_Libreria.Administrador
 
             //creamos solo una vez los userControl
 
-            VistaInicioAdmi = new admiInicio(_usuarioBLL, _rolBLL);
+            VistaInicioAdmi = new admiInicio(_usuarioBLL, _rolBLL , _categoriaBLL);
             VistaUsuarioAdmi = new admiUsuario(_usuarioBLL);
             VistaRolAdmi = new admiRol(_rolBLL);
-            VistaCategoriaAdmi = new admiCategoria();
+            VistaCategoriaAdmi = new admiCategoria(_categoriaBLL);
 
             //Cuando abre el formm, simpre muestra el de inicio
             AbrirUserControl(VistaInicioAdmi);

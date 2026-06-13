@@ -30,12 +30,12 @@
         {
             this.label1 = new System.Windows.Forms.Label();
             this.dgvCategorias = new System.Windows.Forms.DataGridView();
+            this.AgregarCategoria = new System.Windows.Forms.Button();
+            this.panel1 = new System.Windows.Forms.Panel();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column3 = new System.Windows.Forms.DataGridViewButtonColumn();
-            this.Column4 = new System.Windows.Forms.DataGridViewButtonColumn();
-            this.button2 = new System.Windows.Forms.Button();
-            this.panel1 = new System.Windows.Forms.Panel();
+            this.colEliminarCategoria = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.colEditarCategoria = new System.Windows.Forms.DataGridViewButtonColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgvCategorias)).BeginInit();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -54,24 +54,50 @@
             // 
             // dgvCategorias
             // 
-            this.dgvCategorias.AllowUserToAddRows = false;
-            this.dgvCategorias.AllowUserToDeleteRows = false;
             this.dgvCategorias.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
             this.dgvCategorias.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.dgvCategorias.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvCategorias.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Column1,
             this.Column2,
-            this.Column3,
-            this.Column4});
+            this.colEliminarCategoria,
+            this.colEditarCategoria});
             this.dgvCategorias.GridColor = System.Drawing.SystemColors.MenuHighlight;
             this.dgvCategorias.Location = new System.Drawing.Point(38, 142);
             this.dgvCategorias.Name = "dgvCategorias";
-            this.dgvCategorias.ReadOnly = true;
             this.dgvCategorias.RowHeadersWidth = 51;
             this.dgvCategorias.RowTemplate.Height = 24;
             this.dgvCategorias.Size = new System.Drawing.Size(1096, 288);
             this.dgvCategorias.TabIndex = 1;
+            this.dgvCategorias.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvCategorias_CellContentClick_1);
+            // 
+            // AgregarCategoria
+            // 
+            this.AgregarCategoria.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(65)))), ((int)(((byte)(77)))));
+            this.AgregarCategoria.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.AgregarCategoria.FlatAppearance.BorderSize = 0;
+            this.AgregarCategoria.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.AgregarCategoria.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.AgregarCategoria.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.AgregarCategoria.Location = new System.Drawing.Point(877, 415);
+            this.AgregarCategoria.Name = "AgregarCategoria";
+            this.AgregarCategoria.Size = new System.Drawing.Size(239, 47);
+            this.AgregarCategoria.TabIndex = 5;
+            this.AgregarCategoria.Text = "AGREGAR NUEVA CATEGORIA";
+            this.AgregarCategoria.UseVisualStyleBackColor = false;
+            this.AgregarCategoria.Click += new System.EventHandler(this.button2_Click);
+            // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(230)))), ((int)(((byte)(212)))));
+            this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.panel1.Controls.Add(this.AgregarCategoria);
+            this.panel1.Controls.Add(this.label1);
+            this.panel1.Location = new System.Drawing.Point(16, 37);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(1148, 521);
+            this.panel1.TabIndex = 6;
+            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
             // Column1
             // 
@@ -89,51 +115,25 @@
             this.Column2.ReadOnly = true;
             this.Column2.Width = 170;
             // 
-            // Column3
+            // colEliminarCategoria
             // 
-            this.Column3.HeaderText = "ELIMINAR";
-            this.Column3.MinimumWidth = 6;
-            this.Column3.Name = "Column3";
-            this.Column3.ReadOnly = true;
-            this.Column3.Text = "ELIMINAR";
-            this.Column3.UseColumnTextForButtonValue = true;
-            this.Column3.Width = 180;
+            this.colEliminarCategoria.HeaderText = "ELIMINAR";
+            this.colEliminarCategoria.MinimumWidth = 6;
+            this.colEliminarCategoria.Name = "colEliminarCategoria";
+            this.colEliminarCategoria.ReadOnly = true;
+            this.colEliminarCategoria.Text = "ELIMINAR";
+            this.colEliminarCategoria.UseColumnTextForButtonValue = true;
+            this.colEliminarCategoria.Width = 180;
             // 
-            // Column4
+            // colEditarCategoria
             // 
-            this.Column4.HeaderText = "EDITAR";
-            this.Column4.MinimumWidth = 6;
-            this.Column4.Name = "Column4";
-            this.Column4.ReadOnly = true;
-            this.Column4.Text = "EDITAR";
-            this.Column4.UseColumnTextForButtonValue = true;
-            this.Column4.Width = 125;
-            // 
-            // button2
-            // 
-            this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(65)))), ((int)(((byte)(77)))));
-            this.button2.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
-            this.button2.FlatAppearance.BorderSize = 0;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.button2.Location = new System.Drawing.Point(877, 415);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(239, 47);
-            this.button2.TabIndex = 5;
-            this.button2.Text = "AGREGAR NUEVA CATEGORIA";
-            this.button2.UseVisualStyleBackColor = false;
-            // 
-            // panel1
-            // 
-            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(230)))), ((int)(((byte)(212)))));
-            this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.panel1.Controls.Add(this.button2);
-            this.panel1.Controls.Add(this.label1);
-            this.panel1.Location = new System.Drawing.Point(16, 37);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1148, 521);
-            this.panel1.TabIndex = 6;
+            this.colEditarCategoria.HeaderText = "EDITAR";
+            this.colEditarCategoria.MinimumWidth = 6;
+            this.colEditarCategoria.Name = "colEditarCategoria";
+            this.colEditarCategoria.ReadOnly = true;
+            this.colEditarCategoria.Text = "EDITAR";
+            this.colEditarCategoria.UseColumnTextForButtonValue = true;
+            this.colEditarCategoria.Width = 125;
             // 
             // admiCategoria
             // 
@@ -157,11 +157,11 @@
 
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.DataGridView dgvCategorias;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button AgregarCategoria;
+        private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
-        private System.Windows.Forms.DataGridViewButtonColumn Column3;
-        private System.Windows.Forms.DataGridViewButtonColumn Column4;
-        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.DataGridViewButtonColumn colEliminarCategoria;
+        private System.Windows.Forms.DataGridViewButtonColumn colEditarCategoria;
     }
 }

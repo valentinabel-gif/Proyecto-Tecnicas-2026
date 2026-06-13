@@ -45,6 +45,8 @@
     <Compile Include="Seguridad y Usuario\IObservadorUsuario.cs" />
     <Compile Include="Seguridad y Usuario\ISujetoRol.cs" />
     <Compile Include="Seguridad y Usuario\ISujetoUsuario.cs" />
+    <Compile Include="Stock\IObservadorCategoria.cs" />
+    <Compile Include="Stock\ISujetoCategoria.cs" />
     <Compile Include="Stock\Reporte.cs" />
     <Compile Include="Stock\AlertaStock.cs" />
     <Compile Include="Ventas\Pago.cs" />

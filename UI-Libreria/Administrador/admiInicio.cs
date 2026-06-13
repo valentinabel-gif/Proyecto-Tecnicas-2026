@@ -1,5 +1,6 @@
 ﻿using BE_Libreria;
 using BE_Libreria.Seguridad_y_Usuario;
+using BE_Libreria.Stock;
 using BLL_Libreria;
 using BLL_Libreria.Seguridad_y_Usuario___Login;
 using System;
@@ -14,21 +15,23 @@ using System.Windows.Forms;
 
 namespace UI_Libreria.Administrador
 {
-    public partial class admiInicio : UserControl , IObservadorUsuario, IObservadorRol
+    public partial class admiInicio : UserControl , IObservadorUsuario, IObservadorRol , IObservadorCategoria
     {
 
         private UsuarioBLL _usuarioBLL; //= new UsuarioBLL();
         private RolBLL _rolBLL;
-        private CategoriaBLL _categoriaBLL = new CategoriaBLL();
+        private CategoriaBLL _categoriaBLL;
 
     
-        public admiInicio(UsuarioBLL usuarioBLL, RolBLL rolBLL)
+        public admiInicio(UsuarioBLL usuarioBLL, RolBLL rolBLL , CategoriaBLL categoriaBLL)
         {
             InitializeComponent();
             _usuarioBLL = usuarioBLL;
             _rolBLL = rolBLL;
+            _categoriaBLL = categoriaBLL;
             _usuarioBLL.RegistrarObservador(this);
             _rolBLL.RegistrarObservador(this);
+            _categoriaBLL.RegistrarObservador(this);
             DatosGrilla();
 
         }
@@ -106,6 +109,12 @@ namespace UI_Libreria.Administrador
             CargarEstadisticas(); // actualiza el contador de roles
             
         }
+
+        void IObservadorCategoria.Actualizar()
+        {
+            CargarEstadisticas();
+
+        }
         private void label7_Click(object sender, EventArgs e)
         {
 
@@ -125,6 +134,12 @@ namespace UI_Libreria.Administrador
         {
             FormCrearRol form = new FormCrearRol(_rolBLL);
             form.ShowDialog();
+        }
+
+        private void btnAgregarCateInicio_Click(object sender, EventArgs e)
+        {
+            FormCrearCategoria formCrear = new FormCrearCategoria(_categoriaBLL);
+            formCrear.ShowDialog();
         }
     }
 }
