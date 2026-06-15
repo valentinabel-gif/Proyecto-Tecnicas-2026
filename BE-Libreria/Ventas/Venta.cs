@@ -57,11 +57,13 @@ namespace BE_Libreria
         public MedioDePago MedioPago
         {
             get { return _medioPago; }
+            set { _medioPago = value; }
         }
 
         public Cliente Cliente
         {
             get { return _cliente; }
+            set { _cliente = value; }
         }
 
         //metodos
@@ -76,6 +78,47 @@ namespace BE_Libreria
         public void QuitarDetalle(DetalleVenta detalleAEliminar)
         {
             _detalles.Remove(detalleAEliminar);
+        }
+
+        public double CalcularSubtotal()
+        {
+            double acumulador = 0;
+            foreach (DetalleVenta d in _detalles)
+            {
+                acumulador += d.SubtotalDetalleVenta;
+            }
+            return acumulador;
+        }
+
+        public double CalcularTotal()
+        {
+            double subtotal = CalcularSubtotal();
+            //primero aplica descuento del vendedor
+            double conDescuento = subtotal * (1 - _porcentajeDescuento / 100.0);
+            //despues aplica ajuste del medio de pago
+            return _medioPago.CalcularTotalConAjuste(conDescuento);
+        }
+
+        public void Confirmar()
+        {
+            if (_detalles.Count == 0)
+            {
+                throw new Exception("No se puede confirmar una venta sin productos.");
+            }
+            if (_cliente == null)
+            {
+                throw new Exception("No se puede confirmar una venta sin cliente.");
+            }
+            if (_medioPago == null)
+            {
+                throw new Exception("No se puede confirmar una venta sin medio de pago.");
+            }
+        }
+
+        public void Cancelar()
+        {
+            _detalles.Clear();
+            _porcentajeDescuento = 0;
         }
     }
 }

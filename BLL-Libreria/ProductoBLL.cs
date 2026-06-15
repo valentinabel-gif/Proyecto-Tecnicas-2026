@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+//using DAL_Libreria;
 
 namespace BLL_Libreria
 {
@@ -221,6 +222,17 @@ namespace BLL_Libreria
             }
 
             // return _productoDAL.ObtenerProductosStockBajo(stockMinimo);
+            throw new NotImplementedException();
+        }
+
+        public bool ExisteCodigoBarra(string codigoBarra)
+        {
+            if (string.IsNullOrWhiteSpace(codigoBarra))
+            {
+                return false;
+            }
+
+           // return _productoDAL.ExisteCodigoBarra(codigoBarra);
             throw new NotImplementedException();
         }
     }
