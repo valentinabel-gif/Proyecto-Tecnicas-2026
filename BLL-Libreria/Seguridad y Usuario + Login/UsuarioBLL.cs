@@ -80,7 +80,7 @@ namespace BLL_Libreria
 
         public void ModificarUsuario(Usuario usuarioModificado)
         {
-            if (!Sesion.Instancia.HaySesionActiva() || !Sesion.Instancia.UsuarioActivo.TienePermiso("Editar_Usuario"))
+            if (!Sesion.Instancia.HaySesionActiva() || !Sesion.Instancia.UsuarioActivo.TienePermiso("editar_usuario"))
             {
                 throw new Exception("Seguridad: No cuenta con los permisos necesarios para modificar usuarios.");
             }

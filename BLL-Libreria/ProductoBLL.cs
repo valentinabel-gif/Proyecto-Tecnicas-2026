@@ -176,6 +176,11 @@ namespace BLL_Libreria
                 throw new Exception("El valor de venta debe ser mayor a cero.");
             }
 
+            if (productoModificado.Stock < 0)
+            {
+                throw new Exception("El stock no puede ser negativo.");
+            }
+
             // _productoDAL.ModificarProducto(productoModificado);
             throw new NotImplementedException();
         }
