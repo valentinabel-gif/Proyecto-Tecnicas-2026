@@ -67,6 +67,7 @@
     <Compile Include="Ventas\TarjetaCredito.cs" />
     <Compile Include="Ventas\Transferencia.cs" />
     <Compile Include="Seguridad y Usuario\Usuario.cs" />
+    <Compile Include="Ventas\Vendedor.cs" />
     <Compile Include="Ventas\Venta.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

@@ -47,6 +47,7 @@
     <Compile Include="Seguridad y Usuario + Login\RolBLL.cs" />
     <Compile Include="Seguridad y Usuario + Login\Sesion.cs" />
     <Compile Include="Seguridad y Usuario + Login\UsuarioBLL.cs" />
+    <Compile Include="Seguridad y Usuario + Login\VendedorBLL.cs" />
     <Compile Include="VentaBLL.cs" />
   </ItemGroup>
   <ItemGroup>
