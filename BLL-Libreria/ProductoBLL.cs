@@ -1,4 +1,5 @@
 ﻿using BE_Libreria;
+using DAL_Libreria;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -240,5 +241,21 @@ namespace BLL_Libreria
            // return _productoDAL.ExisteCodigoBarra(codigoBarra);
             throw new NotImplementedException();
         }
+
+
+        /*proveedores de vista gerente*/
+
+        public List<Producto> ObtenerProductosPorProveedor(int idProveedor)
+        {
+            ProductoDAL dal = new ProductoDAL();
+            return dal.ObtenerProductosPorProveedor(idProveedor);
+        }
+
+        public List<Producto> ObtenerPreciosPorProveedor(int idProveedor)
+        {
+            ProductoDAL dal = new ProductoDAL();
+            return dal.ObtenerPreciosPorProveedor(idProveedor);
+        }
+
     }
 }

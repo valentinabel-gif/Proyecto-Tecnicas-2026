@@ -226,5 +226,75 @@ namespace DAL_Libreria
 
             return productos;
         }
+
+        /*pantalla proveedores de la vista del gerente */
+
+        public List<Producto> ObtenerProductosPorProveedor(int idProveedor)
+        {
+            SqlParameter[] parametros = new SqlParameter[]
+            {
+        _conexion.crearParametro("@id_proveedor", idProveedor)
+            };
+
+            DataTable tabla = _conexion.LeerPorStoreProcedure("sp_ProductosPorProveedor", parametros);
+            List<Producto> productos = new List<Producto>();
+
+            if (tabla != null)
+            {
+                foreach (DataRow fila in tabla.Rows)
+                {
+                    Categoria categoria = new Categoria(
+                        Convert.ToInt32(fila["id_categoria"]),
+                        fila["nombre_categoria"].ToString()
+                    );
+
+                    productos.Add(new Producto(
+                        Convert.ToInt32(fila["id_producto"]),
+                        fila["nombre_producto"].ToString(),
+                        Convert.ToDouble(fila["valor_venta"]),
+                        Convert.ToDouble(fila["valor_lista"]),
+                        Convert.ToInt32(fila["stock"]),
+                        fila["codigo_barra"].ToString(),
+                        fila["descripcion_producto"].ToString(),
+                        categoria
+                    ));
+                }
+            }
+            return productos;
+        }
+
+        public List<Producto> ObtenerPreciosPorProveedor(int idProveedor)
+        {
+            SqlParameter[] parametros = new SqlParameter[]
+            {
+        _conexion.crearParametro("@id_proveedor", idProveedor)
+            };
+
+            DataTable tabla = _conexion.LeerPorStoreProcedure("sp_PreciosPorProveedor", parametros);
+            List<Producto> precios = new List<Producto>();
+
+            if (tabla != null)
+            {
+                foreach (DataRow fila in tabla.Rows)
+                {
+                    Categoria categoria = new Categoria(
+                        Convert.ToInt32(fila["id_categoria"]),
+                        fila["nombre_categoria"].ToString()
+                    );
+
+                    precios.Add(new Producto(
+                        Convert.ToInt32(fila["id_producto"]),
+                        fila["nombre_producto"].ToString(),
+                        Convert.ToDouble(fila["valor_venta"]),
+                        Convert.ToDouble(fila["valor_lista"]),
+                        Convert.ToInt32(fila["stock"]),
+                        fila["codigo_barra"].ToString(),
+                        fila["descripcion_producto"].ToString(),
+                        categoria
+                    ));
+                }
+            }
+            return precios;
+        }
     }
 }

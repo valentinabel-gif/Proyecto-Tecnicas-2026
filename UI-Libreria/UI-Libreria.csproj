@@ -128,6 +128,24 @@
       <DependentUpon>InicioEncargadoStock.cs</DependentUpon>
     </Compile>
     <Compile Include="FactoryUsuario.cs" />
+    <Compile Include="Gerente\FormModificarProveedor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Gerente\FormModificarProveedor.Designer.cs">
+      <DependentUpon>FormModificarProveedor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Gerente\FormPreciosProveedor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Gerente\FormPreciosProveedor.Designer.cs">
+      <DependentUpon>FormPreciosProveedor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Gerente\FormProductosProveedor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Gerente\FormProductosProveedor.Designer.cs">
+      <DependentUpon>FormProductosProveedor.cs</DependentUpon>
+    </Compile>
     <Compile Include="Gerente\VentaGerente.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -274,6 +292,15 @@
     <EmbeddedResource Include="EncargadoDeStock\InicioEncargadoStock.resx">
       <DependentUpon>InicioEncargadoStock.cs</DependentUpon>
       <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Gerente\FormModificarProveedor.resx">
+      <DependentUpon>FormModificarProveedor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Gerente\FormPreciosProveedor.resx">
+      <DependentUpon>FormPreciosProveedor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Gerente\FormProductosProveedor.resx">
+      <DependentUpon>FormProductosProveedor.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Gerente\VentaGerente.resx">
       <DependentUpon>VentaGerente.cs</DependentUpon>

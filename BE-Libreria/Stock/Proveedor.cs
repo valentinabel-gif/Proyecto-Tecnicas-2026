@@ -11,15 +11,15 @@ namespace BE_Libreria
         //atributos
         private int _idProveedor;
         private string _nombreProveedor;
-        private string _cuilProveedor;
-        private int _telefonoProveedor;
+        private string _cuitProveedor;
+        private string _telefonoProveedor;
 
         //constructor
-        public Proveedor(int idProveedor, string nombreProveedor, string cuilProveedor, int telefonoProveedor)
+        public Proveedor(int idProveedor, string nombreProveedor, string cuitProveedor, string telefonoProveedor)
         {
             _idProveedor = idProveedor;
             _nombreProveedor = nombreProveedor;
-            _cuilProveedor = cuilProveedor;
+            _cuitProveedor = cuitProveedor;
             _telefonoProveedor = telefonoProveedor;
         }
 
@@ -34,12 +34,12 @@ namespace BE_Libreria
             get { return _nombreProveedor; }
         }
 
-        public string CuilProveedor
+        public string CuitProveedor
         {
-            get { return _cuilProveedor; }
+            get { return _cuitProveedor; }
         }
-
-        public int TelefonoProveedor
+        // lo modifique a string pq en la bd hay guiones y no se pueden convertir a int
+        public string TelefonoProveedor
         {
             get { return _telefonoProveedor;}
         }
