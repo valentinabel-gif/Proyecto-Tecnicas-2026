@@ -5,13 +5,12 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-//using DAL_Libreria;
 
 namespace BLL_Libreria
 {
     public class ProductoBLL
     {
-        // private ProductoDAL _productoDAL = new ProductoDAL();
+        private ProductoDAL _productoDAL = new ProductoDAL();
 
         //los metodos q tiro aca son de busqueda
 
@@ -22,8 +21,7 @@ namespace BLL_Libreria
                 throw new Exception("Debe ingresar un código de barras.");
             }
 
-            // return _productoDAL.BuscarPorCodigoBarra(codigoBarra);
-            throw new NotImplementedException();
+            return _productoDAL.BuscarPorCodigoBarra(codigoBarra);
         }
 
         public List<Producto> BuscarPorNombre(string nombre)
@@ -33,8 +31,7 @@ namespace BLL_Libreria
                 throw new Exception("Debe ingresar un nombre para buscar.");
             }
 
-            // return _productoDAL.BuscarPorNombre(nombre);
-            throw new NotImplementedException();
+            return _productoDAL.BuscarPorNombre(nombre);
         }
 
         public Producto ObtenerPorId(int idProducto)
@@ -44,8 +41,7 @@ namespace BLL_Libreria
                 throw new Exception("El ID del producto es inválido.");
             }
 
-            // return _productoDAL.ObtenerPorId(idProducto);
-            throw new NotImplementedException();
+            return _productoDAL.ObtenerPorId(idProducto);
         }
 
         public List<Producto> ObtenerTodos()
@@ -55,8 +51,7 @@ namespace BLL_Libreria
                 throw new Exception("No hay sesión activa.");
             }
 
-            // return _productoDAL.ObtenerTodos();
-            throw new NotImplementedException();
+            return _productoDAL.ObtenerTodos();
         }
 
         //lo de aca tiene q ver mas con stock
@@ -102,8 +97,7 @@ namespace BLL_Libreria
                 throw new Exception($"Stock insuficiente. Stock actual: {producto.Stock}.");
             }
 
-            // _productoDAL.DescontarStock(idProducto, cantidad);
-            throw new NotImplementedException();
+            _productoDAL.DescontarStock(idProducto, cantidad);
         }
 
         //aca tiro lo q es alta baja y modificacion
@@ -140,14 +134,13 @@ namespace BLL_Libreria
                 throw new Exception("El código de barras es obligatorio.");
             }
 
-            // if (_productoDAL.ExisteCodigoBarra(nuevoProducto.CodigoBarra))
-            //{
-                //throw new Exception("El código de barras ya está registrado.");
-            //}
+            if (_productoDAL.ExisteCodigoBarra(nuevoProducto.CodigoBarra))
+            {
+                throw new Exception("El código de barras ya está registrado.");
+            }
 
 
-            // _productoDAL.AgregarProducto(nuevoProducto);
-            throw new NotImplementedException();
+            _productoDAL.AgregarProducto(nuevoProducto);
         }
 
         public void ModificarProducto(Producto productoModificado)
@@ -182,8 +175,7 @@ namespace BLL_Libreria
                 throw new Exception("El stock no puede ser negativo.");
             }
 
-            // _productoDAL.ModificarProducto(productoModificado);
-            throw new NotImplementedException();
+            _productoDAL.ModificarProducto(productoModificado);
         }
 
         public void EliminarProducto(int idProducto)
@@ -198,8 +190,8 @@ namespace BLL_Libreria
                 throw new Exception("El ID del producto es inválido.");
             }
 
-            // _productoDAL.EliminarProducto(idProducto);
-            throw new NotImplementedException();
+            _productoDAL.EliminarProducto(idProducto);
+
         }
 
         //aca lo de alerta de stock
@@ -211,8 +203,7 @@ namespace BLL_Libreria
                 throw new Exception("No hay sesión activa.");
             }
 
-            // return _productoDAL.ObtenerProductosSinStock();
-            throw new NotImplementedException();
+            return _productoDAL.ObtenerProductosSinStock();
         }
 
         public List<Producto> ObtenerProductosStockBajo(int stockMinimo)
@@ -227,8 +218,7 @@ namespace BLL_Libreria
                 throw new Exception("El stock mínimo no puede ser negativo.");
             }
 
-            // return _productoDAL.ObtenerProductosStockBajo(stockMinimo);
-            throw new NotImplementedException();
+            return _productoDAL.ObtenerProductosStockBajo(stockMinimo);
         }
 
         public bool ExisteCodigoBarra(string codigoBarra)
@@ -238,8 +228,7 @@ namespace BLL_Libreria
                 return false;
             }
 
-           // return _productoDAL.ExisteCodigoBarra(codigoBarra);
-            throw new NotImplementedException();
+           return _productoDAL.ExisteCodigoBarra(codigoBarra);
         }
 
 

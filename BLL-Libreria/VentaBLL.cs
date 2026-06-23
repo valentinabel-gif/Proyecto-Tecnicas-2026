@@ -4,16 +4,17 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using DAL_Libreria;
 
 namespace BLL_Libreria
 {
     public class VentaBLL
     {
-        // private VentaDAL _ventaDAL = new VentaDAL();
+        private VentaDAL _ventaDAL = new VentaDAL();
 
         //registrar venta
 
-        public void RegistrarVenta(Venta venta)
+        public int RegistrarVenta(Venta venta)
         {
             if (!Sesion.Instancia.HaySesionActiva())
             {
@@ -64,8 +65,18 @@ namespace BLL_Libreria
             venta.Confirmar();
 
             //cuando este la DAL:
-            // _ventaDAL.RegistrarVenta(venta);
-            throw new NotImplementedException("Pendiente conexión con DAL.");
+            int idVenta = _ventaDAL.RegistrarVentaCabecera(venta);
+
+            foreach (DetalleVenta detalle in venta.Detalles)
+            {
+                _ventaDAL.RegistrarDetalleVenta(idVenta, detalle);
+            }
+
+            _ventaDAL.RegistrarPago(idVenta, venta.CalcularTotal(), venta.MedioPago);
+
+            _ventaDAL.DescontarStockPorVenta(venta.Detalles);
+
+            return idVenta;
         }
 
         //crear detalle
@@ -134,17 +145,57 @@ namespace BLL_Libreria
             venta.Cancelar();
         }
 
+        //generar ticket
+        public string GenerarTextoTicket(Venta venta, int idVentaConfirmado)
+        {
+            StringBuilder ticket = new StringBuilder();
+
+            ticket.AppendLine("=========================================");
+            ticket.AppendLine("           LIBRERÍA BORCELLE            ");
+            ticket.AppendLine("=========================================");
+            ticket.AppendLine($"Ticket Nro: {idVentaConfirmado.ToString("D8")}");
+            ticket.AppendLine($"Fecha: {venta.FechaVenta.ToString("dd/MM/yyyy HH:mm")}");
+            ticket.AppendLine($"Vendedor: {venta.Usuario.NombreUsuario}");
+            ticket.AppendLine($"Cliente: {venta.Cliente.NombreCliente} {venta.Cliente.ApellidoCliente}");
+            ticket.AppendLine("-----------------------------------------");
+            ticket.AppendLine("Cant  Producto                Subtotal   ");
+            ticket.AppendLine("-----------------------------------------");
+
+            foreach (DetalleVenta item in venta.Detalles)
+            {
+                string nombreCorto = item.ProductoItem.NombreProducto.Length > 22 ? item.ProductoItem.NombreProducto.Substring(0, 22) : item.ProductoItem.NombreProducto.PadRight(22);
+
+                ticket.AppendLine($"{item.CantidadProducto.ToString().PadRight(5)}{nombreCorto}${item.SubtotalDetalleVenta.ToString("N2").PadLeft(10)}");
+            }
+
+            ticket.AppendLine("-----------------------------------------");
+            ticket.AppendLine($"SUBTOTAL:               ${venta.CalcularSubtotal().ToString("N2").PadLeft(10)}");
+
+            if (venta.PorcentajeDescuento > 0)
+            {
+                ticket.AppendLine($"DESCUENTO ({venta.PorcentajeDescuento}%):     -${(venta.CalcularSubtotal() * (venta.PorcentajeDescuento / 100.0)).ToString("N2").PadLeft(10)}");
+            }
+
+            ticket.AppendLine($"Medio de Pago: {venta.MedioPago.NombreMedioPago}");
+            ticket.AppendLine("=========================================");
+            ticket.AppendLine($"TOTAL FINAL:            ${venta.CalcularTotal().ToString("N2").PadLeft(10)}");
+            ticket.AppendLine("=========================================");
+            ticket.AppendLine("       ¡Gracias por su compra!           ");
+            ticket.AppendLine("=========================================");
+
+            return ticket.ToString();
+        }
+
         //un apartado de las consutlas
 
-        public List<Venta> ObtenerTodas()
+        /*public List<Venta> ObtenerTodas()
         {
             if (!Sesion.Instancia.HaySesionActiva())
             {
                 throw new Exception("No hay sesión activa.");
             }
 
-            // return _ventaDAL.ObtenerTodas();
-            throw new NotImplementedException("Pendiente conexión con DAL.");
+            return _ventaDAL.ObtenerTodas();
         }
 
         public Venta ObtenerPorId(int idVenta)
@@ -160,8 +211,7 @@ namespace BLL_Libreria
             }
 
 
-            // return _ventaDAL.ObtenerPorId(idVenta);
-            throw new NotImplementedException("Pendiente conexión con DAL.");
-        }
+            return _ventaDAL.ObtenerPorId(idVenta);
+        }*/
     }
 }

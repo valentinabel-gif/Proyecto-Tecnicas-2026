@@ -17,20 +17,17 @@ namespace BLL_Libreria.Seguridad_y_Usuario___Login
         private List<IObservadorRol> _observadores = new List<IObservadorRol>();
         public List<Rol> ObtenerRoles()
         {
-            RolDAL dal = new RolDAL();
-            return dal.RecuperarRoles();
+            return _rolDAL.RecuperarRoles();
         }
 
         public int ContarRoles()
         {
-            RolDAL dal = new RolDAL();
-            return dal.ContarRoles();
+            return _rolDAL.ContarRoles();
         }
 
         public int ContarPermisos()
         {
-            RolDAL dal = new RolDAL();
-            return dal.ContarPermisos();
+            return _rolDAL.ContarPermisos();
         }
 
         public List<Permiso> RecuperarTodosLosPermisos()

@@ -53,7 +53,7 @@ namespace DAL_Libreria
         public List<Permiso> RecuperarListaPermisos()
         {
 
-            DataTable tabla = _conexion.LeerPorComando("sp_RecuperarTodosLosPermisos"); 
+            DataTable tabla = _conexion.LeerPorStoreProcedure("sp_RecuperarTodosLosPermisos"); 
             List<Permiso>permisos = new List<Permiso>();
 
             if (tabla != null && tabla.Rows.Count > 0)

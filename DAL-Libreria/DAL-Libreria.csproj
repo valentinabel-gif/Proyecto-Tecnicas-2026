@@ -42,6 +42,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="CategoriaDAL.cs" />
+    <Compile Include="ClienteDAL.cs" />
     <Compile Include="Conexion.cs" />
     <Compile Include="DatosInicioGerenteDAL.cs" />
     <Compile Include="EstadisticasGerenteDAL.cs" />
@@ -51,6 +52,7 @@
     <Compile Include="RolDAL.cs" />
     <Compile Include="UsuarioDAL.cs" />
     <Compile Include="VendedorDAL.cs" />
+    <Compile Include="VentaDAL.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\BE-Libreria\BE-Libreria.csproj">

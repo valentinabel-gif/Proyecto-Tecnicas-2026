@@ -4,19 +4,18 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using DAL_Libreria;
 
 namespace BLL_Libreria
 {
     public class ClienteBLL
     {
-        //private ClienteDAL _clienteDAL = new ClienteDAL();
+        private ClienteDAL _clienteDAL = new ClienteDAL();
 
         public List<Cliente> ObtenerTodos()
         {
             //cuando tyengamos la BD agarra de ahi 
-            // return _clienteDAL.ObtenerTodos();
-
-            throw new NotImplementedException("La conexión con la base de datos a través de la DAL aún no está implementada.");
+            return _clienteDAL.ObtenerTodos();
         }
 
         public void AgregarCliente(Cliente nuevoCliente)
@@ -45,9 +44,9 @@ namespace BLL_Libreria
                 throw new Exception("Validación fallida: El cliente debe contar obligatoriamente con al menos un DNI o un CUIT válido.");
             }
 
-            // if (_clienteDAL.ExisteCuit(nuevoCliente.CuitCliente)) throw new Exception("El CUIT ingresado ya pertenece a un cliente registrado.");
+            if (_clienteDAL.ExisteDniOCuit(nuevoCliente.CuitCliente)) throw new Exception("El CUIT ingresado ya pertenece a un cliente registrado.");
 
-            // _clienteDAL.AgregarCliente(nuevoCliente);
+            _clienteDAL.AgregarCliente(nuevoCliente);
         }
 
         public void ModificarCliente(Cliente clienteModificado)
@@ -78,7 +77,7 @@ namespace BLL_Libreria
             }
 
             //Si valido todo guardo en la BD
-            // _clienteDAL.ModificarCliente(clienteModificado);
+            _clienteDAL.ModificarCliente(clienteModificado);
         }
 
         public void EliminarCliente(int idCliente)
@@ -93,7 +92,7 @@ namespace BLL_Libreria
                 throw new Exception("Operación rechazada: El ID del cliente a eliminar es inválido.");
             }
 
-            // _clienteDAL.EliminarCliente(idCliente);
+            _clienteDAL.EliminarCliente(idCliente);
         }
 
         public Cliente BuscarPorDniOCuit(string valor)
@@ -101,8 +100,7 @@ namespace BLL_Libreria
             if (string.IsNullOrWhiteSpace(valor))
                 throw new Exception("Debe ingresar un DNI o CUIT para buscar.");
 
-            // return _clienteDAL.BuscarPorDniOCuit(valor);
-            throw new NotImplementedException();
+            return _clienteDAL.BuscarPorDniOCuit(valor);
         }
 
         public Cliente ObtenerPorId(int idCliente)
@@ -110,8 +108,7 @@ namespace BLL_Libreria
             if (idCliente <= 0)
                 throw new Exception("El ID del cliente es inválido.");
 
-            // return _clienteDAL.ObtenerPorId(idCliente);
-            throw new NotImplementedException();
+            return _clienteDAL.ObtenerPorId(idCliente);
         }
 
         public bool ExisteCuit(string cuit)
@@ -119,8 +116,7 @@ namespace BLL_Libreria
             if (string.IsNullOrWhiteSpace(cuit))
                 return false;
 
-            // return _clienteDAL.ExisteCuit(cuit);
-            throw new NotImplementedException();
+            return _clienteDAL.ExisteDniOCuit(cuit);
         }
     }
 }

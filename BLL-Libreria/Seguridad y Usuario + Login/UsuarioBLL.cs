@@ -123,7 +123,6 @@ namespace BLL_Libreria
             }
 
             return _usuarioDAL.RecuperarTodos();
-            throw new NotImplementedException("pendiente conexion con DAL.");
             
         }
 
@@ -139,8 +138,6 @@ namespace BLL_Libreria
                 throw new Exception("El ID de usuario es inválido.");
             }
             return _usuarioDAL.RecuperarPorId(idUsuario);
-
-            throw new NotImplementedException("Pendiente conexión con DAL.");
         }
         public int ContarUsuarios()
         {

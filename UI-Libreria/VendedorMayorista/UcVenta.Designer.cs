@@ -35,6 +35,8 @@
             this.Detalle = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Subtotal = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.CondFiscallbl = new System.Windows.Forms.Label();
+            this.RazonSociallbl = new System.Windows.Forms.Label();
             this.txtDniCuitCliente = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.gpMedioPago = new System.Windows.Forms.GroupBox();
@@ -52,8 +54,6 @@
             this.rbDesc15 = new System.Windows.Forms.RadioButton();
             this.rbDesc10 = new System.Windows.Forms.RadioButton();
             this.rbDesc5 = new System.Windows.Forms.RadioButton();
-            this.RazonSociallbl = new System.Windows.Forms.Label();
-            this.CondFiscallbl = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDetalle)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.gpMedioPago.SuspendLayout();
@@ -131,6 +131,26 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Identificacion Del Cliente";
             // 
+            // CondFiscallbl
+            // 
+            this.CondFiscallbl.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.CondFiscallbl.AutoSize = true;
+            this.CondFiscallbl.Location = new System.Drawing.Point(113, 42);
+            this.CondFiscallbl.Name = "CondFiscallbl";
+            this.CondFiscallbl.Size = new System.Drawing.Size(65, 13);
+            this.CondFiscallbl.TabIndex = 3;
+            this.CondFiscallbl.Text = "Cond Fiscal:";
+            // 
+            // RazonSociallbl
+            // 
+            this.RazonSociallbl.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.RazonSociallbl.AutoSize = true;
+            this.RazonSociallbl.Location = new System.Drawing.Point(108, 16);
+            this.RazonSociallbl.Name = "RazonSociallbl";
+            this.RazonSociallbl.Size = new System.Drawing.Size(73, 13);
+            this.RazonSociallbl.TabIndex = 2;
+            this.RazonSociallbl.Text = "Razon Social:";
+            // 
             // txtDniCuitCliente
             // 
             this.txtDniCuitCliente.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
@@ -138,6 +158,7 @@
             this.txtDniCuitCliente.Name = "txtDniCuitCliente";
             this.txtDniCuitCliente.Size = new System.Drawing.Size(98, 20);
             this.txtDniCuitCliente.TabIndex = 1;
+            this.txtDniCuitCliente.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtDniCuitCliente_KeyDown);
             // 
             // label2
             // 
@@ -175,6 +196,7 @@
             this.btnTransferencia.TabStop = true;
             this.btnTransferencia.Text = "Transferencia";
             this.btnTransferencia.UseVisualStyleBackColor = true;
+            this.btnTransferencia.CheckedChanged += new System.EventHandler(this.btnTransferencia_CheckedChanged);
             // 
             // btnCredito
             // 
@@ -187,6 +209,7 @@
             this.btnCredito.TabStop = true;
             this.btnCredito.Text = "Credito";
             this.btnCredito.UseVisualStyleBackColor = true;
+            this.btnCredito.CheckedChanged += new System.EventHandler(this.btnCredito_CheckedChanged);
             // 
             // btnDebito
             // 
@@ -199,6 +222,7 @@
             this.btnDebito.TabStop = true;
             this.btnDebito.Text = "Debito";
             this.btnDebito.UseVisualStyleBackColor = true;
+            this.btnDebito.CheckedChanged += new System.EventHandler(this.btnDebito_CheckedChanged);
             // 
             // btnEfectivo
             // 
@@ -212,6 +236,7 @@
             this.btnEfectivo.Text = "Efectivo";
             this.btnEfectivo.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnEfectivo.UseVisualStyleBackColor = true;
+            this.btnEfectivo.CheckedChanged += new System.EventHandler(this.btnEfectivo_CheckedChanged);
             // 
             // lSubtotal
             // 
@@ -268,6 +293,7 @@
             this.btnConfirmarVenta.TabIndex = 9;
             this.btnConfirmarVenta.Text = "Confirmar Venta";
             this.btnConfirmarVenta.UseVisualStyleBackColor = false;
+            this.btnConfirmarVenta.Click += new System.EventHandler(this.btnConfirmarVenta_Click_1);
             // 
             // btnCancelarVenta
             // 
@@ -280,6 +306,7 @@
             this.btnCancelarVenta.TabIndex = 10;
             this.btnCancelarVenta.Text = "Cancelar Venta";
             this.btnCancelarVenta.UseVisualStyleBackColor = false;
+            this.btnCancelarVenta.Click += new System.EventHandler(this.btnCancelarVenta_Click_1);
             // 
             // gbDescuento
             // 
@@ -305,6 +332,7 @@
             this.rbDesc15.TabStop = true;
             this.rbDesc15.Text = "15%";
             this.rbDesc15.UseVisualStyleBackColor = true;
+            this.rbDesc15.CheckedChanged += new System.EventHandler(this.rbDesc15_CheckedChanged);
             // 
             // rbDesc10
             // 
@@ -317,6 +345,7 @@
             this.rbDesc10.TabStop = true;
             this.rbDesc10.Text = "10%";
             this.rbDesc10.UseVisualStyleBackColor = true;
+            this.rbDesc10.CheckedChanged += new System.EventHandler(this.rbDesc10_CheckedChanged);
             // 
             // rbDesc5
             // 
@@ -329,27 +358,7 @@
             this.rbDesc5.TabStop = true;
             this.rbDesc5.Text = "5%";
             this.rbDesc5.UseVisualStyleBackColor = true;
-            this.rbDesc5.CheckedChanged += new System.EventHandler(this.radioButton1_CheckedChanged);
-            // 
-            // RazonSociallbl
-            // 
-            this.RazonSociallbl.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.RazonSociallbl.AutoSize = true;
-            this.RazonSociallbl.Location = new System.Drawing.Point(108, 16);
-            this.RazonSociallbl.Name = "RazonSociallbl";
-            this.RazonSociallbl.Size = new System.Drawing.Size(73, 13);
-            this.RazonSociallbl.TabIndex = 2;
-            this.RazonSociallbl.Text = "Razon Social:";
-            // 
-            // CondFiscallbl
-            // 
-            this.CondFiscallbl.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.CondFiscallbl.AutoSize = true;
-            this.CondFiscallbl.Location = new System.Drawing.Point(113, 42);
-            this.CondFiscallbl.Name = "CondFiscallbl";
-            this.CondFiscallbl.Size = new System.Drawing.Size(65, 13);
-            this.CondFiscallbl.TabIndex = 3;
-            this.CondFiscallbl.Text = "Cond Fiscal:";
+            this.rbDesc5.CheckedChanged += new System.EventHandler(this.rbDesc5_CheckedChanged);
             // 
             // UcVenta
             // 
@@ -370,6 +379,7 @@
             this.Location = new System.Drawing.Point(179, 90);
             this.Name = "UcVenta";
             this.Size = new System.Drawing.Size(889, 476);
+            this.Load += new System.EventHandler(this.UcVenta_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvDetalle)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
