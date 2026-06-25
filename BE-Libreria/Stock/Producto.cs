@@ -72,5 +72,9 @@ namespace BE_Libreria
         {
             get { return _categoria; }
         }
+        public string NombreCategoria
+        {
+            get { return _categoria.NombreCategoria; }
+        }
     }
 }

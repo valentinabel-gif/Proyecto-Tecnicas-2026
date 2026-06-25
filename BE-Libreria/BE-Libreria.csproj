@@ -49,6 +49,7 @@
     <Compile Include="Stock\ISujetoCategoria.cs" />
     <Compile Include="Stock\Reporte.cs" />
     <Compile Include="Stock\AlertaStock.cs" />
+    <Compile Include="Stock\ReporteProducto.cs" />
     <Compile Include="Ventas\Pago.cs" />
     <Compile Include="Ventas\Cliente.cs" />
     <Compile Include="Stock\Categoria.cs" />

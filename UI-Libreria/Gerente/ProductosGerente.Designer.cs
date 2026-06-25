@@ -29,75 +29,37 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.button1 = new System.Windows.Forms.Button();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.btnAlerta = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column5 = new System.Windows.Forms.DataGridViewCheckBoxColumn();
-            this.Column6 = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.dgvProductos = new System.Windows.Forms.DataGridView();
+            this.txtBuscar = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvProductos)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.SystemColors.Menu;
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.panel1.Controls.Add(this.button3);
+            this.panel1.Controls.Add(this.btnAlerta);
             this.panel1.Controls.Add(this.button2);
-            this.panel1.Controls.Add(this.dataGridView1);
-            this.panel1.Controls.Add(this.button1);
-            this.panel1.Controls.Add(this.textBox1);
+            this.panel1.Controls.Add(this.dgvProductos);
+            this.panel1.Controls.Add(this.txtBuscar);
             this.panel1.Location = new System.Drawing.Point(22, 31);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1129, 530);
             this.panel1.TabIndex = 0;
+            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
-            // textBox1
+            // btnAlerta
             // 
-            this.textBox1.Location = new System.Drawing.Point(19, 24);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(479, 22);
-            this.textBox1.TabIndex = 0;
-            // 
-            // button1
-            // 
-            this.button1.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.button1.Location = new System.Drawing.Point(538, 21);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(175, 29);
-            this.button1.TabIndex = 1;
-            this.button1.Text = "Buscar Producto";
-            this.button1.UseVisualStyleBackColor = false;
-            // 
-            // dataGridView1
-            // 
-            this.dataGridView1.AllowUserToDeleteRows = false;
-            this.dataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Column1,
-            this.Column7,
-            this.Column2,
-            this.Column3,
-            this.Column4,
-            this.Column5,
-            this.Column6});
-            this.dataGridView1.Location = new System.Drawing.Point(19, 112);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.ReadOnly = true;
-            this.dataGridView1.RowHeadersWidth = 51;
-            this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(1085, 353);
-            this.dataGridView1.TabIndex = 2;
+            this.btnAlerta.Location = new System.Drawing.Point(847, 471);
+            this.btnAlerta.Name = "btnAlerta";
+            this.btnAlerta.Size = new System.Drawing.Size(237, 41);
+            this.btnAlerta.TabIndex = 4;
+            this.btnAlerta.Text = "Ver Alerta de Mercaderia Faltante";
+            this.btnAlerta.UseVisualStyleBackColor = true;
+            this.btnAlerta.Click += new System.EventHandler(this.button3_Click);
             // 
             // button2
             // 
@@ -107,73 +69,28 @@
             this.button2.TabIndex = 3;
             this.button2.Text = "Generar Reporte";
             this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
-            // button3
+            // dgvProductos
             // 
-            this.button3.Location = new System.Drawing.Point(847, 471);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(237, 41);
-            this.button3.TabIndex = 4;
-            this.button3.Text = "Ver Alerta de Mercaderia Faltante";
-            this.button3.UseVisualStyleBackColor = true;
+            this.dgvProductos.AllowUserToDeleteRows = false;
+            this.dgvProductos.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.dgvProductos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvProductos.Location = new System.Drawing.Point(19, 112);
+            this.dgvProductos.Name = "dgvProductos";
+            this.dgvProductos.RowHeadersWidth = 51;
+            this.dgvProductos.RowTemplate.Height = 24;
+            this.dgvProductos.Size = new System.Drawing.Size(1085, 353);
+            this.dgvProductos.TabIndex = 2;
+            this.dgvProductos.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
-            // Column1
+            // txtBuscar
             // 
-            this.Column1.HeaderText = "ID";
-            this.Column1.MinimumWidth = 6;
-            this.Column1.Name = "Column1";
-            this.Column1.ReadOnly = true;
-            this.Column1.Width = 125;
-            // 
-            // Column7
-            // 
-            this.Column7.HeaderText = "Categoria";
-            this.Column7.MinimumWidth = 6;
-            this.Column7.Name = "Column7";
-            this.Column7.ReadOnly = true;
-            this.Column7.Width = 125;
-            // 
-            // Column2
-            // 
-            this.Column2.HeaderText = "Producto";
-            this.Column2.MinimumWidth = 6;
-            this.Column2.Name = "Column2";
-            this.Column2.ReadOnly = true;
-            this.Column2.Width = 125;
-            // 
-            // Column3
-            // 
-            this.Column3.HeaderText = "Cantidad";
-            this.Column3.MinimumWidth = 6;
-            this.Column3.Name = "Column3";
-            this.Column3.ReadOnly = true;
-            this.Column3.Width = 125;
-            // 
-            // Column4
-            // 
-            this.Column4.HeaderText = "Vendido";
-            this.Column4.MinimumWidth = 6;
-            this.Column4.Name = "Column4";
-            this.Column4.ReadOnly = true;
-            this.Column4.Width = 125;
-            // 
-            // Column5
-            // 
-            this.Column5.HeaderText = "Generar Reporte";
-            this.Column5.MinimumWidth = 6;
-            this.Column5.Name = "Column5";
-            this.Column5.ReadOnly = true;
-            this.Column5.Width = 125;
-            // 
-            // Column6
-            // 
-            this.Column6.HeaderText = "Stock del producto";
-            this.Column6.MinimumWidth = 6;
-            this.Column6.Name = "Column6";
-            this.Column6.ReadOnly = true;
-            this.Column6.Text = "Ver stock del producto";
-            this.Column6.UseColumnTextForButtonValue = true;
-            this.Column6.Width = 125;
+            this.txtBuscar.Location = new System.Drawing.Point(327, 45);
+            this.txtBuscar.Name = "txtBuscar";
+            this.txtBuscar.Size = new System.Drawing.Size(479, 22);
+            this.txtBuscar.TabIndex = 0;
+            this.txtBuscar.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // ProductosGerente
             // 
@@ -184,9 +101,10 @@
             this.Location = new System.Drawing.Point(179, 90);
             this.Name = "ProductosGerente";
             this.Size = new System.Drawing.Size(1185, 586);
+            this.Load += new System.EventHandler(this.ProductosGerente_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvProductos)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -194,17 +112,9 @@
         #endregion
 
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.TextBox txtBuscar;
+        private System.Windows.Forms.DataGridView dgvProductos;
         private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column7;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
-        private System.Windows.Forms.DataGridViewCheckBoxColumn Column5;
-        private System.Windows.Forms.DataGridViewButtonColumn Column6;
+        private System.Windows.Forms.Button btnAlerta;
     }
 }

@@ -23,6 +23,7 @@ namespace BE_Libreria
             _cuil = cuil;
             _formatoReporte = formatoReporte;
             _fechaReporte = fechaReporte;
+
         }
 
         //propiedades
