@@ -16,6 +16,11 @@ namespace BLL_Libreria
 
         public Producto BuscarPorCodigoBarra(string codigoBarra)
         {
+            if (!Sesion.Instancia.HaySesionActiva() ||!Sesion.Instancia.UsuarioActivo.TienePermiso("buscar_producto"))
+            {
+                throw new Exception("Seguridad: No tiene permisos para buscar productos.");
+            }
+
             if (string.IsNullOrWhiteSpace(codigoBarra))
             {
                 throw new Exception("Debe ingresar un código de barras.");
@@ -26,6 +31,11 @@ namespace BLL_Libreria
 
         public List<Producto> BuscarPorNombre(string nombre)
         {
+            if (!Sesion.Instancia.HaySesionActiva() ||!Sesion.Instancia.UsuarioActivo.TienePermiso("buscar_producto"))
+            {
+                throw new Exception("Seguridad: No tiene permisos para buscar productos.");
+            }
+
             if (string.IsNullOrWhiteSpace(nombre))
             {
                 throw new Exception("Debe ingresar un nombre para buscar.");
@@ -46,6 +56,10 @@ namespace BLL_Libreria
 
         public List<Producto> ObtenerTodos()
         {
+            if (!Sesion.Instancia.HaySesionActiva() ||!Sesion.Instancia.UsuarioActivo.TienePermiso("ver_lista_productos"))
+            {
+                throw new Exception("Seguridad: No tiene permisos para ver el listado de productos.");
+            }
             if (!Sesion.Instancia.HaySesionActiva())
             {
                 throw new Exception("No hay sesión activa.");
@@ -236,12 +250,20 @@ namespace BLL_Libreria
 
         public List<Producto> ObtenerProductosPorProveedor(int idProveedor)
         {
+            if (!Sesion.Instancia.HaySesionActiva() ||!Sesion.Instancia.UsuarioActivo.TienePermiso("ver_lista_productos"))
+            {
+                throw new Exception("Seguridad: No tiene permisos para ver el listado de productos.");
+            }
             ProductoDAL dal = new ProductoDAL();
             return dal.ObtenerProductosPorProveedor(idProveedor);
         }
 
         public List<Producto> ObtenerPreciosPorProveedor(int idProveedor)
         {
+            if (!Sesion.Instancia.HaySesionActiva() ||!Sesion.Instancia.UsuarioActivo.TienePermiso("consultar_precios"))
+            {
+                throw new Exception("Seguridad: No tiene permisos para consultar precios.");
+            }
             ProductoDAL dal = new ProductoDAL();
             return dal.ObtenerPreciosPorProveedor(idProveedor);
         }

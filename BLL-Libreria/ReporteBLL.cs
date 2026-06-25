@@ -27,21 +27,24 @@ namespace BLL_Libreria
         }
         public List<Producto> ObtenerAlertaStockBajo(int stockMinimo)
         {
+            if (!Sesion.Instancia.HaySesionActiva() || !Sesion.Instancia.UsuarioActivo.TienePermiso("ver_alerta_mercaderia"))
+            {
+                throw new Exception("Seguridad: No tiene permisos para ver alertas de mercadería.");
+            }
             return _productoBLL.ObtenerProductosStockBajo(stockMinimo);
         }
 
         public List<ReporteProducto> ObtenerReporte(List<int> ids)
         {
-            if (!Sesion.Instancia.HaySesionActiva())
-                throw new Exception("No hay sesión activa.");
+            if (!Sesion.Instancia.HaySesionActiva() || !Sesion.Instancia.UsuarioActivo.TienePermiso("generar_reporte"))
+            {
+                throw new Exception("Seguridad: No tiene permisos para ver alertas de mercadería.");
+            }
 
-            if (ids == null || ids.Count == 0)
-                throw new Exception(
-                    "Debe seleccionar al menos un producto.");
 
-            if (ids.Count > 50)
-                throw new Exception(
-                    "No se pueden incluir más de 50 productos por reporte.");
+            if (ids == null || ids.Count == 0) throw new Exception("Debe seleccionar al menos un producto.");
+
+            if (ids.Count > 50)throw new Exception( "No se pueden incluir más de 50 productos por reporte.");
 
             string idsJoined = string.Join(",", ids);
 
