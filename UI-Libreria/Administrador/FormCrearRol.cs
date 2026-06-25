@@ -35,12 +35,13 @@ namespace UI_Libreria.Administrador
                 string nombreRol = txtNombreRol.Text.Trim();
 
                 if (string.IsNullOrWhiteSpace(nombreRol))
+                {
                     throw new Exception("El nombre del rol es obligatorio.");
+                }
 
                 _rolBLL.CrearRol(nombreRol);
 
-                MessageBox.Show("El rol fue creado exitosamente.", "Éxito",
-                    MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("El rol fue creado exitosamente.", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
                 this.Close();
             }
@@ -52,14 +53,18 @@ namespace UI_Libreria.Administrador
 
         private void btnCancelar_Click_1(object sender, EventArgs e)
         {
-            DialogResult resultado = MessageBox.Show(
-              "¿Desea salir sin guardar?",
-              "Confirmar",
-              MessageBoxButtons.YesNo,
-              MessageBoxIcon.Question);
+            DialogResult resultado = MessageBox.Show( "¿Desea salir sin guardar?","Confirmar", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
 
             if (resultado == DialogResult.Yes)
+            {
                 this.Close();
+            }
+              
+        }
+
+        private void txtNombreRol_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            e.Handled = !(char.IsLetter(e.KeyChar) || char.IsWhiteSpace(e.KeyChar) || char.IsControl(e.KeyChar));
         }
     }
 }

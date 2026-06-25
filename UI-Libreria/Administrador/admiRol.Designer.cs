@@ -34,6 +34,7 @@
             this.Column5 = new System.Windows.Forms.DataGridViewButtonColumn();
             this.button2 = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.label1 = new System.Windows.Forms.Label();
             this.lblBusqueda = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.dgvRoles)).BeginInit();
@@ -44,11 +45,10 @@
             // labelbuscarRol
             // 
             this.labelbuscarRol.Font = new System.Drawing.Font("Microsoft YaHei UI Light", 7.8F, System.Drawing.FontStyle.Italic);
-            this.labelbuscarRol.Location = new System.Drawing.Point(165, 46);
+            this.labelbuscarRol.Location = new System.Drawing.Point(98, 69);
             this.labelbuscarRol.Name = "labelbuscarRol";
             this.labelbuscarRol.Size = new System.Drawing.Size(797, 25);
             this.labelbuscarRol.TabIndex = 0;
-            this.labelbuscarRol.Text = "Buscar Rol";
             this.labelbuscarRol.TextChanged += new System.EventHandler(this.labelbuscarRol_TextChanged);
             // 
             // dgvRoles
@@ -103,6 +103,7 @@
             // panel1
             // 
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.lblBusqueda);
             this.panel1.Controls.Add(this.labelbuscarRol);
             this.panel1.Controls.Add(this.button2);
@@ -113,16 +114,28 @@
             this.panel1.TabIndex = 5;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft YaHei UI", 9F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(94, 46);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(84, 20);
+            this.label1.TabIndex = 7;
+            this.label1.Text = "Buscar Rol";
+            // 
             // lblBusqueda
             // 
             this.lblBusqueda.AutoSize = true;
+            this.lblBusqueda.Font = new System.Drawing.Font("Microsoft YaHei", 12F, System.Drawing.FontStyle.Bold);
             this.lblBusqueda.ForeColor = System.Drawing.Color.Maroon;
             this.lblBusqueda.Location = new System.Drawing.Point(458, 302);
             this.lblBusqueda.Name = "lblBusqueda";
-            this.lblBusqueda.Size = new System.Drawing.Size(121, 16);
+            this.lblBusqueda.Size = new System.Drawing.Size(201, 27);
             this.lblBusqueda.TabIndex = 6;
             this.lblBusqueda.Text = "Rol No Encontrado";
             this.lblBusqueda.Visible = false;
+            this.lblBusqueda.Click += new System.EventHandler(this.lblBusqueda_Click);
             // 
             // panel2
             // 
@@ -160,5 +173,6 @@
         private System.Windows.Forms.DataGridViewButtonColumn Column4;
         private System.Windows.Forms.DataGridViewButtonColumn Column5;
         private System.Windows.Forms.Label lblBusqueda;
+        private System.Windows.Forms.Label label1;
     }
 }

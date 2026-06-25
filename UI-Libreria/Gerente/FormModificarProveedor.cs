@@ -35,8 +35,7 @@ namespace UI_Libreria.Gerente
 
         private void CargarDatosProveedor()
         {
-            Proveedor proveedor = _proveedorBLL.BuscarProveedores("")
-                .Find(p => p.IdProveedor == _idProveedor);
+            Proveedor proveedor = _proveedorBLL.BuscarProveedores("").Find(p => p.IdProveedor == _idProveedor);
 
             if (proveedor != null)
             {
@@ -48,9 +47,7 @@ namespace UI_Libreria.Gerente
 
         private void btnGuardar_Click(object sender, EventArgs e)
         {
-            if (string.IsNullOrWhiteSpace(txtNombre.Text) ||
-                string.IsNullOrWhiteSpace(txtTelefono.Text) ||
-                string.IsNullOrWhiteSpace(txtCuit.Text))
+            if (string.IsNullOrWhiteSpace(txtNombre.Text) ||string.IsNullOrWhiteSpace(txtTelefono.Text) ||string.IsNullOrWhiteSpace(txtCuit.Text))
             {
                 MessageBox.Show("Complete todos los campos.", "Atención", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
@@ -70,5 +67,30 @@ namespace UI_Libreria.Gerente
                 MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        //Valida que el cuit sea solo numeros
+        private void TxtCuit_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            e.Handled = !char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar);
+        }
+
+        // Solo letray numeros y espacios para el nombre
+        private void TxtNombre_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            e.Handled = !(char.IsLetterOrDigit(e.KeyChar) || char.IsWhiteSpace(e.KeyChar) || char.IsControl(e.KeyChar));
+        }
+
+        // }numero y guion (opcional) para el telefono
+        private void TxtTelefono_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            e.Handled = !(char.IsDigit(e.KeyChar) || e.KeyChar == '-' || char.IsControl(e.KeyChar));
+
+        }
     }
+
 }

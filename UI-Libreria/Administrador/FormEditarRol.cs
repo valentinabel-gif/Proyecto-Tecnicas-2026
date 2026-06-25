@@ -78,9 +78,11 @@ namespace UI_Libreria.Administrador
             try
             {
                 if (string.IsNullOrWhiteSpace(txtNombreRol.Text))
+                {
                     throw new Exception("El nombre del rol es obligatorio.");
-
-                // Recolectás los permisos que quedaron marcados
+                }
+                   
+                // Guarda los permisos marcados
                 List<Permiso> permisosSeleccionados = new List<Permiso>();
                 for (int i = 0; i < dgvPermisos.Rows.Count; i++)
                 {
@@ -104,7 +106,21 @@ namespace UI_Libreria.Administrador
 
         private void btnCancelar_Click_1(object sender, EventArgs e)
         {
-            this.Close();
+            DialogResult resultado = MessageBox.Show("¿Desea salir sin guardar?", "Confirmar", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (resultado == DialogResult.Yes)
+            {
+                this.Close();
+            }
+        }
+
+        private void txtNombreRol_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            e.Handled = !(char.IsLetter(e.KeyChar) || char.IsWhiteSpace(e.KeyChar) || char.IsControl(e.KeyChar));
+        }
+
+        private void txtNombreRol_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

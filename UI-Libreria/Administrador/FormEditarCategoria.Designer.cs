@@ -37,25 +37,28 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(198, 91);
+            this.label1.Font = new System.Drawing.Font("Microsoft YaHei UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(51, 69);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(104, 16);
+            this.label1.Size = new System.Drawing.Size(139, 23);
             this.label1.TabIndex = 0;
             this.label1.Text = "Editar Categoria";
             // 
             // txtEditarCategoria
             // 
-            this.txtEditarCategoria.Location = new System.Drawing.Point(161, 134);
+            this.txtEditarCategoria.Location = new System.Drawing.Point(55, 111);
+            this.txtEditarCategoria.MaxLength = 50;
             this.txtEditarCategoria.Name = "txtEditarCategoria";
-            this.txtEditarCategoria.Size = new System.Drawing.Size(187, 22);
+            this.txtEditarCategoria.Size = new System.Drawing.Size(217, 22);
             this.txtEditarCategoria.TabIndex = 1;
             this.txtEditarCategoria.TextChanged += new System.EventHandler(this.txtEditarCategoria_TextChanged);
+            this.txtEditarCategoria.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtEditarCategoria_KeysPress);
             // 
             // btnGuardar
             // 
-            this.btnGuardar.Location = new System.Drawing.Point(161, 203);
+            this.btnGuardar.Location = new System.Drawing.Point(55, 190);
             this.btnGuardar.Name = "btnGuardar";
-            this.btnGuardar.Size = new System.Drawing.Size(75, 23);
+            this.btnGuardar.Size = new System.Drawing.Size(110, 34);
             this.btnGuardar.TabIndex = 2;
             this.btnGuardar.Text = "Guardar";
             this.btnGuardar.UseVisualStyleBackColor = true;
@@ -63,9 +66,9 @@
             // 
             // btnCancelar
             // 
-            this.btnCancelar.Location = new System.Drawing.Point(273, 203);
+            this.btnCancelar.Location = new System.Drawing.Point(171, 190);
             this.btnCancelar.Name = "btnCancelar";
-            this.btnCancelar.Size = new System.Drawing.Size(75, 23);
+            this.btnCancelar.Size = new System.Drawing.Size(101, 34);
             this.btnCancelar.TabIndex = 4;
             this.btnCancelar.Text = "Cancelar";
             this.btnCancelar.UseVisualStyleBackColor = true;
@@ -75,13 +78,13 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(528, 370);
+            this.ClientSize = new System.Drawing.Size(338, 279);
             this.Controls.Add(this.btnCancelar);
             this.Controls.Add(this.btnGuardar);
             this.Controls.Add(this.txtEditarCategoria);
             this.Controls.Add(this.label1);
             this.Name = "FormEditarCategoria";
-            this.Text = "FormEditarCategoria";
+            this.Text = "Modificar Categoria";
             this.Load += new System.EventHandler(this.FormEditarCategoria_Load);
             this.ResumeLayout(false);
             this.PerformLayout();

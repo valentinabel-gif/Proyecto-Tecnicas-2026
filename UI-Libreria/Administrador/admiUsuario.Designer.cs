@@ -31,8 +31,6 @@
             this.txtBuscar = new System.Windows.Forms.TextBox();
             this.button2 = new System.Windows.Forms.Button();
             this.dgvUsuarios = new System.Windows.Forms.DataGridView();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.lblSinResultados = new System.Windows.Forms.Label();
             this.id_usuario = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nombre_usuario = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -42,6 +40,9 @@
             this.colApellido = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colEditar = new System.Windows.Forms.DataGridViewButtonColumn();
             this.colEliminar = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.lblSinResultados = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgvUsuarios)).BeginInit();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -49,12 +50,11 @@
             // txtBuscar
             // 
             this.txtBuscar.Font = new System.Drawing.Font("Microsoft YaHei UI Light", 7.8F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtBuscar.Location = new System.Drawing.Point(152, 39);
+            this.txtBuscar.Location = new System.Drawing.Point(21, 69);
             this.txtBuscar.Multiline = true;
             this.txtBuscar.Name = "txtBuscar";
-            this.txtBuscar.Size = new System.Drawing.Size(868, 25);
+            this.txtBuscar.Size = new System.Drawing.Size(631, 25);
             this.txtBuscar.TabIndex = 0;
-            this.txtBuscar.Text = "Buscar Usuario...";
             this.txtBuscar.TextChanged += new System.EventHandler(this.textBuscar_TextChanged);
             // 
             // button2
@@ -95,34 +95,6 @@
             this.dgvUsuarios.Size = new System.Drawing.Size(1099, 315);
             this.dgvUsuarios.TabIndex = 3;
             this.dgvUsuarios.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick_1);
-            // 
-            // panel1
-            // 
-            this.panel1.BackColor = System.Drawing.Color.LightGray;
-            this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.panel1.Controls.Add(this.lblSinResultados);
-            this.panel1.Controls.Add(this.dgvUsuarios);
-            this.panel1.Controls.Add(this.button2);
-            this.panel1.Controls.Add(this.txtBuscar);
-            this.panel1.Location = new System.Drawing.Point(16, 37);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1148, 521);
-            this.panel1.TabIndex = 4;
-            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
-            // 
-            // lblSinResultados
-            // 
-            this.lblSinResultados.AutoSize = true;
-            this.lblSinResultados.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.lblSinResultados.Font = new System.Drawing.Font("Microsoft YaHei", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblSinResultados.ForeColor = System.Drawing.Color.Maroon;
-            this.lblSinResultados.Location = new System.Drawing.Point(409, 249);
-            this.lblSinResultados.Name = "lblSinResultados";
-            this.lblSinResultados.Size = new System.Drawing.Size(243, 27);
-            this.lblSinResultados.TabIndex = 5;
-            this.lblSinResultados.Text = "Usuario no encontrado";
-            this.lblSinResultados.Visible = false;
-            this.lblSinResultados.Click += new System.EventHandler(this.lblSinResultados_Click);
             // 
             // id_usuario
             // 
@@ -201,6 +173,45 @@
             this.colEliminar.UseColumnTextForButtonValue = true;
             this.colEliminar.Width = 80;
             // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.LightGray;
+            this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.panel1.Controls.Add(this.label1);
+            this.panel1.Controls.Add(this.lblSinResultados);
+            this.panel1.Controls.Add(this.dgvUsuarios);
+            this.panel1.Controls.Add(this.button2);
+            this.panel1.Controls.Add(this.txtBuscar);
+            this.panel1.Location = new System.Drawing.Point(16, 37);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(1148, 521);
+            this.panel1.TabIndex = 4;
+            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
+            // 
+            // lblSinResultados
+            // 
+            this.lblSinResultados.AutoSize = true;
+            this.lblSinResultados.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.lblSinResultados.Font = new System.Drawing.Font("Microsoft YaHei", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblSinResultados.ForeColor = System.Drawing.Color.Maroon;
+            this.lblSinResultados.Location = new System.Drawing.Point(409, 249);
+            this.lblSinResultados.Name = "lblSinResultados";
+            this.lblSinResultados.Size = new System.Drawing.Size(243, 27);
+            this.lblSinResultados.TabIndex = 5;
+            this.lblSinResultados.Text = "Usuario no encontrado";
+            this.lblSinResultados.Visible = false;
+            this.lblSinResultados.Click += new System.EventHandler(this.lblSinResultados_Click);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft YaHei UI", 9F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(17, 37);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(115, 20);
+            this.label1.TabIndex = 6;
+            this.label1.Text = "Buscar Usuario";
+            // 
             // admiUsuario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -234,5 +245,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn colApellido;
         private System.Windows.Forms.DataGridViewButtonColumn colEditar;
         private System.Windows.Forms.DataGridViewButtonColumn colEliminar;
+        private System.Windows.Forms.Label label1;
     }
 }

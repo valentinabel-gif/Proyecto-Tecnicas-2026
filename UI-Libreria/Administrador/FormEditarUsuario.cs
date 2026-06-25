@@ -59,11 +59,6 @@ namespace UI_Libreria.Administrador
 
         }
 
-        private void textApellido_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
         private void txtNombre_TextChanged(object sender, EventArgs e)
         {
 
@@ -94,35 +89,62 @@ namespace UI_Libreria.Administrador
 
                 Rol rolSeleccionado = (Rol)cmbRol.SelectedItem;
 
-                Usuario usuarioModificado = new Usuario(
-                    id_usuario,
-                    nombre,
-                    apellido,
-                    correo,
-                    dni,
-                    "",
-                    username,
-                    rolSeleccionado
-                );
+                Usuario usuarioModificado = new Usuario(id_usuario,nombre,apellido,correo,dni,"",username,rolSeleccionado);
 
                 //UsuarioBLL usuarioBLL = new UsuarioBLL();
                 _usuarioBLL.ModificarUsuario(usuarioModificado);
 
-                MessageBox.Show("Usuario modificado exitosamente.", "Éxito",
-                    MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Usuario modificado exitosamente.", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
                 this.Close();
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message, "Error",
-                    MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show(ex.Message, "Error",MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
-            this.Close();
+            DialogResult resultado = MessageBox.Show("¿Desea salir sin guardar?", "Confirmar", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (resultado == DialogResult.Yes)
+            {
+                this.Close();
+            }
+        }
+
+        // nombre, solo leytras y espacio
+        private void txtNombre_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            e.Handled = !(char.IsLetter(e.KeyChar) || char.IsWhiteSpace(e.KeyChar) || char.IsControl(e.KeyChar));
+        }
+
+        // apellido solo letras y espacio
+        private void txtApellido_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            e.Handled = !(char.IsLetter(e.KeyChar) || char.IsWhiteSpace(e.KeyChar) || char.IsControl(e.KeyChar));
+        }
+
+        // valida que dni solo tenga numeros 
+        private void txtDni_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            e.Handled = !char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar);
+        }
+
+        // usuario, letra,numero,guion y guin bajo
+        private void txtUsuario_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            e.Handled = !(char.IsLetterOrDigit(e.KeyChar) ||  e.KeyChar == '_' || e.KeyChar == '-' || char.IsControl(e.KeyChar));
+        }
+
+        // correo, letras,numeros, y caracteres como . y _
+        private void txtCorreo_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            e.Handled = !(char.IsLetterOrDigit(e.KeyChar) || e.KeyChar == '@' || e.KeyChar == '.' ||e.KeyChar == '_' || e.KeyChar == '-' || char.IsControl(e.KeyChar));
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
 
         }
     }

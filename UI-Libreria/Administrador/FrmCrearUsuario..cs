@@ -59,7 +59,7 @@ namespace UI_Libreria.Administrador
 
         private void button2_Click(object sender, EventArgs e)
         {
-             DialogResult resultado = MessageBox.Show("¿Desea salir sin guardar?", "Confirmar",MessageBoxButtons.YesNo,MessageBoxIcon.Question);
+            DialogResult resultado = MessageBox.Show("¿Desea salir sin guardar?", "Confirmar",MessageBoxButtons.YesNo,MessageBoxIcon.Question);
             if (resultado == DialogResult.Yes)
             {
                 this.Close();
@@ -76,8 +76,7 @@ namespace UI_Libreria.Administrador
                 string dni = txtDNI.Text;
                 string contrasena = txtContrasena.Text;
                 string username = txtUsername.Text;
-                if (string.IsNullOrWhiteSpace(nombre))
-                { throw new Exception("El nombre es obligatorio."); }
+                if (string.IsNullOrWhiteSpace(nombre)){ throw new Exception("El nombre es obligatorio."); }
                 if (string.IsNullOrWhiteSpace(apellido))
                 { throw new Exception("El apellido es obligatorio."); }
                 if (string.IsNullOrWhiteSpace(correo))

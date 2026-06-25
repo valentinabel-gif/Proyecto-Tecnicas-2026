@@ -109,6 +109,7 @@ namespace UI_Libreria.Administrador
             if (string.IsNullOrEmpty(RolBuscado))
             {
                 dgvRoles.DataSource = new List<Rol>(_listaRoles);
+                lblBusqueda.Visible=false;
                 return;
             }
 
@@ -116,7 +117,15 @@ namespace UI_Libreria.Administrador
                 .Where(u => u.NombreMedidaDeSeguridad.ToLower().Contains(RolBuscado)).ToList();
 
             dgvRoles.DataSource = filtrados;
-            lblBusqueda.Visible = filtrados.Count == 0;
+           
+            if(filtrados.Count == 0)
+            {
+                lblBusqueda.Visible=true;
+            }
+            else
+            {
+                lblBusqueda.Visible=false;
+            }
         }
 
         public void Actualizar()
@@ -127,6 +136,11 @@ namespace UI_Libreria.Administrador
         {
             FormCrearRol form = new FormCrearRol(_rolBll);
             form.ShowDialog();
+        }
+
+        private void lblBusqueda_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -23,7 +23,11 @@ namespace UI_Libreria.Administrador
 
         private void btnCancelar_Click(object sender, EventArgs e)
         {
-            this.Close();
+            DialogResult resultado = MessageBox.Show("¿Desea salir sin guardar?", "Confirmar", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (resultado == DialogResult.Yes)
+            {
+                this.Close();
+            }
         }
 
         private void textBox1_TextChanged(object sender, EventArgs e)
@@ -41,8 +45,10 @@ namespace UI_Libreria.Administrador
             try
             {
                 if (string.IsNullOrWhiteSpace(txtCrearCategoria.Text))
+                {
                     throw new Exception("El nombre de la categoría es obligatorio.");
-
+                }
+                   
                 _categoriaBLL.CrearCategoria(txtCrearCategoria.Text.Trim());
                 MessageBox.Show("Categoría creada correctamente.", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 this.Close();
@@ -51,6 +57,11 @@ namespace UI_Libreria.Administrador
             {
                 MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+        }
+
+        private void txtCrearCategoria_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            e.Handled = !(char.IsLetter(e.KeyChar) || char.IsWhiteSpace(e.KeyChar) || char.IsControl(e.KeyChar));
         }
     }
 }

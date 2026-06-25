@@ -94,6 +94,7 @@ namespace UI_Libreria.Administrador
             if (string.IsNullOrEmpty(textoBusqueda))
             {
                 dgvUsuarios.DataSource = new List<Usuario>(_listaUsuarios);
+                lblSinResultados.Visible = false; // para que no se vea el label
                 return;
             }
 
@@ -103,7 +104,16 @@ namespace UI_Libreria.Administrador
                 .ToList();
 
             dgvUsuarios.DataSource = filtrados;
-            lblSinResultados.Visible = filtrados.Count == 0;
+            // lblSinResultados.Visible = filtrados.Count == 0;
+            //verifico
+            if (filtrados.Count == 0)
+            {
+                lblSinResultados.Visible = true;
+            }
+            else
+            {
+                lblSinResultados.Visible = false;
+            }
 
         }
 
@@ -126,7 +136,7 @@ namespace UI_Libreria.Administrador
 
         public void Actualizar()
         {
-            MessageBox.Show("Observer ejecutando");
+            //MessageBox.Show("Observer ejecutando");
             CargarListaUsuarios();
 
         }
@@ -142,4 +152,4 @@ namespace UI_Libreria.Administrador
 
         }
     }
-    }
+}

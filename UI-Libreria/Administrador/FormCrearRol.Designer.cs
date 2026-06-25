@@ -37,22 +37,25 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(152, 92);
+            this.label1.Font = new System.Drawing.Font("Microsoft YaHei UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(55, 83);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(136, 16);
+            this.label1.Size = new System.Drawing.Size(197, 24);
             this.label1.TabIndex = 0;
             this.label1.Text = "Nombre del nuevo rol";
             // 
             // txtNombreRol
             // 
-            this.txtNombreRol.Location = new System.Drawing.Point(115, 128);
+            this.txtNombreRol.Location = new System.Drawing.Point(59, 129);
+            this.txtNombreRol.MaxLength = 20;
             this.txtNombreRol.Name = "txtNombreRol";
-            this.txtNombreRol.Size = new System.Drawing.Size(221, 22);
+            this.txtNombreRol.Size = new System.Drawing.Size(230, 22);
             this.txtNombreRol.TabIndex = 1;
+            this.txtNombreRol.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNombreRol_KeyPress);
             // 
             // btnCrear
             // 
-            this.btnCrear.Location = new System.Drawing.Point(145, 188);
+            this.btnCrear.Location = new System.Drawing.Point(59, 203);
             this.btnCrear.Name = "btnCrear";
             this.btnCrear.Size = new System.Drawing.Size(143, 23);
             this.btnCrear.TabIndex = 2;
@@ -62,7 +65,7 @@
             // 
             // btnCancelar
             // 
-            this.btnCancelar.Location = new System.Drawing.Point(180, 232);
+            this.btnCancelar.Location = new System.Drawing.Point(208, 203);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(81, 23);
             this.btnCancelar.TabIndex = 3;
@@ -74,7 +77,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(476, 290);
+            this.ClientSize = new System.Drawing.Size(376, 289);
             this.Controls.Add(this.btnCancelar);
             this.Controls.Add(this.btnCrear);
             this.Controls.Add(this.txtNombreRol);
