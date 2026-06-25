@@ -21,6 +21,11 @@ namespace BLL_Libreria
                 throw new Exception("No hay sesión activa.");
             }
 
+            if (!Sesion.Instancia.UsuarioActivo.TienePermiso("realizar_venta"))
+            {
+                throw new Exception("Seguridad: Su usuario no cuenta con los permisos requeridos para realizar ventas.");
+            }
+
             if (venta == null)
             {
                 throw new ArgumentNullException("La venta no puede ser nula.");

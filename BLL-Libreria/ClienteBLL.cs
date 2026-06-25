@@ -25,6 +25,11 @@ namespace BLL_Libreria
                 throw new Exception("No hay sesión activa.");
             }
 
+            if (!Sesion.Instancia.UsuarioActivo.TienePermiso("crear_cliente"))
+            {
+                throw new Exception("Seguridad: No tiene permisos para registrar clientes nuevos.");
+            }
+
             if (nuevoCliente == null)
             {
                 throw new ArgumentNullException("El cliente no puede ser nulo.");
@@ -54,6 +59,11 @@ namespace BLL_Libreria
             if (!Sesion.Instancia.HaySesionActiva())
             {
                 throw new Exception("No hay sesión activa.");
+            }
+
+            if (!Sesion.Instancia.UsuarioActivo.TienePermiso("editar_cliente"))
+            {
+                throw new Exception("Seguridad: No tiene autorización para modificar datos de clientes.");
             }
 
             if (clienteModificado == null)

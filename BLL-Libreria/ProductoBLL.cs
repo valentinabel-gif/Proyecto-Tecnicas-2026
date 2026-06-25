@@ -60,11 +60,6 @@ namespace BLL_Libreria
             {
                 throw new Exception("Seguridad: No tiene permisos para ver el listado de productos.");
             }
-            if (!Sesion.Instancia.HaySesionActiva())
-            {
-                throw new Exception("No hay sesión activa.");
-            }
-
             return _productoDAL.ObtenerTodos();
         }
 
