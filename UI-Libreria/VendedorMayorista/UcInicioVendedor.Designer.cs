@@ -37,7 +37,7 @@
             // tableLayoutPanel1
             // 
             this.tableLayoutPanel1.ColumnCount = 1;
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanel1.Controls.Add(this.lblBienvenida, 0, 0);
             this.tableLayoutPanel1.Controls.Add(this.lblFecha, 0, 1);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -45,33 +45,33 @@
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 2;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 241F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel1.Size = new System.Drawing.Size(889, 476);
             this.tableLayoutPanel1.TabIndex = 0;
             this.tableLayoutPanel1.Paint += new System.Windows.Forms.PaintEventHandler(this.tableLayoutPanel1_Paint);
             // 
             // lblBienvenida
             // 
-            this.lblBienvenida.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.lblBienvenida.AutoSize = true;
+            this.lblBienvenida.Dock = System.Windows.Forms.DockStyle.Fill;
             this.lblBienvenida.Font = new System.Drawing.Font("Microsoft YaHei UI", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblBienvenida.Location = new System.Drawing.Point(377, 92);
+            this.lblBienvenida.Location = new System.Drawing.Point(3, 0);
             this.lblBienvenida.Name = "lblBienvenida";
-            this.lblBienvenida.Size = new System.Drawing.Size(135, 50);
+            this.lblBienvenida.Size = new System.Drawing.Size(883, 238);
             this.lblBienvenida.TabIndex = 0;
             this.lblBienvenida.Text = "label1";
+            this.lblBienvenida.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.lblBienvenida.Click += new System.EventHandler(this.label1_Click);
             // 
             // lblFecha
             // 
-            this.lblFecha.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.lblFecha.AutoSize = true;
+            this.lblFecha.Dock = System.Windows.Forms.DockStyle.Fill;
             this.lblFecha.Font = new System.Drawing.Font("Microsoft YaHei", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblFecha.Location = new System.Drawing.Point(407, 341);
+            this.lblFecha.Location = new System.Drawing.Point(3, 238);
             this.lblFecha.Name = "lblFecha";
-            this.lblFecha.Size = new System.Drawing.Size(75, 28);
+            this.lblFecha.Size = new System.Drawing.Size(883, 238);
             this.lblFecha.TabIndex = 1;
             this.lblFecha.Text = "label2";
+            this.lblFecha.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.lblFecha.Click += new System.EventHandler(this.label2_Click);
             // 
             // UcInicioVendedor
@@ -80,11 +80,10 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.tableLayoutPanel1);
             this.Location = new System.Drawing.Point(179, 90);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "UcInicioVendedor";
             this.Size = new System.Drawing.Size(889, 476);
             this.tableLayoutPanel1.ResumeLayout(false);
-            this.tableLayoutPanel1.PerformLayout();
             this.ResumeLayout(false);
 
         }

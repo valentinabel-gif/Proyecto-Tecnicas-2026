@@ -54,6 +54,7 @@
             this.rbDesc15 = new System.Windows.Forms.RadioButton();
             this.rbDesc10 = new System.Windows.Forms.RadioButton();
             this.rbDesc5 = new System.Windows.Forms.RadioButton();
+            this.rbDescNinguno = new System.Windows.Forms.RadioButton();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDetalle)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.gpMedioPago.SuspendLayout();
@@ -311,6 +312,7 @@
             // gbDescuento
             // 
             this.gbDescuento.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.gbDescuento.Controls.Add(this.rbDescNinguno);
             this.gbDescuento.Controls.Add(this.rbDesc15);
             this.gbDescuento.Controls.Add(this.rbDesc10);
             this.gbDescuento.Controls.Add(this.rbDesc5);
@@ -329,7 +331,6 @@
             this.rbDesc15.Name = "rbDesc15";
             this.rbDesc15.Size = new System.Drawing.Size(45, 17);
             this.rbDesc15.TabIndex = 2;
-            this.rbDesc15.TabStop = true;
             this.rbDesc15.Text = "15%";
             this.rbDesc15.UseVisualStyleBackColor = true;
             this.rbDesc15.CheckedChanged += new System.EventHandler(this.rbDesc15_CheckedChanged);
@@ -342,7 +343,6 @@
             this.rbDesc10.Name = "rbDesc10";
             this.rbDesc10.Size = new System.Drawing.Size(45, 17);
             this.rbDesc10.TabIndex = 1;
-            this.rbDesc10.TabStop = true;
             this.rbDesc10.Text = "10%";
             this.rbDesc10.UseVisualStyleBackColor = true;
             this.rbDesc10.CheckedChanged += new System.EventHandler(this.rbDesc10_CheckedChanged);
@@ -355,10 +355,22 @@
             this.rbDesc5.Name = "rbDesc5";
             this.rbDesc5.Size = new System.Drawing.Size(39, 17);
             this.rbDesc5.TabIndex = 0;
-            this.rbDesc5.TabStop = true;
             this.rbDesc5.Text = "5%";
             this.rbDesc5.UseVisualStyleBackColor = true;
             this.rbDesc5.CheckedChanged += new System.EventHandler(this.rbDesc5_CheckedChanged);
+            // 
+            // rbDescNinguno
+            // 
+            this.rbDescNinguno.AutoSize = true;
+            this.rbDescNinguno.Checked = true;
+            this.rbDescNinguno.Location = new System.Drawing.Point(52, 20);
+            this.rbDescNinguno.Name = "rbDescNinguno";
+            this.rbDescNinguno.Size = new System.Drawing.Size(34, 17);
+            this.rbDescNinguno.TabIndex = 3;
+            this.rbDescNinguno.TabStop = true;
+            this.rbDescNinguno.Text = "rb";
+            this.rbDescNinguno.UseVisualStyleBackColor = true;
+            this.rbDescNinguno.Visible = false;
             // 
             // UcVenta
             // 
@@ -420,5 +432,6 @@
         private System.Windows.Forms.RadioButton rbDesc15;
         private System.Windows.Forms.Label CondFiscallbl;
         private System.Windows.Forms.Label RazonSociallbl;
+        private System.Windows.Forms.RadioButton rbDescNinguno;
     }
 }

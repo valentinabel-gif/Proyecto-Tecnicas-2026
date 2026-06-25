@@ -24,6 +24,11 @@ namespace UI_Libreria.VendedorMayorista
         public UcVenta()
         {
             InitializeComponent();
+            rbDesc5.Click += rbDescuento_Click;
+            rbDesc10.Click += rbDescuento_Click;
+            rbDesc15.Click += rbDescuento_Click;
+            dgvDetalle.CellEndEdit += dgvDetalle_CellEndEdit;           
+            dgvDetalle.EditingControlShowing += dgvDetalle_EditingControlShowing;
         }
 
         private void UcVenta_Load(object sender, EventArgs e)
@@ -35,9 +40,10 @@ namespace UI_Libreria.VendedorMayorista
 
         private void IniciarNuevaVenta()
         {
-
-            dgvDetalle.ReadOnly = true;
             dgvDetalle.AllowUserToAddRows = false;
+            dgvDetalle.Columns[0].ReadOnly = false;  // Cantidad — editable
+            dgvDetalle.Columns[1].ReadOnly = true;   // Detalle — solo lectura
+            dgvDetalle.Columns[2].ReadOnly = true;   // Subtotal — solo lectura
             //creamos una venta nueva con el usuario de la sesion activa
             _ventaActual = new Venta(0, DateTime.Now, null, Sesion.Instancia.UsuarioActivo, null);
 
@@ -57,9 +63,10 @@ namespace UI_Libreria.VendedorMayorista
             btnDebito.Checked = false;
             btnCredito.Checked = false;
             btnTransferencia.Checked = false;
-            rbDesc5.Checked = false;
-            rbDesc10.Checked = false;
-            rbDesc15.Checked = false;
+            rbDescNinguno.Checked = true;
+            rbDesc5.Tag = null;
+            rbDesc10.Tag = null;
+            rbDesc15.Tag = null;
 
             txtBusqueda.Focus();
         }
@@ -145,6 +152,31 @@ namespace UI_Libreria.VendedorMayorista
                     return;
                 }
 
+                int indiceExistente = _ventaActual.Detalles.FindIndex(d => d.ProductoItem.IdProducto == producto.IdProducto);
+
+                if (indiceExistente >= 0)
+                {
+                    //si ya existe sumar cantidad
+                    DetalleVenta detalleExistente = _ventaActual.Detalles[indiceExistente];
+                    int nuevaCantidad = detalleExistente.CantidadProducto + cantidad;
+
+                    if (nuevaCantidad > producto.Stock)
+                    {
+                        MessageBox.Show($"Stock insuficiente.\nYa tenés {detalleExistente.CantidadProducto} " + $"unidades cargadas.\nStock disponible: {producto.Stock}.", "Stock insuficiente", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        return;
+                    }
+
+                    DetalleVenta nuevoDetalle = _ventaBLL.CrearDetalle(producto, nuevaCantidad);
+                    _ventaActual.Detalles[indiceExistente] = nuevoDetalle;
+                    dgvDetalle.Rows[indiceExistente].Cells[0].Value = nuevaCantidad;
+                    dgvDetalle.Rows[indiceExistente].Cells[2].Value = nuevoDetalle.SubtotalDetalleVenta.ToString("N2");
+
+                    ActualizarTotales();
+                    txtBusqueda.Clear();
+                    txtBusqueda.Focus();
+                    return;
+                }
+
                 //crear detalle y agregar a la venta
                 DetalleVenta detalle = _ventaBLL.CrearDetalle(producto, cantidad);
                 _ventaActual.AgregarDetalle(detalle);
@@ -179,6 +211,21 @@ namespace UI_Libreria.VendedorMayorista
             string valor = txtDniCuitCliente.Text.Trim();
             if (string.IsNullOrWhiteSpace(valor))
             {
+                MessageBox.Show("Debe ingresar un DNI o CUIT para buscar.", "Campo vacío", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+            //solo numeros
+            if (!valor.All(char.IsDigit))
+            {
+                MessageBox.Show("El DNI o CUIT solo puede contener números, sin guiones ni espacios.", "Formato inválido", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+            //longitud valida: DNI 7-8 digitos, CUIT 11 digitos
+            if (valor.Length != 7 && valor.Length != 8 && valor.Length != 11)
+            {
+                MessageBox.Show("Formato inválido.\n" + "DNI: 7 u 8 dígitos.\n" + "CUIT: 11 dígitos sin guiones.", "Formato inválido", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
 
@@ -200,9 +247,11 @@ namespace UI_Libreria.VendedorMayorista
 
                     if (resultado == DialogResult.Yes)
                     {
-                        // Abrir gestión de clientes para alta
-                        UcGestionClientes ucAlta = new UcGestionClientes();
-                        //integrar con el FormVendedor
+                        FormVendedor formPadre = this.ParentForm as FormVendedor;
+                        if (formPadre != null)
+                        {
+                            formPadre.AbrirFicha(new UcGestionClientes());
+                        }
                     }
                 }
             }
@@ -226,7 +275,12 @@ namespace UI_Libreria.VendedorMayorista
 
         private void btnDebito_CheckedChanged(object sender, EventArgs e)
         {
-
+            if (btnDebito.Checked)
+            {
+                _medioPagoSeleccionado = new Debito(2, "Débito", 0);
+                _ventaActual.MedioPago = _medioPagoSeleccionado;
+                ActualizarTotales();
+            }
         }
 
         private void btnCredito_CheckedChanged(object sender, EventArgs e)
@@ -325,7 +379,7 @@ namespace UI_Libreria.VendedorMayorista
                int idVentaGenerado = _ventaBLL.RegistrarVenta(_ventaActual);
 
                 //cuadrito de dialogo interactivo con botones Si/No
-                DialogResult respuestaImpresion = MessageBox.Show("¡Venta registrada con éxito en el sistema!\n\n¿Desea generar e imprimir el ticket de comprobante para el cliente?", "Emisión de Comprobante - Librería Canning", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                DialogResult respuestaImpresion = MessageBox.Show("¡Venta registrada con éxito en el sistema!\n\n¿Desea generar e imprimir el ticket de comprobante para el cliente?", "Emisión de Comprobante - Librería BORCELLE", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
 
                 //si el vendedor presiona "Si", generamos la cadena de texto plano armada en tu BLL
                 if (respuestaImpresion == DialogResult.Yes)
@@ -358,6 +412,93 @@ namespace UI_Libreria.VendedorMayorista
                 _ventaBLL.CancelarVenta(_ventaActual);
                 IniciarNuevaVenta();
             }
+        }
+
+        // ─── PARA DESCLICKEAR EN DESCUENTO ───
+
+        private void rbDescuento_Click(object sender, EventArgs e)
+        {
+            RadioButton rb = (RadioButton)sender;
+
+            if (rb.Tag?.ToString() == "marcado")
+            {
+                rb.Tag = null;
+                rbDescNinguno.Checked = true;
+                _ventaActual.PorcentajeDescuento = 0;
+                ActualizarTotales();
+            }
+            else
+            {
+                rbDesc5.Tag = null;
+                rbDesc10.Tag = null;
+                rbDesc15.Tag = null;
+                rb.Tag = "marcado";
+            }
+        }
+
+        // ─── PARA MODIFICAR CANTIDAD EN DGV ───
+        private void dgvDetalle_EditingControlShowing(object sender,DataGridViewEditingControlShowingEventArgs e)
+        {
+            if (dgvDetalle.CurrentCell.ColumnIndex == 0)
+            {
+                TextBox tb = e.Control as TextBox;
+                if (tb != null)
+                {
+                    tb.KeyPress -= SoloNumeros;
+                    tb.KeyPress += SoloNumeros;
+                }
+            }
+        }
+
+        private void SoloNumeros(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsDigit(e.KeyChar) && e.KeyChar != (char)Keys.Back)
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void dgvDetalle_CellEndEdit(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.ColumnIndex != 0)
+            {
+                return;
+            }
+
+            DataGridViewRow fila = dgvDetalle.Rows[e.RowIndex];
+            int cantidadOriginal = _ventaActual.Detalles[e.RowIndex].CantidadProducto;
+
+            //no puede quedar vacIo
+            if (fila.Cells[0].Value == null || string.IsNullOrWhiteSpace(fila.Cells[0].Value.ToString()))
+            {
+                MessageBox.Show("La cantidad no puede quedar vacía.", "Validación", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                fila.Cells[0].Value = cantidadOriginal;
+                return;
+            }
+
+            //tiene ser numero entero mayor a cero
+            if (!int.TryParse(fila.Cells[0].Value.ToString(), out int nuevaCantidad) || nuevaCantidad <= 0)
+            {
+                MessageBox.Show("Ingrese una cantidad válida mayor a cero.", "Validación", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                fila.Cells[0].Value = cantidadOriginal;
+                return;
+            }
+
+            //no puede superar el stock disponible
+            Producto producto = _ventaActual.Detalles[e.RowIndex].ProductoItem;
+            if (nuevaCantidad > producto.Stock)
+            {
+                MessageBox.Show($"Stock insuficiente.\nStock disponible: {producto.Stock} unidades.", "Stock insuficiente", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                fila.Cells[0].Value = cantidadOriginal;
+                return;
+            }
+
+            //actualizar detalle y grilla
+            DetalleVenta nuevoDetalle = _ventaBLL.CrearDetalle(producto, nuevaCantidad);
+            _ventaActual.Detalles[e.RowIndex] = nuevoDetalle;
+            fila.Cells[2].Value = nuevoDetalle.SubtotalDetalleVenta.ToString("N2");
+
+            ActualizarTotales();
         }
 
         private void label2_Click(object sender, EventArgs e) { }
