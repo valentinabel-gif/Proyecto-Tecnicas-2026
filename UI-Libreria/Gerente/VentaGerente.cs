@@ -2,12 +2,6 @@
 using BLL_Libreria;
 using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace UI_Libreria.Gerente
@@ -101,14 +95,15 @@ namespace UI_Libreria.Gerente
                 IngresosMesAnterior.Text = "$" + IngresosAnterior.ToString("N0");
 
                 //EGRESOSO
-                double  EgresosEsteMes = _estadisticasBLL.EgresosPorMes(mesActual, anioActual);
+                double EgresosEsteMes = _estadisticasBLL.EgresosPorMes(mesActual, anioActual);
                 double EgresosAnterior = _estadisticasBLL.EgresosPorMes(mesAnterior, anioMesAnterios);
                 Egresos.Text = "$" + IngresosEsteMes.ToString("N0");
                 EgresosMesAnterior.Text = "$" + IngresosAnterior.ToString("N0");
 
                 //Vnetas del mes
                 CargarVentas(mesActual, anioActual);
-            }catch(Exception e)
+            }
+            catch (Exception e)
             {
                 MessageBox.Show(e.Message, "error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
@@ -135,7 +130,7 @@ namespace UI_Libreria.Gerente
 
         private void panel3_Paint(object sender, PaintEventArgs e)
         {
-           
+
         }
 
         private void button2_Click(object sender, EventArgs e)

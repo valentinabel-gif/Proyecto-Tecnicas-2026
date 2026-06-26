@@ -1,12 +1,5 @@
 ﻿using BLL_Libreria;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace UI_Libreria.Gerente
@@ -58,7 +51,7 @@ namespace UI_Libreria.Gerente
 
         private void panelInicioGerente_Paint(object sender, PaintEventArgs e)
         {
-      
+
         }
 
         private void btnInicioGerente_Click(object sender, EventArgs e)

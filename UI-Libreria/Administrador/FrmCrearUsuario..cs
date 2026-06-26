@@ -3,12 +3,6 @@ using BLL_Libreria;
 using BLL_Libreria.Seguridad_y_Usuario___Login;
 using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace UI_Libreria.Administrador
@@ -59,7 +53,7 @@ namespace UI_Libreria.Administrador
 
         private void button2_Click(object sender, EventArgs e)
         {
-            DialogResult resultado = MessageBox.Show("¿Desea salir sin guardar?", "Confirmar",MessageBoxButtons.YesNo,MessageBoxIcon.Question);
+            DialogResult resultado = MessageBox.Show("¿Desea salir sin guardar?", "Confirmar", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
             if (resultado == DialogResult.Yes)
             {
                 this.Close();
@@ -76,7 +70,7 @@ namespace UI_Libreria.Administrador
                 string dni = txtDNI.Text;
                 string contrasena = txtContrasena.Text;
                 string username = txtUsername.Text;
-                if (string.IsNullOrWhiteSpace(nombre)){ throw new Exception("El nombre es obligatorio."); }
+                if (string.IsNullOrWhiteSpace(nombre)) { throw new Exception("El nombre es obligatorio."); }
                 if (string.IsNullOrWhiteSpace(apellido))
                 { throw new Exception("El apellido es obligatorio."); }
                 if (string.IsNullOrWhiteSpace(correo))
@@ -103,9 +97,10 @@ namespace UI_Libreria.Administrador
 
                 _usuarioBLL.AltaUsuario(nuevoUsuario);
 
-                MessageBox.Show("El usuario fue creado exitosamente!","EXITO",MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("El usuario fue creado exitosamente!", "EXITO", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
-            }catch(Exception ex)
+            }
+            catch (Exception ex)
             {
                 MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;

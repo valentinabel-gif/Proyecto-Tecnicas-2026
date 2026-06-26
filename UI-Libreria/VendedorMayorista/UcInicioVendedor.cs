@@ -1,15 +1,7 @@
-﻿using BE_Libreria;
-using BLL_Libreria;
-using BLL_Libreria.Seguridad_y_Usuario___Login;
+﻿using BLL_Libreria;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Drawing;
 using System.Globalization;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace UI_Libreria.VendedorMayorista

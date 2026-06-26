@@ -2,12 +2,7 @@
 using BLL_Libreria;
 using System;
 using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace UI_Libreria.VendedorMayorista
@@ -205,11 +200,11 @@ namespace UI_Libreria.VendedorMayorista
         {
             if (_clienteSeleccionado == null)
             {
-                MessageBox.Show( "Seleccione un cliente de la lista.", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Seleccione un cliente de la lista.", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
 
-            DialogResult confirmacion = MessageBox.Show( $"¿Está seguro que desea eliminar a " + $"{_clienteSeleccionado.NombreCliente} " + $"{_clienteSeleccionado.ApellidoCliente}?", "Confirmar eliminación", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+            DialogResult confirmacion = MessageBox.Show($"¿Está seguro que desea eliminar a " + $"{_clienteSeleccionado.NombreCliente} " + $"{_clienteSeleccionado.ApellidoCliente}?", "Confirmar eliminación", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
 
             if (confirmacion == DialogResult.Yes)
             {
@@ -299,7 +294,7 @@ namespace UI_Libreria.VendedorMayorista
                 }
                 if (txtCUIT.Text.Length != 11)
                 {
-                    MessageBox.Show("El CUIT debe tener exactamente 11 dígitos.","Validación", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    MessageBox.Show("El CUIT debe tener exactamente 11 dígitos.", "Validación", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     txtCUIT.Focus();
                     return false;
                 }

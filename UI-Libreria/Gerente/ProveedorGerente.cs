@@ -2,12 +2,8 @@
 using BLL_Libreria;
 using System;
 using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
-using System.Drawing;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace UI_Libreria.Gerente
@@ -17,7 +13,7 @@ namespace UI_Libreria.Gerente
         private ProveedorBLL _proveedorBLL = new ProveedorBLL();
         private ProductoBLL _productoBLL = new ProductoBLL();
         private List<Proveedor> _listaProveedores = new List<Proveedor>();
-     
+
         public ProveedorGerente()
         {
             InitializeComponent();

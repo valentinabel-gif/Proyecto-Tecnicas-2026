@@ -1,13 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 using System.Windows.Forms;
-using UI_Libreria.EncargadoDeStock;
-
-using UI_Libreria.Administrador;
-
-using UI_Libreria.VendedorMayorista;
 
 
 namespace UI_Libreria
@@ -27,10 +19,10 @@ namespace UI_Libreria
             //Application.Run(new FormVendedor());
 
             //Application.Run(new InicioEncargadoStock()); 
-             //Application.Run(new Inicioadministrador());
+            //Application.Run(new Inicioadministrador());
             Application.Run(new login());
             //Application.Run(new Gerente.inicioGerente());
-            
+
         }
     }
 }

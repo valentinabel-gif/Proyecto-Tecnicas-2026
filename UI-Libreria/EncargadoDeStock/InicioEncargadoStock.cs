@@ -1,12 +1,5 @@
 ﻿using BLL_Libreria;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace UI_Libreria.EncargadoDeStock
@@ -27,7 +20,7 @@ namespace UI_Libreria.EncargadoDeStock
             Date.Text = DateTime.Now.ToString("dd/MM/yyyy HH:mm:ss");
 
             //Creamos una sola vez los User Control
-            VistaInicio= new UcInicio();
+            VistaInicio = new UcInicio();
             VistaIngresos = new UcIngresos();
             VistaProveedores = new UcProveedores();
             VistaStock = new UcStock();
@@ -144,4 +137,4 @@ namespace UI_Libreria.EncargadoDeStock
 
         }
     }
-    }
+}

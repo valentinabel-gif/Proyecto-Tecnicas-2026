@@ -1,14 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using BLL_Libreria;
+using System;
 using System.Windows.Forms;
-using BLL_Libreria;
-using BE_Libreria;
 
 namespace UI_Libreria.Administrador
 {
@@ -48,7 +40,7 @@ namespace UI_Libreria.Administrador
                 {
                     throw new Exception("El nombre de la categoría es obligatorio.");
                 }
-                   
+
                 _categoriaBLL.CrearCategoria(txtCrearCategoria.Text.Trim());
                 MessageBox.Show("Categoría creada correctamente.", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 this.Close();

@@ -2,17 +2,12 @@
 using BE_Libreria.Stock;
 using BLL_Libreria;
 using QuestPDF.Fluent;
+using QuestPDF.Helpers;
 using QuestPDF.Infrastructure;
 using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
-using QuestPDF.Helpers;
 
 namespace UI_Libreria.Gerente
 {
@@ -37,7 +32,7 @@ namespace UI_Libreria.Gerente
             {
                 btnAlerta.BackColor = System.Drawing.Color.Red;
                 btnAlerta.ForeColor = System.Drawing.Color.White;
-                btnAlerta.TextAlign= ContentAlignment.MiddleCenter;
+                btnAlerta.TextAlign = ContentAlignment.MiddleCenter;
                 btnAlerta.Text = "⚠ Ver Alerta de Mercadería Faltante ("
                    + alertas.Count + ")";
             }
@@ -54,7 +49,7 @@ namespace UI_Libreria.Gerente
             {
                 List<Producto> productos =
                     _reporteBLL.BuscarProductosParaReporte(criterio);
-             
+
                 dgvProductos.DataSource = null;
                 dgvProductos.DataSource = productos;
                 dgvProductos.Columns["Categoria"].Visible = false;

@@ -3,17 +3,13 @@ using BE_Libreria.Seguridad_y_Usuario;
 using BLL_Libreria;
 using System;
 using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
-using System.Drawing;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace UI_Libreria.Administrador
 {
-    public partial class admiUsuario : UserControl , IObservadorUsuario//obs
+    public partial class admiUsuario : UserControl, IObservadorUsuario//obs
     {
         private List<Usuario> _listaUsuarios = new List<Usuario>();
         private UsuarioBLL _usuarioBLL; //= new UsuarioBLL();

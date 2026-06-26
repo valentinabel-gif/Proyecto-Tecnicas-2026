@@ -1,14 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
-using BE_Libreria;
+﻿using BE_Libreria;
 using BLL_Libreria;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Windows.Forms;
 
 namespace UI_Libreria.VendedorMayorista
 {
@@ -27,7 +22,7 @@ namespace UI_Libreria.VendedorMayorista
             rbDesc5.Click += rbDescuento_Click;
             rbDesc10.Click += rbDescuento_Click;
             rbDesc15.Click += rbDescuento_Click;
-            dgvDetalle.CellEndEdit += dgvDetalle_CellEndEdit;           
+            dgvDetalle.CellEndEdit += dgvDetalle_CellEndEdit;
             dgvDetalle.EditingControlShowing += dgvDetalle_EditingControlShowing;
         }
 
@@ -127,7 +122,7 @@ namespace UI_Libreria.VendedorMayorista
                 }
 
                 // Pedir cantidad
-                string inputCantidad = Microsoft.VisualBasic.Interaction.InputBox($"Ingrese la cantidad para:\n{producto.NombreProducto}" + $"\nStock disponible: {producto.Stock}","Cantidad", "1");
+                string inputCantidad = Microsoft.VisualBasic.Interaction.InputBox($"Ingrese la cantidad para:\n{producto.NombreProducto}" + $"\nStock disponible: {producto.Stock}", "Cantidad", "1");
 
                 if (string.IsNullOrWhiteSpace(inputCantidad))
                 {
@@ -182,7 +177,7 @@ namespace UI_Libreria.VendedorMayorista
                 _ventaActual.AgregarDetalle(detalle);
 
                 // Agregar a la grilla
-                dgvDetalle.Rows.Add(cantidad, producto.NombreProducto,detalle.SubtotalDetalleVenta.ToString("N2"));
+                dgvDetalle.Rows.Add(cantidad, producto.NombreProducto, detalle.SubtotalDetalleVenta.ToString("N2"));
 
                 ActualizarTotales();
                 txtBusqueda.Clear();
@@ -376,7 +371,7 @@ namespace UI_Libreria.VendedorMayorista
 
             try
             {
-               int idVentaGenerado = _ventaBLL.RegistrarVenta(_ventaActual);
+                int idVentaGenerado = _ventaBLL.RegistrarVenta(_ventaActual);
 
                 //cuadrito de dialogo interactivo con botones Si/No
                 DialogResult respuestaImpresion = MessageBox.Show("¡Venta registrada con éxito en el sistema!\n\n¿Desea generar e imprimir el ticket de comprobante para el cliente?", "Emisión de Comprobante - Librería BORCELLE", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
@@ -437,7 +432,7 @@ namespace UI_Libreria.VendedorMayorista
         }
 
         // ─── PARA MODIFICAR CANTIDAD EN DGV ───
-        private void dgvDetalle_EditingControlShowing(object sender,DataGridViewEditingControlShowingEventArgs e)
+        private void dgvDetalle_EditingControlShowing(object sender, DataGridViewEditingControlShowingEventArgs e)
         {
             if (dgvDetalle.CurrentCell.ColumnIndex == 0)
             {

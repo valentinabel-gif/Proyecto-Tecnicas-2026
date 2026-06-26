@@ -1,19 +1,12 @@
 ﻿using BLL_Libreria.Seguridad_y_Usuario___Login;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace UI_Libreria.Administrador
 {
     public partial class FormCrearRol : Form
     {
-       
+
         private RolBLL _rolBLL;
 
         public FormCrearRol(RolBLL rolBLL)
@@ -53,13 +46,13 @@ namespace UI_Libreria.Administrador
 
         private void btnCancelar_Click_1(object sender, EventArgs e)
         {
-            DialogResult resultado = MessageBox.Show( "¿Desea salir sin guardar?","Confirmar", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            DialogResult resultado = MessageBox.Show("¿Desea salir sin guardar?", "Confirmar", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
 
             if (resultado == DialogResult.Yes)
             {
                 this.Close();
             }
-              
+
         }
 
         private void txtNombreRol_KeyPress(object sender, KeyPressEventArgs e)

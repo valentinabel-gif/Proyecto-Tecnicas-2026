@@ -1,22 +1,17 @@
 ﻿using BE_Libreria;
 using BE_Libreria.Seguridad_y_Usuario;
-using BLL_Libreria;
 using BLL_Libreria.Seguridad_y_Usuario___Login;
 using System;
 using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
-using System.Drawing;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace UI_Libreria.Administrador
 {
     public partial class admiRol : UserControl, IObservadorRol
     {
-        private List<Rol>_listaRoles = new List<Rol>();
+        private List<Rol> _listaRoles = new List<Rol>();
         private RolBLL _rolBll;
 
         public admiRol(RolBLL rolBLL)
@@ -83,7 +78,7 @@ namespace UI_Libreria.Administrador
             dgvRoles.Columns.Add(new DataGridViewTextBoxColumn { HeaderText = "Nombre Rol", DataPropertyName = "NombreMedidaDeSeguridad", Width = 150 });
             dgvRoles.Columns.Add(new DataGridViewButtonColumn { Name = "colEliminarRol", HeaderText = "", Text = "ELIMINAR ROL", UseColumnTextForButtonValue = true, Width = 120 });
             dgvRoles.Columns.Add(new DataGridViewButtonColumn { Name = "colModificarRol", HeaderText = "", Text = "MODIFICAR ROL", UseColumnTextForButtonValue = true, Width = 120 });
-            
+
         }
 
         public void CargarListaRoles()
@@ -109,7 +104,7 @@ namespace UI_Libreria.Administrador
             if (string.IsNullOrEmpty(RolBuscado))
             {
                 dgvRoles.DataSource = new List<Rol>(_listaRoles);
-                lblBusqueda.Visible=false;
+                lblBusqueda.Visible = false;
                 return;
             }
 
@@ -117,14 +112,14 @@ namespace UI_Libreria.Administrador
                 .Where(u => u.NombreMedidaDeSeguridad.ToLower().Contains(RolBuscado)).ToList();
 
             dgvRoles.DataSource = filtrados;
-           
-            if(filtrados.Count == 0)
+
+            if (filtrados.Count == 0)
             {
-                lblBusqueda.Visible=true;
+                lblBusqueda.Visible = true;
             }
             else
             {
-                lblBusqueda.Visible=false;
+                lblBusqueda.Visible = false;
             }
         }
 

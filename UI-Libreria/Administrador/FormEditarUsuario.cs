@@ -3,12 +3,6 @@ using BLL_Libreria;
 using BLL_Libreria.Seguridad_y_Usuario___Login;
 using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace UI_Libreria.Administrador
@@ -23,7 +17,7 @@ namespace UI_Libreria.Administrador
             InitializeComponent();
             id_usuario = idusuario;
             //_usuario = usuario;
-           _usuarioBLL = usuarioBLL;
+            _usuarioBLL = usuarioBLL;
         }
 
         private void FormEditarUsuario_Load(object sender, EventArgs e)
@@ -38,7 +32,7 @@ namespace UI_Libreria.Administrador
                 cmbRol.ValueMember = "IdMedidaDeSeguridad";
 
                 // Carga los datos del usuario en los campos
-               // UsuarioBLL usuarioBLL = new UsuarioBLL();
+                // UsuarioBLL usuarioBLL = new UsuarioBLL();
                 Usuario usuario = _usuarioBLL.RecuperarUsuarioPorId(id_usuario);
 
                 txtNombre.Text = usuario.NombreUsuario;
@@ -89,7 +83,7 @@ namespace UI_Libreria.Administrador
 
                 Rol rolSeleccionado = (Rol)cmbRol.SelectedItem;
 
-                Usuario usuarioModificado = new Usuario(id_usuario,nombre,apellido,correo,dni,"",username,rolSeleccionado);
+                Usuario usuarioModificado = new Usuario(id_usuario, nombre, apellido, correo, dni, "", username, rolSeleccionado);
 
                 //UsuarioBLL usuarioBLL = new UsuarioBLL();
                 _usuarioBLL.ModificarUsuario(usuarioModificado);
@@ -100,7 +94,7 @@ namespace UI_Libreria.Administrador
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message, "Error",MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
@@ -134,13 +128,13 @@ namespace UI_Libreria.Administrador
         // usuario, letra,numero,guion y guin bajo
         private void txtUsuario_KeyPress(object sender, KeyPressEventArgs e)
         {
-            e.Handled = !(char.IsLetterOrDigit(e.KeyChar) ||  e.KeyChar == '_' || e.KeyChar == '-' || char.IsControl(e.KeyChar));
+            e.Handled = !(char.IsLetterOrDigit(e.KeyChar) || e.KeyChar == '_' || e.KeyChar == '-' || char.IsControl(e.KeyChar));
         }
 
         // correo, letras,numeros, y caracteres como . y _
         private void txtCorreo_KeyPress(object sender, KeyPressEventArgs e)
         {
-            e.Handled = !(char.IsLetterOrDigit(e.KeyChar) || e.KeyChar == '@' || e.KeyChar == '.' ||e.KeyChar == '_' || e.KeyChar == '-' || char.IsControl(e.KeyChar));
+            e.Handled = !(char.IsLetterOrDigit(e.KeyChar) || e.KeyChar == '@' || e.KeyChar == '.' || e.KeyChar == '_' || e.KeyChar == '-' || char.IsControl(e.KeyChar));
         }
 
         private void panel1_Paint(object sender, PaintEventArgs e)

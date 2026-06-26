@@ -5,25 +5,19 @@ using BLL_Libreria;
 using BLL_Libreria.Seguridad_y_Usuario___Login;
 using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace UI_Libreria.Administrador
 {
-    public partial class admiInicio : UserControl , IObservadorUsuario, IObservadorRol , IObservadorCategoria
+    public partial class admiInicio : UserControl, IObservadorUsuario, IObservadorRol, IObservadorCategoria
     {
 
         private UsuarioBLL _usuarioBLL; //= new UsuarioBLL();
         private RolBLL _rolBLL;
         private CategoriaBLL _categoriaBLL;
 
-    
-        public admiInicio(UsuarioBLL usuarioBLL, RolBLL rolBLL , CategoriaBLL categoriaBLL)
+
+        public admiInicio(UsuarioBLL usuarioBLL, RolBLL rolBLL, CategoriaBLL categoriaBLL)
         {
             InitializeComponent();
             _usuarioBLL = usuarioBLL;
@@ -107,7 +101,7 @@ namespace UI_Libreria.Administrador
         void IObservadorRol.Actualizar()
         {
             CargarEstadisticas(); // actualiza el contador de roles
-            
+
         }
 
         void IObservadorCategoria.Actualizar()

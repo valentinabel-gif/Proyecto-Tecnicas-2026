@@ -1,18 +1,7 @@
 ﻿using BE_Libreria;
 using BLL_Libreria;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
-using UI_Libreria.Administrador;
-using UI_Libreria.Gerente;
-using UI_Libreria.VendedorMayorista;
-using UI_Libreria.EncargadoDeStock;
 
 namespace UI_Libreria
 {
@@ -80,9 +69,10 @@ namespace UI_Libreria
                     frm.Show();
                     this.Hide();
                 }
-            }catch (Exception ex)
+            }
+            catch (Exception ex)
             {
-                MessageBox.Show(ex.Message,"Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
@@ -93,11 +83,11 @@ namespace UI_Libreria
 
         private void btnSalir_Click(object sender, EventArgs e)
         {
-            DialogResult resultado = MessageBox.Show("¿Desea salir del sistema?", "Confirmar",MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            DialogResult resultado = MessageBox.Show("¿Desea salir del sistema?", "Confirmar", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
 
             if (resultado == DialogResult.Yes)
             {
-                Application.Exit(); 
+                Application.Exit();
             }
         }
 

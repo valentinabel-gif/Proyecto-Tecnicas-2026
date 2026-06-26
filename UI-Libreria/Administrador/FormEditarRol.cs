@@ -2,12 +2,6 @@
 using BLL_Libreria.Seguridad_y_Usuario___Login;
 using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace UI_Libreria.Administrador
@@ -63,7 +57,7 @@ namespace UI_Libreria.Administrador
             }
         }
 
-      
+
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
@@ -81,7 +75,7 @@ namespace UI_Libreria.Administrador
                 {
                     throw new Exception("El nombre del rol es obligatorio.");
                 }
-                   
+
                 // Guarda los permisos marcados
                 List<Permiso> permisosSeleccionados = new List<Permiso>();
                 for (int i = 0; i < dgvPermisos.Rows.Count; i++)

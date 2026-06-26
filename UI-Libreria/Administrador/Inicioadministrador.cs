@@ -1,15 +1,7 @@
 ﻿using BLL_Libreria;
 using BLL_Libreria.Seguridad_y_Usuario___Login;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
-using UI_Libreria.EncargadoDeStock;
 
 namespace UI_Libreria.Administrador
 {
@@ -33,7 +25,7 @@ namespace UI_Libreria.Administrador
 
             //creamos solo una vez los userControl
 
-            VistaInicioAdmi = new admiInicio(_usuarioBLL, _rolBLL , _categoriaBLL);
+            VistaInicioAdmi = new admiInicio(_usuarioBLL, _rolBLL, _categoriaBLL);
             VistaUsuarioAdmi = new admiUsuario(_usuarioBLL);
             VistaRolAdmi = new admiRol(_rolBLL);
             VistaCategoriaAdmi = new admiCategoria(_categoriaBLL);
